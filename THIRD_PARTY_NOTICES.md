@@ -14,3 +14,5 @@ OmniVoice and its dependencies are installed separately. Their licenses apply in
 - [imageio-ffmpeg](https://github.com/imageio/imageio-ffmpeg)
 
 Game-derived scripts use PolyForm Noncommercial 1.0.0. Dialogic retains its bundled MIT license. Reference audio, character assets, MLP artwork, and setup music retain their respective owners' rights and are separate from the code license.
+
+[Original setup music](https://www.youtube.com/watch?v=For4GGkxALQ).

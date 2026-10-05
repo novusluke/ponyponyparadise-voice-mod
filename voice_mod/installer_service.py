@@ -30,7 +30,7 @@ print(json.dumps({'python':sys.version.split()[0], 'omnivoice':bool(importlib.ut
 
 def release_metadata() -> dict:
     path = backend.ROOT / "release.json"
-    return json.loads(path.read_text()) if path.exists() else {"version": "1.1.0", "github_repository": "", "github_branch": "main"}
+    return json.loads(path.read_text()) if path.exists() else {"version": "1.0.0", "github_repository": "", "github_branch": "main"}
 
 
 def patch_fingerprint() -> str:
@@ -120,7 +120,7 @@ def command_result(command: list[str], timeout=30) -> subprocess.CompletedProces
 def inspect_environment(folder: Path) -> dict:
     candidates = backend.python_candidates(folder)
     if not candidates:
-        return {"ok": False, "kind": "missing", "message": "No Python environment found. Browse to the OmniVoice folder, .venv or venv."}
+        return {"ok": False, "kind": "missing", "message": "No OmniVoice environment found. Click Download & install OmniVoice, or Use existing to select an installation."}
     errors = []
     repairable = False
     for python in candidates:
@@ -284,6 +284,19 @@ def ensure_uv(log) -> Path:
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(archive.read(member))
     return target
+
+
+def new_installation_folder(parent: Path) -> Path:
+    parent = parent.expanduser().resolve()
+    if not parent.is_dir():
+        raise ValueError("Choose a folder where OmniVoice should be installed.")
+    folder = parent / "OmniVoice"
+    number = 2
+    while folder.exists() and (not folder.is_dir() or any(folder.iterdir())):
+        folder = parent / f"OmniVoice-{number}"
+        number += 1
+    require_private_destination(folder)
+    return folder
 
 
 def install_local(folder: Path, options: dict, log) -> dict:

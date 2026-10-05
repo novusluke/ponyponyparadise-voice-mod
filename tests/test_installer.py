@@ -125,6 +125,36 @@ class InstallerServiceTests(unittest.TestCase):
             download.assert_not_called()
         self.assertEqual(self.python.read_bytes(), before)
 
+    def test_download_location_preserves_existing_files_and_installations(self):
+        downloads = self.root / "Downloads"
+        downloads.mkdir()
+        (downloads / "personal.txt").write_text("keep")
+        existing = downloads / "OmniVoice"
+        existing.mkdir()
+        (existing / "important.txt").write_text("keep existing engine")
+        target = service.new_installation_folder(downloads)
+        self.assertEqual(target, downloads / "OmniVoice-2")
+        self.assertEqual((downloads / "personal.txt").read_text(), "keep")
+        self.assertEqual((existing / "important.txt").read_text(), "keep existing engine")
+
+    def test_fresh_install_downloads_source_and_creates_managed_python(self):
+        import io
+        import zipfile
+        content = io.BytesIO()
+        with zipfile.ZipFile(content, "w") as archive:
+            archive.writestr("OmniVoice-source/pyproject.toml", "[project]\nname='omnivoice'\n")
+        target = service.new_installation_folder(self.root)
+        ready = {"ok": True, "python_path": str(target / ".venv/Scripts/python.exe"), "message": "OmniVoice ready"}
+        with patch.object(script, "download", return_value=content.getvalue()) as download, \
+             patch.object(service, "ensure_uv", return_value=self.root / "uv.exe"), \
+             patch.object(service, "run_logged") as run, \
+             patch.object(service, "inspect_environment", return_value=ready):
+            self.assertEqual(service.install_local(target, script.DEFAULTS["omnivoice"], lambda _: None), ready)
+        self.assertTrue((target / "pyproject.toml").is_file())
+        self.assertIn(script.DEFAULTS["omnivoice"]["revision"], download.call_args.args[0])
+        self.assertIn("--managed-python", run.call_args_list[0].args[0])
+        self.assertEqual(len(run.call_args_list), 3)
+
     def test_releases_new_current_and_unpublished(self):
         response = {"tag_name": "v1.2.0", "assets": [{"name": "PonyPonyParadiseVoiceSetup.exe",
                      "browser_download_url": "https://github.com/owner/repo/releases/download/v1.2.0/PonyPonyParadiseVoiceSetup.exe"}]}
@@ -237,6 +267,35 @@ class InstallerGuiTests(unittest.TestCase):
         discover.assert_called_once()
         self.assertTrue(self.window.environment["ok"])
         self.assertNotEqual(self.window.config["omnivoice"]["install_path"], "uninstalled-default-folder")
+
+    def test_download_button_installs_into_child_of_selected_location(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            parent = Path(temporary).resolve()
+            (parent / "existing-download.txt").write_text("keep")
+            target = parent / "OmniVoice"
+            ready = {"ok": True, "python_path": str(target / ".venv/Scripts/python.exe"), "message": "OmniVoice ready"}
+            def installed(folder, options, log):
+                folder.mkdir()
+                return ready
+            with patch.object(QFileDialog, "getExistingDirectory", return_value=str(parent)), \
+                 patch.object(service, "install_local", side_effect=installed) as install, \
+                 patch.object(service, "inspect_environment") as detect:
+                self.window.install_button.click()
+                self.finish()
+            self.assertEqual(install.call_args.args[0], target)
+            detect.assert_not_called()
+            self.assertEqual(self.window.omni_folder.text(), str(target))
+            self.assertEqual(self.window.config["omnivoice"]["python_path"], ready["python_path"])
+            self.assertTrue(self.window.environment["ok"])
+            self.assertTrue(self.window.log.isVisible())
+            self.assertEqual((parent / "existing-download.txt").read_text(), "keep")
+
+    def test_cancelling_download_location_starts_no_installation(self):
+        with patch.object(QFileDialog, "getExistingDirectory", return_value=""), \
+             patch.object(service, "install_local") as install:
+            self.window.install_button.click()
+        install.assert_not_called()
+        self.assertIsNone(self.window.job)
 
     def test_local_mode_needs_a_working_environment(self):
         self.window.game_folder.setText(str(Path(__file__).parent))
@@ -384,7 +443,7 @@ class InstallerGuiTests(unittest.TestCase):
             pack.write_bytes(b"existing game fixture")
             state = game / "data/voice_mod/install_state.json"
             state.parent.mkdir(parents=True)
-            state.write_text('{"mod_version":"1.3.0"}', encoding="utf-8")
+            state.write_text('{"mod_version":"0.9.0"}', encoding="utf-8")
             before = pack.read_bytes()
             with patch.object(service, "apply_voices") as apply:
                 self.window.game_folder.setText(str(game))

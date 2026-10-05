@@ -238,21 +238,22 @@ class Installer(QMainWindow):
         local.addWidget(label("OmniVoice folder · accepts the project, .venv or venv", "muted"))
         row = QHBoxLayout()
         self.omni_folder = QLineEdit("" if preview else self.config["omnivoice"].get("install_path", ""))
-        self.omni_folder.setPlaceholderText("Select your OmniVoice folder…")
+        self.omni_folder.setPlaceholderText("Use an existing installation or download OmniVoice below…")
         self.omni_folder.textEdited.connect(self.invalidate_environment)
         row.addWidget(self.omni_folder, 1)
-        self.browse_omni = button("Browse…", self.browse_environment)
+        self.browse_omni = button("Use existing…", self.browse_environment)
         row.addWidget(self.browse_omni)
         local.addLayout(row)
         row = QHBoxLayout()
         self.detect_button = button("Detect OmniVoice", self.detect)
-        self.install_button = button("Install OmniVoice…", self.install_new)
+        self.install_button = button("Download & install OmniVoice…", self.install_new)
         self.repair_button = button("Repair environment", self.repair_environment)
         self.repair_button.hide()
         row.addWidget(self.detect_button)
         row.addWidget(self.install_button)
         row.addWidget(self.repair_button)
         local.addLayout(row)
+        local.addWidget(label("Choose an install location. Setup creates an OmniVoice folder and downloads Python and the voice engine automatically.", "muted"))
         engine.addWidget(self.local_card)
         row = QHBoxLayout()
         row.addWidget(label("Voice language", "muted"))
@@ -394,7 +395,7 @@ class Installer(QMainWindow):
         self.repair_button.hide()
 
     def browse_environment(self):
-        folder = QFileDialog.getExistingDirectory(self, "Select OmniVoice folder or virtual environment", self.omni_folder.text())
+        folder = QFileDialog.getExistingDirectory(self, "Select an existing OmniVoice installation", self.omni_folder.text())
         if folder:
             self.omni_folder.setText(folder)
             self.invalidate_environment()
@@ -459,11 +460,18 @@ class Installer(QMainWindow):
         self.start_job(task, "Checking OmniVoice…", self.detected)
 
     def install_new(self):
-        folder = QFileDialog.getExistingDirectory(self, "Choose a new empty folder for OmniVoice", str(state_directory().parent))
-        if folder:
-            self.omni_folder.setText(folder)
+        parent = QFileDialog.getExistingDirectory(self, "Choose where to download and install OmniVoice", str(Path.home()))
+        if parent:
+            try:
+                folder = service.new_installation_folder(Path(parent))
+            except (OSError, ValueError) as error:
+                self.set_status(str(error), error=True)
+                return
+            self.omni_folder.setText(str(folder))
             self.invalidate_environment()
-            self.start_job(lambda log: service.install_local(Path(folder), copy.deepcopy(self.config["omnivoice"]), log),
+            self.log.show()
+            self.details.setText("Hide activity")
+            self.start_job(lambda log: service.install_local(folder, copy.deepcopy(self.config["omnivoice"]), log),
                            "Installing OmniVoice. Keep this window open…", self.detected)
 
     def repair_environment(self):
