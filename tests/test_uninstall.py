@@ -18,7 +18,7 @@ from voice_mod.uninstall import uninstall_game
 class UninstallTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
-        self.root = Path(self.temporary.name)
+        self.root = Path(self.temporary.name).resolve()
         self.private_state = patch.dict(os.environ, {"PONY_VOICE_STATE_DIR": str(self.root / "private")})
         self.private_state.start()
         self.source = self.root / "source"

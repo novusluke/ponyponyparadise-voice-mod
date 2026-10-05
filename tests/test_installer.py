@@ -19,7 +19,7 @@ from voice_mod.settings import preferences_path
 class InstallerServiceTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
-        self.root = Path(self.temporary.name)
+        self.root = Path(self.temporary.name).resolve()
         self.state = patch.dict(os.environ, {"PONY_VOICE_STATE_DIR": str(self.root / "private")})
         self.state.start()
         self.folder = self.root / "folder with spaces/venv"
