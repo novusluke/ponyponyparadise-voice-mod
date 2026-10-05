@@ -1,7 +1,9 @@
 """Installer regressions: broken venvs, native browsing and private state."""
 import copy
+import io
 import json
 import os
+import ssl
 import subprocess
 import tempfile
 import time
@@ -9,11 +11,68 @@ import unittest
 import urllib.error
 from pathlib import Path
 from types import SimpleNamespace
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 import script
 from voice_mod import installer_service as service
 from voice_mod.settings import preferences_path
+
+
+class DownloadTests(unittest.TestCase):
+    def test_verified_download_does_not_create_a_fallback_context(self):
+        with patch.object(script.urllib.request, "urlopen", return_value=io.BytesIO(b"download")) as open_url, \
+             patch.object(script.ssl, "_create_unverified_context") as fallback:
+            self.assertEqual(script.download("https://example.com/download"), b"download")
+        self.assertEqual(open_url.call_count, 1)
+        self.assertNotIn("context", open_url.call_args.kwargs)
+        fallback.assert_not_called()
+
+    def test_certificate_failure_retries_the_same_request_once(self):
+        error = urllib.error.URLError(ssl.SSLCertVerificationError(1, "CERTIFICATE_VERIFY_FAILED"))
+        log = Mock()
+        default_context = ssl._create_default_https_context
+        with patch.object(script.urllib.request, "urlopen", side_effect=[error, io.BytesIO(b"download")]) as open_url:
+            self.assertEqual(script.download("https://example.com/download", log=log), b"download")
+        first, retry = open_url.call_args_list
+        self.assertIs(first.args[0], retry.args[0])
+        self.assertEqual(first.kwargs, {"timeout": 60})
+        self.assertEqual(retry.kwargs["timeout"], 60)
+        self.assertEqual(retry.kwargs["context"].verify_mode, ssl.CERT_NONE)
+        self.assertFalse(retry.kwargs["context"].check_hostname)
+        self.assertIs(ssl._create_default_https_context, default_context)
+        log.assert_called_once()
+
+    def test_direct_and_wrapped_ssl_verification_errors_retry(self):
+        generic = ssl.SSLError(1, "certificate failure")
+        generic.reason = "CERTIFICATE_VERIFY_FAILED"
+        for error in (ssl.SSLCertVerificationError(1, "certificate failure"), urllib.error.URLError(generic)):
+            with self.subTest(error=error), \
+                 patch.object(script.urllib.request, "urlopen", side_effect=[error, io.BytesIO(b"download")]) as open_url:
+                self.assertEqual(script.download("https://example.com/download", log=Mock()), b"download")
+                self.assertEqual(open_url.call_count, 2)
+
+    def test_other_network_errors_are_not_retried(self):
+        errors = (urllib.error.URLError("CERTIFICATE_VERIFY_FAILED"), urllib.error.URLError("DNS lookup failed"),
+                  urllib.error.HTTPError("https://example.com", 404, "Not found", {}, None),
+                  ssl.SSLError(1, "TLS protocol failure"), TimeoutError("download timed out"))
+        for error in errors:
+            with self.subTest(error=error), \
+                 patch.object(script.urllib.request, "urlopen", side_effect=error) as open_url, \
+                 patch.object(script.ssl, "_create_unverified_context") as fallback:
+                with self.assertRaises(type(error)) as caught:
+                    script.download("https://example.com/download")
+                self.assertIs(caught.exception, error)
+                self.assertEqual(open_url.call_count, 1)
+                fallback.assert_not_called()
+
+    def test_failed_fallback_propagates_without_another_retry(self):
+        certificate = urllib.error.URLError(ssl.SSLCertVerificationError(1, "certificate failure"))
+        failure = urllib.error.URLError("connection refused")
+        with patch.object(script.urllib.request, "urlopen", side_effect=[certificate, failure]) as open_url:
+            with self.assertRaises(urllib.error.URLError) as caught:
+                script.download("https://example.com/download", log=Mock())
+        self.assertIs(caught.exception, failure)
+        self.assertEqual(open_url.call_count, 2)
 
 
 class InstallerServiceTests(unittest.TestCase):
@@ -154,6 +213,14 @@ class InstallerServiceTests(unittest.TestCase):
         self.assertIn(script.DEFAULTS["omnivoice"]["revision"], download.call_args.args[0])
         self.assertIn("--managed-python", run.call_args_list[0].args[0])
         self.assertEqual(len(run.call_args_list), 3)
+
+    def test_environment_manager_checksum_is_required_after_ssl_fallback(self):
+        error = urllib.error.URLError(ssl.SSLCertVerificationError(1, "certificate failure"))
+        with patch.object(script.urllib.request, "urlopen", side_effect=[error, io.BytesIO(b"invalid archive")]) as open_url:
+            with self.assertRaisesRegex(ValueError, "checksum"):
+                service.ensure_uv(Mock())
+        self.assertEqual(open_url.call_count, 2)
+        self.assertFalse((self.root / "private/tools/uv.exe").exists())
 
     def test_releases_new_current_and_unpublished(self):
         response = {"tag_name": "v1.2.0", "assets": [{"name": "PonyPonyParadiseVoiceSetup.exe",

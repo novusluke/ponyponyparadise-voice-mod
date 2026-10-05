@@ -30,7 +30,7 @@ print(json.dumps({'python':sys.version.split()[0], 'omnivoice':bool(importlib.ut
 
 def release_metadata() -> dict:
     path = backend.ROOT / "release.json"
-    return json.loads(path.read_text()) if path.exists() else {"version": "1.0.0", "github_repository": "", "github_branch": "main"}
+    return json.loads(path.read_text()) if path.exists() else {"version": "1.0.1", "github_repository": "", "github_branch": "main"}
 
 
 def patch_fingerprint() -> str:
@@ -274,7 +274,7 @@ def ensure_uv(log) -> Path:
     if target.is_file():
         return target
     log("Downloading the private Python environment manager…")
-    content = backend.download(f"https://github.com/astral-sh/uv/releases/download/{UV_VERSION}/uv-x86_64-pc-windows-msvc.zip")
+    content = backend.download(f"https://github.com/astral-sh/uv/releases/download/{UV_VERSION}/uv-x86_64-pc-windows-msvc.zip", log=log)
     if hashlib.sha256(content).hexdigest() != UV_SHA256:
         raise ValueError("The environment-manager download failed its checksum check.")
     with zipfile.ZipFile(io.BytesIO(content)) as archive:
@@ -309,7 +309,7 @@ def install_local(folder: Path, options: dict, log) -> dict:
     if not re.fullmatch(r"[a-f0-9]{40}", revision):
         raise ValueError("Invalid pinned OmniVoice revision.")
     log("Downloading OmniVoice source…")
-    content = backend.download(f"https://github.com/k2-fsa/OmniVoice/archive/{revision}.zip")
+    content = backend.download(f"https://github.com/k2-fsa/OmniVoice/archive/{revision}.zip", log=log)
     with zipfile.ZipFile(io.BytesIO(content)) as archive:
         for member in archive.infolist():
             parts = Path(member.filename).parts[1:]

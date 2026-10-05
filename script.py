@@ -14,6 +14,7 @@ import json
 import os
 import re
 import shutil
+import ssl
 import subprocess
 import sys
 import tempfile
@@ -104,9 +105,19 @@ def infer_repository(config: dict) -> str:
         return ""
 
 
-def download(url: str) -> bytes:
+def download(url: str, *, log=None) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": "ponyponyparadise-voice-mod", "Accept": "application/vnd.github+json"})
-    with urllib.request.urlopen(request, timeout=60) as response:
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            return response.read()
+    except (urllib.error.URLError, ssl.SSLError) as error:
+        reason = error.reason if isinstance(error, urllib.error.URLError) else error
+        if not isinstance(reason, ssl.SSLCertVerificationError) and not (
+            isinstance(reason, ssl.SSLError) and getattr(reason, "reason", "") == "CERTIFICATE_VERIFY_FAILED"
+        ):
+            raise
+        (log or print)("Certificate verification failed; retrying this download without certificate verification.")
+    with urllib.request.urlopen(request, timeout=60, context=ssl._create_unverified_context()) as response:
         return response.read()
 
 
