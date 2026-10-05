@@ -1,0 +1,81 @@
+{
+  "character_tag": "buttonmash",
+  "default_location": "hay_burger",
+  "schedules": [
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "time_slots": ["morning"],
+      "location_id": "schoolhouse",
+      "activity_hint": "Attending school (though mostly daydreaming about video games).",
+      "priority": 0
+    },
+    {
+      "days": ["Monday", "Wednesday"],
+      "time_slots": ["afternoon"],
+      "choices": [
+        { "location_id": "hay_burger", "activity_hint": "Playing arcade games and having milkshakes.", "weight": 60 },
+        { "location_id": "golden_oak_library", "activity_hint": "Reading comic books and game magazines.", "weight": 25 },
+        { "location_id": "sugarcube_corner", "activity_hint": "Getting gaming fuel (sugary snacks).", "weight": 15 }
+      ],
+      "priority": 0
+    },
+    {
+      "days": ["Tuesday", "Thursday"],
+      "time_slots": ["afternoon"],
+      "choices": [
+        { "location_id": "hay_burger", "activity_hint": "Competing for high scores on the arcade machines.", "weight": 50 },
+        { "location_id": "cmc_clubhouse", "activity_hint": "Hanging out with other colts and fillies.", "weight": 30 },
+        { "location_id": "townhall", "activity_hint": "Watching if any gaming events are being set up.", "weight": 20 }
+      ],
+      "priority": 0
+    },
+    {
+      "days": ["Friday"],
+      "time_slots": ["afternoon"],
+      "choices": [
+        { "location_id": "hay_burger", "activity_hint": "Friday gaming marathon begins!", "weight": 70 },
+        { "location_id": "sugarcube_corner", "activity_hint": "Stocking up on snacks for weekend gaming.", "weight": 30 }
+      ],
+      "priority": 0
+    },
+    {
+      "days": ["Saturday"],
+      "time_slots": ["morning"],
+      "choices": [
+        { "location_id": "hay_burger", "activity_hint": "Early bird gets the arcade machine!", "weight": 80 },
+        { "location_id": "golden_oak_library", "activity_hint": "Borrowing strategy guides and game lore books.", "weight": 20 }
+      ],
+      "priority": 0
+    },
+    {
+      "days": ["Saturday"],
+      "time_slots": ["afternoon"],
+      "choices": [
+        { "location_id": "hay_burger", "activity_hint": "Intense gaming session with friends.", "weight": 60 },
+        { "location_id": "cmc_clubhouse", "activity_hint": "Teaching the CMC about video games.", "weight": 20 },
+        { "location_id": "sugarcube_corner", "activity_hint": "Sugar rush break between gaming sessions.", "weight": 20 }
+      ],
+      "priority": 0
+    },
+    {
+      "days": ["Sunday"],
+      "time_slots": ["morning"],
+      "choices": [
+        { "location_id": "sweet_apple_acres", "activity_hint": "Reluctantly helping with chores (mom's orders).", "weight": 40 },
+        { "location_id": "hay_burger", "activity_hint": "Sneaking in some morning gaming.", "weight": 40 },
+        { "location_id": "townhall", "activity_hint": "Attending any gaming tournaments or events.", "weight": 20 }
+      ],
+      "priority": 0
+    },
+    {
+      "days": ["Sunday"],
+      "time_slots": ["afternoon"],
+      "choices": [
+        { "location_id": "hay_burger", "activity_hint": "Last chance for weekend gaming!", "weight": 50 },
+        { "location_id": "golden_oak_library", "activity_hint": "Doing homework (at the last minute).", "weight": 30 },
+        { "location_id": "carousel_boutique", "activity_hint": "Getting dragged along by mom for new school clothes.", "weight": 20 }
+      ],
+      "priority": 0
+    }
+  ]
+}

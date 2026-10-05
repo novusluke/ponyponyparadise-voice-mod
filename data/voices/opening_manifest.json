@@ -1,0 +1,2360 @@
+{
+  "schema_version": 1,
+  "num_step": 64,
+  "speed": 1.0,
+  "model": "k2-fsa/OmniVoice",
+  "omnivoice_version": "0.2.1",
+  "quality_verification": "Each clip records the actual model.generate num_step argument and MP3 checksum.",
+  "lines": [
+    {
+      "id": "d7135983d1abdd5c766d2e9df477a674b235b89d8ad129d8bf23a5f7fd41a8b4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Darkness.",
+      "file": "en/d7135983d1abdd5c766d2e9df477a674b235b89d8ad129d8bf23a5f7fd41a8b4.mp3",
+      "sha256": "34fa52ac665ab3254acbdf351c7c877ef5e7706147f3d717bc50652709a552d5",
+      "num_step": 64,
+      "generation_text_sha256": "07960f189dc1bab683f012d1c48b1f243066e847dee625a4c7a432baa06dcaad",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "22d92de2cb0b63af9871c71457537afa359a3b533a42b695bec63bc31771afba",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Weight.",
+      "file": "en/22d92de2cb0b63af9871c71457537afa359a3b533a42b695bec63bc31771afba.mp3",
+      "sha256": "ae6e7d5e9f79c34058a158160864150312777e0e1e8269d442c881547d31cee2",
+      "num_step": 64,
+      "generation_text_sha256": "c41c30622b34aee13fc8096a8420904d8c3b75941f44401051ed1c62500dae8f",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "6c5b6a9be16847fd7ae5e93599839dd33400bcd447a60e221487ab87b2712c01",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Cold earth presses into my back, damp and crawling with tiny things.",
+      "file": "en/6c5b6a9be16847fd7ae5e93599839dd33400bcd447a60e221487ab87b2712c01.mp3",
+      "sha256": "193f04c8b9d8af333c7145fc7b29ef86fa2027f4d550377bebc1d75245e0feb5",
+      "num_step": 64,
+      "generation_text_sha256": "817f63f03c1f4909daf7a4593edf63a32791ec556d4552a9c9720ac4db16b3f2",
+      "generation_attempts": 2,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 2,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "708bc3628711298f580f78b20ec155ecb6ddf4a959c465180ec11a9643283739",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The scent of moss and rot fills my lungs.",
+      "file": "en/708bc3628711298f580f78b20ec155ecb6ddf4a959c465180ec11a9643283739.mp3",
+      "sha256": "a720ec8732c94a08d4cac3fb45312e15bdae1a5cc352b9ccbffc51c9ffb819ca",
+      "num_step": 64,
+      "generation_text_sha256": "486397a3a34abeb32e201c9668ac0cbd3216155d87e971aef50cca0b3d8ba009",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "1d148fd2b93ab3ac475235a2eecd3d53ccfc8f0cd469e0e43bb13c21a29116b1",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Something's wrong.",
+      "file": "en/1d148fd2b93ab3ac475235a2eecd3d53ccfc8f0cd469e0e43bb13c21a29116b1.mp3",
+      "sha256": "2750ce8a280247d26a26446f8ca9946a744b5a37bbef5725e9381b9b12476ef0",
+      "num_step": 64,
+      "generation_text_sha256": "80bdb01f1539bf8354c992d23c0cc2873a873c40d921a247b39662b5bbedb5c7",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "e423966e2dda1288f01c7996e85d4cb39b016073d705c10f4412b2e6d0dc9f76",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My mind claws upward from sleep, thick and sluggish, like wading through wet sand.",
+      "file": "en/e423966e2dda1288f01c7996e85d4cb39b016073d705c10f4412b2e6d0dc9f76.mp3",
+      "sha256": "28d0619fd35a0a32d1339bfb4b2dccd59e457b3dfd2eadeb431e1b055ff6b90a",
+      "num_step": 64,
+      "generation_text_sha256": "4f8ebc3b3ca38b615a95880f4f183a3864aef13651e558d76c16ffe3fef6add2",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "a2fc2563efc9f157c66104bc40c625a73330ee312eeff1ba88aa4cd016db0e53",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Pain flares behind my eyes, sharp and disorienting.",
+      "file": "en/a2fc2563efc9f157c66104bc40c625a73330ee312eeff1ba88aa4cd016db0e53.mp3",
+      "sha256": "b6c2815dcdaa6bb4fd4c64b77cacaaadc16794b976ef723e6f6d56eb6fa33292",
+      "num_step": 64,
+      "generation_text_sha256": "7014b3e20f80b912dec238059da47051f8248dcf1ab51cb9038bb7b9b83879b4",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "242a9b68adc867f58513bced5d10a1382ea41dcf67010219417067058a112e9e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The world tilts sideways.",
+      "file": "en/242a9b68adc867f58513bced5d10a1382ea41dcf67010219417067058a112e9e.mp3",
+      "sha256": "17d244520405e433aee6528a10396ef1c9461b277e6bcb794a07cc390e615128",
+      "num_step": 64,
+      "generation_text_sha256": "3f9e653b2c6d13ba4cec5e34543d79ac1b3385e68fe3c51a0c93a4fc9d90d946",
+      "generation_attempts": 3,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 3,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "a2607f33f27add606ad681b1fa1a7de49a0e96a845e1821950963a4dad73c5be",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I try to move. My limbs feel distant, like they belong to someone else.",
+      "file": "en/a2607f33f27add606ad681b1fa1a7de49a0e96a845e1821950963a4dad73c5be.mp3",
+      "sha256": "a8ccc2300ac8e4f42179a9ee1a8e99ef7e81d3865f9a536ba9a9d5a292681dee",
+      "num_step": 64,
+      "generation_text_sha256": "6f3059503b462dd7ec030b7c63ca6ed9c996ea62fc4ac3e194de60905c716db4",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "92f87433848b142a81b0865f4db502b465397f6eac15839dc5872c3e72dc28e1",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Where…?",
+      "file": "en/92f87433848b142a81b0865f4db502b465397f6eac15839dc5872c3e72dc28e1.mp3",
+      "sha256": "88f118f0053b156e7ac429dd5a833971d7659cb663dddd764c7686176548df9b",
+      "num_step": 64,
+      "generation_text_sha256": "e651ef3ef53a90bdfa961566d43fadcef8a0ef313c74e223ed8112fc45cd7e30",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "cb239ce921cc11cc59978eb8670a9ed63892cf1feda2578cb13001677e763c27",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I manage to roll onto my side. Wet leaves cling to my skin.",
+      "file": "en/cb239ce921cc11cc59978eb8670a9ed63892cf1feda2578cb13001677e763c27.mp3",
+      "sha256": "498cad1364284a420b871a9c9c5257fc3deb2eef1ba009589300239d58c7b155",
+      "num_step": 64,
+      "generation_text_sha256": "18cbc4589f957f7d49b3d4f774fa7a4045ab248887dc76a96e63034f3d3fb7f9",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 0.9231,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "f8a3e0f8862df95bf8a29d5864181bc27d153c202f7e377d6a4c3785bb15b7ab",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Each breath scrapes my throat — shallow, expensive.",
+      "file": "en/f8a3e0f8862df95bf8a29d5864181bc27d153c202f7e377d6a4c3785bb15b7ab.mp3",
+      "sha256": "9d70665596197093ad5c0d77a1ebe632f3c0eea100ab9e3a5aa7103ce36de81f",
+      "num_step": 64,
+      "generation_text_sha256": "ee38dab8e37e6c51a5029fb46b283fa8c5714c65e56bb3e9eed7809dd7778dae",
+      "generation_attempts": 3,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 3,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "d921389b80aff752b3257db5625bd84785f39bf75a1ee78531708675f821f48f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My heart pounds, unsure if from fear or effort.",
+      "file": "en/d921389b80aff752b3257db5625bd84785f39bf75a1ee78531708675f821f48f.mp3",
+      "sha256": "6a96f6de012e5df35e0211ab676296353826d1df04b21ec488f09e51d3f67a5e",
+      "num_step": 64,
+      "generation_text_sha256": "25ce17bba735da0fac3a288b2ca808620645ef79099e69a6b726bbdc88e5960e",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 0.8889,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "2ea582aaa03612d5bd57d0f3be6f235c6523156adf9e2a9b1645d642dc9f761a",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Shapes flicker at the edges of my vision — light, movement, forest.",
+      "file": "en/2ea582aaa03612d5bd57d0f3be6f235c6523156adf9e2a9b1645d642dc9f761a.mp3",
+      "sha256": "dd47c23facc6878d2d587bb9f84016df90cd42bb5279059fccef048c9aa73429",
+      "num_step": 64,
+      "generation_text_sha256": "09fc3b4121bcfabfa14afe438d30377244f8488a11cfc78c363cbacd6dda36db",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "829beb9aacf8bc7784e8defe2386e8ac88e2c88d280a5055f4e11e6487000f6d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I lift an arm. Or... I try to.",
+      "file": "en/829beb9aacf8bc7784e8defe2386e8ac88e2c88d280a5055f4e11e6487000f6d.mp3",
+      "sha256": "9c9f74a1b49ad1fdf48583f02ff7e425a9a1fddb9b45b66fd2eae6310e4af56c",
+      "num_step": 64,
+      "generation_text_sha256": "80ccf1f5f8a11c66c404e504c97addeeb9c8d95ca05d0b52586ea9ec125ae5ef",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "91aee54fb5db83b645160af7cf23643fef0683b7d8ad2ff0cfdf96895a54601f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I need to know.",
+      "file": "en/91aee54fb5db83b645160af7cf23643fef0683b7d8ad2ff0cfdf96895a54601f.mp3",
+      "sha256": "322ff986b0c591bef37944b9346ec9e13725419c72277571bc4c96d98482d904",
+      "num_step": 64,
+      "generation_text_sha256": "3b600da677c86d362deb89a9856d7debcf2e6637046cfa077e46524558970309",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "8b1128a2352bb3da45bddb8a03083a7310fbc3aacd33b5b4f07f7e5ac7ebf8fa",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "What am I?",
+      "file": "en/8b1128a2352bb3da45bddb8a03083a7310fbc3aacd33b5b4f07f7e5ac7ebf8fa.mp3",
+      "sha256": "75bc23d4b87590e49fb706cf1eafe4dd3baa215ced7fae9e4b6fa6d459b75aed",
+      "num_step": 64,
+      "generation_text_sha256": "9ba6720f76d82132614c6b4837fa3a05f24b9cbf973aeb46199eda9302e73f08",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "50330c1dafce92d465e143b370473456144e0828205a82255b2ecbef532ea6d5",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Blurred fingers come into view — five of them, trembling and smudged with dirt.",
+      "file": "en/50330c1dafce92d465e143b370473456144e0828205a82255b2ecbef532ea6d5.mp3",
+      "sha256": "79278a9305f69bd9a48e5b5240fcd4f8614c418f2fff363bb5a682ddc57201fb",
+      "num_step": 64,
+      "generation_text_sha256": "620a1a33000ef3816f248a426ed2307122cd97988199dd18b5a5b693e882d140",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "2f13161368f859bbd824374229723791092a1c03fc93c92486f5406ff84f05da",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I flex them. The motion is clumsy, but familiar.",
+      "file": "en/2f13161368f859bbd824374229723791092a1c03fc93c92486f5406ff84f05da.mp3",
+      "sha256": "bfc3feaad10fcda0b2d7a3f22a87b37a5a415f81bfd959314e1c92638697e7c0",
+      "num_step": 64,
+      "generation_text_sha256": "7eed58066ecaa6691b5727c0a465703fd2d02ab916cf44c2e23768dfbf79768a",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "503daa9455d82489c8dc5c0466de19aae9b4c9093dbbaf4579ec4ae428e8cab3",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "This feels right. Even if nothing else does.",
+      "file": "en/503daa9455d82489c8dc5c0466de19aae9b4c9093dbbaf4579ec4ae428e8cab3.mp3",
+      "sha256": "b678e0e585c5157129ed958514c3112f90a1ce609337fb332d649fe31de0dc1f",
+      "num_step": 64,
+      "generation_text_sha256": "746b257f8d4b5cecf0add7baba32f4d7c26c108921a6b6e836b6404b99b494a2",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "027ce1128915f51dd044b40169f61c3e6ff652dac868fe62b73496bc109c1794",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Broad, flat shapes come into view — hooves, chipped and heavy with mud.",
+      "file": "en/027ce1128915f51dd044b40169f61c3e6ff652dac868fe62b73496bc109c1794.mp3",
+      "sha256": "ea9fdd1c8d634bf3ec340501fa4fd18657a0d44d98169e0e70f077f6f0b23811",
+      "num_step": 64,
+      "generation_text_sha256": "1536df7cc1319aeb77f9acf321a334767325a2fab262fb0dfd248a25661f3160",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "835f1412cb0bdba73600dbd5e5a618fd2c7c8bd7f4f22004ae34d671f9e5d71f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I lift one. It moves... wrong. Like a tool I don't remember learning to use.",
+      "file": "en/835f1412cb0bdba73600dbd5e5a618fd2c7c8bd7f4f22004ae34d671f9e5d71f.mp3",
+      "sha256": "922eca9c5a0bd42c1ae6bf891909a26d86001715387184fb23d76aa22b356d9f",
+      "num_step": 64,
+      "generation_text_sha256": "e9dc04f5b6e0b8fbf7e921351d069df44491d7c6fdb221c888a70c3aa96b6c18",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "27a5e3c340289f4fc40236829452196de8fd717fea2d153664a20703a1680761",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A chill coils in my stomach. This can't be me.",
+      "file": "en/27a5e3c340289f4fc40236829452196de8fd717fea2d153664a20703a1680761.mp3",
+      "sha256": "b05de81a7fa79e026d225e3fa01ab9ea43a970109c788443ace163043883e33f",
+      "num_step": 64,
+      "generation_text_sha256": "5a87d9bdcb10a4e47db49916696da287ecdb164521b6710d34c18aa4b79cfa7a",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "bd7a59ba387e83d377a9ce2563f2e9ead7fb541e6472dba978abed86c6a39bcf",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "...Can it?",
+      "file": "en/bd7a59ba387e83d377a9ce2563f2e9ead7fb541e6472dba978abed86c6a39bcf.mp3",
+      "sha256": "476382d580ff3a092bdc53804ad59c37018fd673294c2efb4694496761f9cdd0",
+      "num_step": 64,
+      "generation_text_sha256": "f43a130b625508c5e53bdab0cac28045001a9d367aafa4a037798893f8169c35",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "830525c772a2adfac751f3cd9a2d725120086da730280bf6c5971ccc6046f326",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A sudden noise jolts me alert.",
+      "file": "en/830525c772a2adfac751f3cd9a2d725120086da730280bf6c5971ccc6046f326.mp3",
+      "sha256": "b42c25a7d928eebd52cc3beae277ba90df1c8e25bd7a3f0c3d6d6202b00fc951",
+      "num_step": 64,
+      "generation_text_sha256": "44341cb9f36c5307dd8e461593db62306e41b5cc0c5c5716fce5b7f8119dc1e6",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "0be6cc7912e1d2df9392af5b742f5ab7b78baad3a2c672a88dac06122b9efb22",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Leaves rustle nearby, something is moving out there.",
+      "file": "en/0be6cc7912e1d2df9392af5b742f5ab7b78baad3a2c672a88dac06122b9efb22.mp3",
+      "sha256": "4bb5581890fbc474d441614d374e91cec601fb78551308c1560982196b405493",
+      "num_step": 64,
+      "generation_text_sha256": "7a6c823521c13a52cd58eb8c9e3806e7e01c6b2bb274e695fbfc567ee7b68088",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "9fadd77e9e9288d43fcafb6714eb508976281f18fea4fd4165bf2695f6b5dbc5",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Hello? Is anypony— Oh!\"",
+      "file": "en/9fadd77e9e9288d43fcafb6714eb508976281f18fea4fd4165bf2695f6b5dbc5.mp3",
+      "sha256": "c24fbb1bda5dabe84398a96b1d60009c705045ef973fe2dd47728162325f3545",
+      "num_step": 64,
+      "generation_text_sha256": "d564ec72193f3a701cc5a62abc66ef9b070958e1215459c9a6b9c0bf7e62d3b6"
+    },
+    {
+      "id": "dc6132c13734f51753561d82b3d037a8de17f5a2d1119068eb383f3115e06e8e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A purple figure steps from the trees, the edges of my vision still swimming.",
+      "file": "en/dc6132c13734f51753561d82b3d037a8de17f5a2d1119068eb383f3115e06e8e.mp3",
+      "sha256": "7fd7b32b809d4731ee4838e398610b83e7eb9cdcd650cfcabdb19d519a2e602a",
+      "num_step": 64,
+      "generation_text_sha256": "ea73ba363e50db621c1064864bdc3184ffacaed3bc9513cb8a46af707b4157f4",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "7b6bb31a43ba21837e6f102f3759cf3dde725f1d7936824227f0f78a335c2aeb",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"What in Equestria...? Are you hurt? Please, stay still.\"",
+      "file": "en/7b6bb31a43ba21837e6f102f3759cf3dde725f1d7936824227f0f78a335c2aeb.mp3",
+      "sha256": "32f0882cb16f3a30161dd9a41045b46cdded47a9c69daab441b5831230ad2bed",
+      "num_step": 64,
+      "generation_text_sha256": "8171e3cc6cb6fa6fc6dc202d5b59f934da9597784e6ed65ef1b420180894c8be"
+    },
+    {
+      "id": "39e0ed11c628ea9f43eacd7789a146fdb3b130891625fb086f462282dab9ff7d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Four legs, a spiralled horn. My mind recoils. Impossible.",
+      "file": "en/39e0ed11c628ea9f43eacd7789a146fdb3b130891625fb086f462282dab9ff7d.mp3",
+      "sha256": "c4e98244799541f2b56aecd0fd7360a212ce8989ece208ddc2862f42d9f76f91",
+      "num_step": 64,
+      "generation_text_sha256": "6586bd61f54d5aad0460acbf7463dd24f10ad0ce3ab5e1e943e0defb8e94c13e",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 0.8889,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "83dc05cdbe41e0dbb30a85b093e4db6158dc2ad544217ce1cdab1ae9a744ce0f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"A… talking… horse?\"",
+      "file": "en/83dc05cdbe41e0dbb30a85b093e4db6158dc2ad544217ce1cdab1ae9a744ce0f.mp3",
+      "sha256": "c0b32ce765dccde1171498ed4d3d9852e9d20006fc1d2d68fc7cebd330c45420",
+      "num_step": 64,
+      "generation_text_sha256": "1aa2819c7eb45469325b02dd5d2ef35f080b40cea318d515dfc45973dd4e5301",
+      "generation_attempts": 2,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 2,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "b905998bac40da9e709226a749ca671a0c1f9f122a107dc64239e3959f03303e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Hearing my voice jars something loose. The sound might give me a clue...",
+      "file": "en/b905998bac40da9e709226a749ca671a0c1f9f122a107dc64239e3959f03303e.mp3",
+      "sha256": "24788e7287fcef948120645f2d42002b7a814516181412b803da2df64cf154ec",
+      "num_step": 64,
+      "generation_text_sha256": "07bfe06a83162ea3f1399017cdfa6ec30a900198e4bbb86b2ae212562e0028f1",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "12de5e6c4899c3bf103b400a2cca5b6f4106edd36ccbfb62022c2b2c2c947a96",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Yes, that's definitely a male's voice.",
+      "file": "en/12de5e6c4899c3bf103b400a2cca5b6f4106edd36ccbfb62022c2b2c2c947a96.mp3",
+      "sha256": "66eeeb9cbcf02e31151d96bd40d18a06a79f79dbd9e78450e9f7dee17f01ce2e",
+      "num_step": 64,
+      "generation_text_sha256": "699b874a8778e6229e929d0bf7121640c51c9b84256c5f5bfe972dd5cfd358a3",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "902c2a5f98ae4433de870b973bcf5b0c2a56de64ce10acd0149914089b87871d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "No doubt about it, that's a female's voice.",
+      "file": "en/902c2a5f98ae4433de870b973bcf5b0c2a56de64ce10acd0149914089b87871d.mp3",
+      "sha256": "898248f2d99e871162c8e465ef60899f03b3167cae3f5ff445a9f64835ab9bed",
+      "num_step": 64,
+      "generation_text_sha256": "cb3e7872b4198d387083a987bf71b8d4048ecadd3674b0e8a16f1277b9aca9ba",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "ec70a55236b3dd675e7ad468b58edf54aa3aa759b9068374f6fa2c1c8552f4f8",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Horse? I'm a pony. A unicorn, technically.\"",
+      "file": "en/ec70a55236b3dd675e7ad468b58edf54aa3aa759b9068374f6fa2c1c8552f4f8.mp3",
+      "sha256": "1ef3d0d60dac0417da51577903b55b57d65f1fe2736204370feb69e5499dd4b9",
+      "num_step": 64,
+      "generation_text_sha256": "b1bbf0c2952fadc2c97904745a724db37290a9cfb4c833eaa503e2fe67e920fb"
+    },
+    {
+      "id": "d6d90dc967f82a8918abfe5d8a861b96c0a2868880d6a6a038cd1018f1567ebd",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I'm Twilight Sparkle. And I'm... guessing you're not from around here?\"",
+      "file": "en/d6d90dc967f82a8918abfe5d8a861b96c0a2868880d6a6a038cd1018f1567ebd.mp3",
+      "sha256": "236646057f6e841634c6ce7b2247cd941bc1077f652e383f1a760c5c0b036b15",
+      "num_step": 64,
+      "generation_text_sha256": "a3ce81d1bfd0f6a250e6978b1e0ba156074613b2bc4cfb29ca01757f11893cbe"
+    },
+    {
+      "id": "6458bd4bad57ca661479c3b0cddd034bd330049751e62666cd51dbfd0be5c4b6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She tilts her head — curious, but cautious.",
+      "file": "en/6458bd4bad57ca661479c3b0cddd034bd330049751e62666cd51dbfd0be5c4b6.mp3",
+      "sha256": "818cfc2543ebe1c03473530ef084e5fea1ef3b5165ac0743db72939a3340dce6",
+      "num_step": 64,
+      "generation_text_sha256": "606ab32454b343d8e576ecfe2ed141941c2df70e39b084c9bcc8e2fa23043748",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "62d13b1bb49edc6e9848acf139c366224a5c88f80399b29f7f1ab1b8f2de3eb1",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I tracked a surge of wild magic here, but I never expected to find *you*.\"",
+      "file": "en/62d13b1bb49edc6e9848acf139c366224a5c88f80399b29f7f1ab1b8f2de3eb1.mp3",
+      "sha256": "c7d7862365ea2174baef151f38675926da583ced29937c93e2c07e36f15f4993",
+      "num_step": 64,
+      "generation_text_sha256": "0368988cf7a500d3917a4308e3b6b2cb4fd4505aaebbdf81255cf7b994681cf8"
+    },
+    {
+      "id": "1b20bba390d3ffbfea60bd2d0285e33934d9cc432279c4f75a281dee0af669b7",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Hello? Is somepony there?\"",
+      "file": "en/1b20bba390d3ffbfea60bd2d0285e33934d9cc432279c4f75a281dee0af669b7.mp3",
+      "sha256": "c6e4c3f6fad7f4696daffd7991658c23756191dc7d8dac2dffd5854eb50341d4",
+      "num_step": 64,
+      "generation_text_sha256": "32a413203e23833f0a4e5b373a0bb189372f210c002283314d970b5b23f44ba9"
+    },
+    {
+      "id": "4f2cf75fd780b4dcbfe5a1adbface3daa10cf1228560facbdcdbc34200117ee7",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Oh my goodness! Are you hurt?\"",
+      "file": "en/4f2cf75fd780b4dcbfe5a1adbface3daa10cf1228560facbdcdbc34200117ee7.mp3",
+      "sha256": "ad63a37db1adc97296b926a561f6b1b82da97a76848d8800797cbb527b20bddd",
+      "num_step": 64,
+      "generation_text_sha256": "a303a40eec08a249d66dbe21ef3e7380ef77aceb6a8b103395f8ae1d46bce639"
+    },
+    {
+      "id": "77d99b33d84c1f4180935ce951554acfb913e08b43172ea6b0d43376d77f6d8f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I sensed a burst of wild magic nearby. Did something happen?\"",
+      "file": "en/77d99b33d84c1f4180935ce951554acfb913e08b43172ea6b0d43376d77f6d8f.mp3",
+      "sha256": "3df42685e59333a6dd5e7e21c9ec6c0125c98387876f7650d80aae1d70d57f2d",
+      "num_step": 64,
+      "generation_text_sha256": "a4321d4c1071a8b79a5d2b922329c14847b36a17a58488ac7c1160ce49ea76e6"
+    },
+    {
+      "id": "65fa3a7e5d341a9485d67783c38e7d582b4f400f4335ba2f01a1765f29a534c2",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I blink hard. Four legs, a horn—this can't be real.",
+      "file": "en/65fa3a7e5d341a9485d67783c38e7d582b4f400f4335ba2f01a1765f29a534c2.mp3",
+      "sha256": "42119ef271d2a1f75eae6797aeda8ce53797d656c34d3a59353b57e2cecb5bcc",
+      "num_step": 64,
+      "generation_text_sha256": "5ebf267c47ee1df0f94acda9d5d5b44466187133705c43ed85b944a6f15a6451",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "1ea056ff4843351020a8a80cf098bd7446a89428bfde3e67c78e409b3215ded5",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"A... talking... horse?\"",
+      "file": "en/1ea056ff4843351020a8a80cf098bd7446a89428bfde3e67c78e409b3215ded5.mp3",
+      "sha256": "5dbdbf54306a62b23054fd238df519d606d9768a56ce75df7195dad929e5a6a1",
+      "num_step": 64,
+      "generation_text_sha256": "b687183f31fb0a7db4c06a8ae3abc6d473479cc3222149a69958b969c1becacb",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "100391c6f3b98f1b35a5c170478063b3f158d292302a92e1eb04f6d4cb11efb4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Is this normal? It doesn't feel normal.",
+      "file": "en/100391c6f3b98f1b35a5c170478063b3f158d292302a92e1eb04f6d4cb11efb4.mp3",
+      "sha256": "6e90d29df3e01395fafcbba71352f412c37a4218eea469c4e45814cfddbf4844",
+      "num_step": 64,
+      "generation_text_sha256": "9a9da79e7bbea5c8975fdf4dfad7db9e678bf13a4707c1906ac0365dfb2f2175",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "86ede4a4c0508c1347ac89b5658354baec540123acebc359bc488a038e8a3a7b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Horse? We're ponies—both of us.\"",
+      "file": "en/86ede4a4c0508c1347ac89b5658354baec540123acebc359bc488a038e8a3a7b.mp3",
+      "sha256": "8e713f8b8ff4162b9e0d6ea5a16297b29d84481f05d1628833e181509d7b2ee8",
+      "num_step": 64,
+      "generation_text_sha256": "9d508d76eec6fb52789f01f7d5abbe463000d0840cbd8a6b35de2eaa9160be87"
+    },
+    {
+      "id": "8974943601b022bdec1b132c5f6df51c85e3079d9943cfab695d0389ec726905",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I'm Twilight Sparkle. You look a little... disoriented.\"",
+      "file": "en/8974943601b022bdec1b132c5f6df51c85e3079d9943cfab695d0389ec726905.mp3",
+      "sha256": "76b7e86b34fc012d7b17fa61d32294f8675b9f81650dfd3d202404b6ee1aec88",
+      "num_step": 64,
+      "generation_text_sha256": "5047acaeb6c6206cc9cb9583fe9a4ff8a667d4bb418826ffcfd2551a7d9e6e1a"
+    },
+    {
+      "id": "67195e6532af0c2ee7ac275e88cad34de862c9ae4657dde23c893475ba731337",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She studies me, frowning at my blank stare.",
+      "file": "en/67195e6532af0c2ee7ac275e88cad34de862c9ae4657dde23c893475ba731337.mp3",
+      "sha256": "815f6c464976b96cf2aab75cfb9c17f86c51fe0d2b8f1cb27d2fb7b88d87bee6",
+      "num_step": 64,
+      "generation_text_sha256": "1abcc3fbf0cd0be4b19f37cb7d026774258fd2598cc38adfac64257a9c0c3c48",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "1aae43a18bf1ea5db27c8cbf97273a3b546b44ab0700935370993d208c0fca1a",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You may have hit your head... or been caught in a magical backlash. Maybe both.\"",
+      "file": "en/1aae43a18bf1ea5db27c8cbf97273a3b546b44ab0700935370993d208c0fca1a.mp3",
+      "sha256": "e223ff360f3a1486d1123e0ab67fc09210a470fefbea236a54b4c6b3ebce1933",
+      "num_step": 64,
+      "generation_text_sha256": "722dcdad9e18e0029d1a962d8c173113b6b6fdc3f52b5522d0ecdd5717ac23a6"
+    },
+    {
+      "id": "06eaa9415eb06a6690cd4cf97764032ee4763a3ee20f20a5fbe48005ab0490de",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Her brow furrows, I can almost see the gears turning behind her eyes.",
+      "file": "en/06eaa9415eb06a6690cd4cf97764032ee4763a3ee20f20a5fbe48005ab0490de.mp3",
+      "sha256": "e450cdf3855dc71f80581bfbb734c27df5c18b7bf4633ffa536c54cdfb97a66f",
+      "num_step": 64,
+      "generation_text_sha256": "96d5589e8c69152a639a6f728ae947bb130ad204c0ab5033941ca13decabeaa4",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "3e89907161190b020e7959f5593db3a3898b63ac55edc19858c720762123a91a",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Don't worry. We'll figure this out. But first, let's get you somewhere safe.\"",
+      "file": "en/3e89907161190b020e7959f5593db3a3898b63ac55edc19858c720762123a91a.mp3",
+      "sha256": "12dc7fab545a4ca1c40e85a7b49e4b201d67a8d780028038483c422ef0a6ab61",
+      "num_step": 64,
+      "generation_text_sha256": "5347b9d2e9af84a768f06c579ab4edb21b47c37114582680c65ef7d562382bac"
+    },
+    {
+      "id": "6bb46c82fb4e9f33c751d03f42424da0408cc716c5def8df296ea2ef230fd66c",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Hold still. Different anatomy, but levitation works on just about anything… I think.\"",
+      "file": "en/6bb46c82fb4e9f33c751d03f42424da0408cc716c5def8df296ea2ef230fd66c.mp3",
+      "sha256": "fad95d9d8f884f14aff4ff5bd7d0e125b96ac22a6b2c03a5a90746429c8c88a0",
+      "num_step": 64,
+      "generation_text_sha256": "324531a1e2c90df69ee5a4f9e9af24d01b76e6ef93294e8ce3b6777ead152c96"
+    },
+    {
+      "id": "0cabbe5e3b20c57ce0205c363f710576f50135c0402c936b1087a1449843136f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Purple light gathers around my arms and legs. I'm lifted a handspan from the ground—weightless, unsettling.",
+      "file": "en/0cabbe5e3b20c57ce0205c363f710576f50135c0402c936b1087a1449843136f.mp3",
+      "sha256": "94920591007f8e83a826e9308c928328dbed5f061c63ea8bdc1d722a65520a5a",
+      "num_step": 64,
+      "generation_text_sha256": "69acbd7ba869be87eaa6ad903e1e194e1078117e1b8074e96f76b3c6b9f0abf0",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "401f9fa9603b5279171d4bc9169bb9363b6cdf33cf0b8dbc285165496aa11e45",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Easy… there we go.\"",
+      "file": "en/401f9fa9603b5279171d4bc9169bb9363b6cdf33cf0b8dbc285165496aa11e45.mp3",
+      "sha256": "08ad73aeca5506c190e537b1e51f69d98b0cb53d4a244899ca5c173ad0bd0755",
+      "num_step": 64,
+      "generation_text_sha256": "54be83d5d11fc8783068dfe9c6f642dce7f7ad4fcbeb93f47bee966343472e1f"
+    },
+    {
+      "id": "5254cc9131fcb250aa75411515718ea68d0676184bd192063ca702ba9ad0916f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Here, foreleg over my withers—steady.\"",
+      "file": "en/5254cc9131fcb250aa75411515718ea68d0676184bd192063ca702ba9ad0916f.mp3",
+      "sha256": "35efc5ae5cca8c2d73e2984b81a48c2b492db7d28b12408e009acf7482576da7",
+      "num_step": 64,
+      "generation_text_sha256": "129e0f7259d275df3416763ca9ae7a4f1c0a14f0ea193745b294276bf42b5797"
+    },
+    {
+      "id": "713001ab5848be8a46f60c74a2a70795353c89fdd6d18a71c77374bb3fab2047",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Her aura cushions my barrel while her shoulder props me up. Four legs wobble beneath me like newborn stilts.",
+      "file": "en/713001ab5848be8a46f60c74a2a70795353c89fdd6d18a71c77374bb3fab2047.mp3",
+      "sha256": "8497733cfcfb7af539e61361b02ed4e424b91a11824c754be3254a1ae16aed1a",
+      "num_step": 64,
+      "generation_text_sha256": "1555d93df043e3e408552e7daa2485289bb077e9cda0f4c5362957b1f2169b68",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "b174174e636e9fff587ce2f59ffb2f789e11922b08d768aca7090c073c06d7ca",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Breathe. Find your balance.\"",
+      "file": "en/b174174e636e9fff587ce2f59ffb2f789e11922b08d768aca7090c073c06d7ca.mp3",
+      "sha256": "9e18e28e7260b9163084fd90ef84b98b5579e0261798bd5c30b434529cee8231",
+      "num_step": 64,
+      "generation_text_sha256": "9abdc8165f3973a4e121b4f4b53a81c5de349c3bd9aa4b4d18a363762ceae5bd"
+    },
+    {
+      "id": "30dba83d1f761b770e1b25b4ad27c53a040f9aff73898cf2cdc96075d598727b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "We stand there for a moment: me, unsure of everything, and her, watching carefully.",
+      "file": "en/30dba83d1f761b770e1b25b4ad27c53a040f9aff73898cf2cdc96075d598727b.mp3",
+      "sha256": "9e09e3c76cb693907f3ec73d5a971c23c3ccc56a17ff9532fe508d115d27b4d2",
+      "num_step": 64,
+      "generation_text_sha256": "76752d3de2d38880974c19b3b69819989324639d654942f632901ea334d7b24d",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "fb71a6cfe828f297f155cf7b7acd2826f60b9c041e9860f2e0a3946c9c423515",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Can you tell me your name?\"",
+      "file": "en/fb71a6cfe828f297f155cf7b7acd2826f60b9c041e9860f2e0a3946c9c423515.mp3",
+      "sha256": "c0321c43e50ae78b65896afe017f0ceaad1a703ee8d06fad0dc9ced35ac58d4d",
+      "num_step": 64,
+      "generation_text_sha256": "8090cee009e3b904e666670de6b40fc825fd2a628b73e500275bdf90a59306c1"
+    },
+    {
+      "id": "cb3bf81fd4298d0d97e8c802c287be61d7cfd3a044e8eca4905565eaad8d0bc6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"I... I can't...\"",
+      "file": "en/cb3bf81fd4298d0d97e8c802c287be61d7cfd3a044e8eca4905565eaad8d0bc6.mp3",
+      "sha256": "715adfb9d1252dbac1c9b7bf2b7016a09ba3fa89b8c01d3a5123a87623b71224",
+      "num_step": 64,
+      "generation_text_sha256": "8ba0b056040f4ef585d44ba580fd153647edaebbc16fb7eb4aca29bde35b3476",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "52a0de3e6fe9d329c03db69b562f57292fe8f0b17f042988564b511df565e91e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"Why can't I remember anything?\"",
+      "file": "en/52a0de3e6fe9d329c03db69b562f57292fe8f0b17f042988564b511df565e91e.mp3",
+      "sha256": "86983c896fb3ff9982d9a21bbb4ce73050f7eae6d0f02ecf90f98f0a582e2588",
+      "num_step": 64,
+      "generation_text_sha256": "f7b5b74c5654a56c1f97936ecde39375138133d6ea674940dac95e1a6cd3c402",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "61ffac1a7d57f966018225e8e94373cf3a0ea6e7e4bd6b4807ef5ed9c157ab69",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Memory loss, wild magic, and an unfamiliar species... This is bigger than a stray anomaly.\"",
+      "file": "en/61ffac1a7d57f966018225e8e94373cf3a0ea6e7e4bd6b4807ef5ed9c157ab69.mp3",
+      "sha256": "07305d3008a9d979ef7de31f773ecbfe8e5a02e15a7b717e4804c5d1cfe0f77b",
+      "num_step": 64,
+      "generation_text_sha256": "3522739ce79d7f0d4214c9d82e16696cb43fc976e75a784544e78949ee955c74"
+    },
+    {
+      "id": "d321987d787b24ede8c6fd3f0b7293bbe410d20d3fd3b85e671b62591bf72124",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Memory loss? That's… troubling.\"",
+      "file": "en/d321987d787b24ede8c6fd3f0b7293bbe410d20d3fd3b85e671b62591bf72124.mp3",
+      "sha256": "258d176469e4e585767de6745956864c4412306de759c97e4d649a94ecb37d76",
+      "num_step": 64,
+      "generation_text_sha256": "4e87032d3b2202d2458c90133db2998a0dbc8bc13599045d160be47c96490bb6"
+    },
+    {
+      "id": "9aa4c9a2b358a447e89b68d55dfecd785527e875d7c7ed5840ad3d223cdd11c8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Words stick in my throat. Confusion crushes the urge to speak.",
+      "file": "en/9aa4c9a2b358a447e89b68d55dfecd785527e875d7c7ed5840ad3d223cdd11c8.mp3",
+      "sha256": "55c3faaaceb9f4f1b7717f6600c0f4149d720e882e1fdb05e62987ebaa565e67",
+      "num_step": 64,
+      "generation_text_sha256": "41750934c49cca9007213c1d1c6a3cb6d3a4d89be30b15f28bd84f8a0b47930a",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "5734c6be7edddb95926bdea5d15c6eea9a0d9af856ab8d85e419ef76ec6b4153",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"It's alright. Take your time.\"",
+      "file": "en/5734c6be7edddb95926bdea5d15c6eea9a0d9af856ab8d85e419ef76ec6b4153.mp3",
+      "sha256": "295b13e3864af4366cc8548186b8e13c44f244a623eec294de28755af1f31b7a",
+      "num_step": 64,
+      "generation_text_sha256": "0ba28ea6866c3fb8b69189ce1e92c71749afca07283d74ff528f85cb17f89b2f"
+    },
+    {
+      "id": "88315051824011d1363fad6540a3edb98a73c2f4d077f74486a79d76be81566b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"We'll figure this out together. Though first…\"",
+      "file": "en/88315051824011d1363fad6540a3edb98a73c2f4d077f74486a79d76be81566b.mp3",
+      "sha256": "b88fba17e4ad9af677ae1fd3e2a36db331b2853f1f2aa5e97b4d90b123948ce8",
+      "num_step": 64,
+      "generation_text_sha256": "50632e6d8176eee6b9d48eaebac1c1bdfe4369d3f83e3c8b8b2ea9fd75b5eda3"
+    },
+    {
+      "id": "3b9ab051ad897107415f21ee5588dc7a8c774273255abf16507ece387a4b9d77",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"That didn't sound friendly. We should move, quickly. The Everfree isn't safe after dark.\"",
+      "file": "en/3b9ab051ad897107415f21ee5588dc7a8c774273255abf16507ece387a4b9d77.mp3",
+      "sha256": "2ea8874a89525baa02d953def73bd958edb59d0e709a7001ad56f03d721780aa",
+      "num_step": 64,
+      "generation_text_sha256": "2d2c859c8e561e198e5267472c0528b556dd54ba6a61ca2f69d07c30c51c5c7c"
+    },
+    {
+      "id": "a202ee6b7aed6ba53d606cadff8960ef7f6870bc6105633fd905bcdb9190b33f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"My library's close. Shelves on trans-dimensional theory, identity displacement, anomalous surge charts…\"",
+      "file": "en/a202ee6b7aed6ba53d606cadff8960ef7f6870bc6105633fd905bcdb9190b33f.mp3",
+      "sha256": "57f8f5f4eb496e58c5a013db8d69274bc476fdb49d497dca800564f343242268",
+      "num_step": 64,
+      "generation_text_sha256": "ac2394978e32dde0d9759fbbb24dcaf65a3242487ed74a08dfe012be258375b4"
+    },
+    {
+      "id": "a46b491dd3a4266bda504dc30456845b0e5bb359f02ffd87c0b5158f91a444f6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She tries to stay serious, but the sparkle in her eyes betrays her excitement.",
+      "file": "en/a46b491dd3a4266bda504dc30456845b0e5bb359f02ffd87c0b5158f91a444f6.mp3",
+      "sha256": "f47aa122444913e3300436d719f8b5839248f3aa689ae54008b56b7031afc67e",
+      "num_step": 64,
+      "generation_text_sha256": "a80237d5abb1e662fe7cea8456b78a208ef4f05a568e08f6c598662c6e3aa0d9",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "2311875a203a69f425228184fe8b760c0bcab8ec62413e49c6adb30aeef6dbab",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I've got a library nearby. Lots of material on magical disruptions, memory loss...\"",
+      "file": "en/2311875a203a69f425228184fe8b760c0bcab8ec62413e49c6adb30aeef6dbab.mp3",
+      "sha256": "b5111b5359565646d92996571f4b8c1eece28d776a2c79fdca5a816193c35a0c",
+      "num_step": 64,
+      "generation_text_sha256": "164cef64b1796cc407fe7605962b25dc7efddda6f33b1e7a02106dd2e20be87b"
+    },
+    {
+      "id": "c932efb2641ffa2af90f3468146ee4b255eba9f9cd2037018bcf7b181f3d2e51",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"...and I *might* have been looking for a reason to reorganize the whole section again.\"",
+      "file": "en/c932efb2641ffa2af90f3468146ee4b255eba9f9cd2037018bcf7b181f3d2e51.mp3",
+      "sha256": "af33b6016d73b95a33ff3f0d0ce4d3bf9b1f47c931ef529bcf41603ca5963f24",
+      "num_step": 64,
+      "generation_text_sha256": "ee2ac73a3002ae5c63f32bda01c3225b3a1cf39a9538522b38e861c1b00bf3fc"
+    },
+    {
+      "id": "ffdefb1f237dfefb68eb0d49c5a08a67c8999e92aa69bf02e3012b5cecd1acb4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"Thank you... I don't know what else to do.\"",
+      "file": "en/ffdefb1f237dfefb68eb0d49c5a08a67c8999e92aa69bf02e3012b5cecd1acb4.mp3",
+      "sha256": "1d0ad81fb2b60b43f23cb9660fda3e49e3f43d6f29c1210183842f59a82a92d4",
+      "num_step": 64,
+      "generation_text_sha256": "29d08c653801c6b3a53c958453815be12aeb7da7652f370c0e8567a9b545156a",
+      "generation_attempts": 2,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 2,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "e68d4c9283554b3099f8597abbf974e23190891d9e5255c6b04d9290cf95878f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You're welcome. You're not alone in this, not anymore.\"",
+      "file": "en/e68d4c9283554b3099f8597abbf974e23190891d9e5255c6b04d9290cf95878f.mp3",
+      "sha256": "f4319811f5ba6b3203414599c1c7c65544b6b65ed0135efa9edb4105a8c8be57",
+      "num_step": 64,
+      "generation_text_sha256": "246e6756436b94a07646e156f6ddc6030c4cd365721784a5c26f7ac70ce7954c"
+    },
+    {
+      "id": "58de0a10198ae49efb1115b3db07bfc03de711562de23047374bf5182136b092",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She keeps pace beside me, magic ready in case I falter.",
+      "file": "en/58de0a10198ae49efb1115b3db07bfc03de711562de23047374bf5182136b092.mp3",
+      "sha256": "93efa2ad0e345a6011f4c0334e721ba5cb00c748aa937460ff5bfe2ad78e90fe",
+      "num_step": 64,
+      "generation_text_sha256": "c0ca84b1e99767a234b2d06124eb01d2c4e7b674e67be078eabfdda5a9e896ad",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "f491ca60ee82b9527548f315cc3227684f990e3627303dea2f0c45ceea3b40c4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She walks close, matching my uncertain steps.",
+      "file": "en/f491ca60ee82b9527548f315cc3227684f990e3627303dea2f0c45ceea3b40c4.mp3",
+      "sha256": "4c7653e0c9d5f628000befa86503f02e684972804982df4cb62bb407fa106b65",
+      "num_step": 64,
+      "generation_text_sha256": "ef32775ba1ea186f4d18876b871c860a79a802244005ff895230fdfd6f07c134",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "cbaf3e68da46bb67ef283abe7199c538d087791c9cb40e92f364141915079fca",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"How do I know I can trust you?\"",
+      "file": "en/cbaf3e68da46bb67ef283abe7199c538d087791c9cb40e92f364141915079fca.mp3",
+      "sha256": "5024ce81e76f16949129ed8b212d1a9aea930255d09827727857d6d1500f9852",
+      "num_step": 64,
+      "generation_text_sha256": "94d860ef5c9ce4c0f37d6a7c6a09ae4d57ba4226744280ce554198e1e23e7686",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "1a642512a1fb859d84e2b3814d2c3f16d5b8770542cf98dddf9c509a6e7b84c0",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You don't. But you're alone, confused, and clearly not from here.\"",
+      "file": "en/1a642512a1fb859d84e2b3814d2c3f16d5b8770542cf98dddf9c509a6e7b84c0.mp3",
+      "sha256": "c7c149f44faa13a4df8b84c3c686bad252a00204f18abfe103ccc65a342c292b",
+      "num_step": 64,
+      "generation_text_sha256": "758660c3363a183c7ccb5e460af903cd1144d7123cba8e534d826ffce0c84cee"
+    },
+    {
+      "id": "f622165697cf273d76f28f0e313868efdc8c82519ee6233f16a413c30c695066",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"And when things like *you* show up, it's kind of my job to get involved.\"",
+      "file": "en/f622165697cf273d76f28f0e313868efdc8c82519ee6233f16a413c30c695066.mp3",
+      "sha256": "9e67f21ea426234969a24a1d8276a70bae3a18c315ebd1fcd7411f6c800c180a",
+      "num_step": 64,
+      "generation_text_sha256": "f56be0a7421af5619bcf8cf5a9617e65f2ec74539f28aaf2b3c97c2323169d6d"
+    },
+    {
+      "id": "3057bb0be56399715cd645cb6e5f4fa127db95b598f5c7e06f31ee85db0d324a",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You don't. But you're disoriented, and I don't think you ended up here by choice.\"",
+      "file": "en/3057bb0be56399715cd645cb6e5f4fa127db95b598f5c7e06f31ee85db0d324a.mp3",
+      "sha256": "0b2f014ccebe6e4c83477c4075a5103ebd6572dd258d377dcc26004d132068a8",
+      "num_step": 64,
+      "generation_text_sha256": "4dcc646effe3e886ee49a47a6702bd34cc33afe5053d65c3f7477c7cf8cbdacc"
+    },
+    {
+      "id": "676fe153412513b5dd6fcf00fc0521f7917f2aa2b678ad25c390119589b61086",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"And as Ponyville's resident magical expert, helping is what I do.\"",
+      "file": "en/676fe153412513b5dd6fcf00fc0521f7917f2aa2b678ad25c390119589b61086.mp3",
+      "sha256": "b2cdabdac6ee184051ee12cd6ebf7a6c5de8a7cd07b4ed9d45d38d75c409e9b1",
+      "num_step": 64,
+      "generation_text_sha256": "c3907f002133cf68dc7e2ae00da9b3989f556aa026d2f763b36f917b2e182bd9"
+    },
+    {
+      "id": "1f57dbab4b8ec8e955c55670c7a419bdeb9aeae295a353343cbceca5e6a9b6de",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "As we leave the forest behind, something shifts in the treeline—too quick to name.",
+      "file": "en/1f57dbab4b8ec8e955c55670c7a419bdeb9aeae295a353343cbceca5e6a9b6de.mp3",
+      "sha256": "c8d9a41c6c4184f29995be80b9265641257ee026b8472a8f0bd0f41ebf85bcd7",
+      "num_step": 64,
+      "generation_text_sha256": "c2a5616b33d3d49972896d526d26d20597eea477c0126e928a4240d9a1d4df75",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 0.9333,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "3854d47e02638ab14a66e2331232f9bf89695dbacad8ebc235b76cb6c69621b5",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Whatever brought me here... I don't think it's finished with me.",
+      "file": "en/3854d47e02638ab14a66e2331232f9bf89695dbacad8ebc235b76cb6c69621b5.mp3",
+      "sha256": "ad74b61523e12d32e3f7546fc39f0b4b143b52f04f9b9b3d166f635fda80b786",
+      "num_step": 64,
+      "generation_text_sha256": "e118148ecb965909c923417c8aa59e778e6c3dd56522e4a6f42796646637bb0b",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "a672887ec6a6ec301c6e348812b115dc786c9033d5ceeb79920a48c517b17bfe",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The library is warm and welcoming, a stark contrast to the dark forest.",
+      "file": "en/a672887ec6a6ec301c6e348812b115dc786c9033d5ceeb79920a48c517b17bfe.mp3",
+      "sha256": "ac00f9246ad8729ca787b9e43c1edbcb8e6c35f0d1b2102bb02a130361853f76",
+      "num_step": 64,
+      "generation_text_sha256": "82b6816b1863dae0bd16a367276cb04bf5434bae031a2d16159601133c3ca530",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "66109eaf8f1cfda21edcf1bfee40607b74aa275e8a01cda1c4b6f310e2f60687",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Books line every wall, reaching up to the ceiling.",
+      "file": "en/66109eaf8f1cfda21edcf1bfee40607b74aa275e8a01cda1c4b6f310e2f60687.mp3",
+      "sha256": "d295247997057997d1771243fe857036bda8d86415d4c816f038986286bb59ad",
+      "num_step": 64,
+      "generation_text_sha256": "1e1b02c1969ff93cfce667508e5086d397a9795b0c6d6348a84f0d5e47c20735",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "0486588e8c266a7d2f69f4df30e126670ad366b8a94c8e76ddbbf7f19eddcc44",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Soft light filters through the windows, illuminating floating dust motes.",
+      "file": "en/0486588e8c266a7d2f69f4df30e126670ad366b8a94c8e76ddbbf7f19eddcc44.mp3",
+      "sha256": "c9a4fb9e3a1533e57a42275fdd4e3732a678006ed749a340b8871a417abf0b7f",
+      "num_step": 64,
+      "generation_text_sha256": "366b9507a9f59d6fec608ac828814d50220bca306465d0ea5faa793bf56b8034",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "5476bd8787713e69dbc855900dba915b6b518994b6e724e69a6f1b4a91b5aa71",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Welcome to my home — the Golden Oak Library!\"",
+      "file": "en/5476bd8787713e69dbc855900dba915b6b518994b6e724e69a6f1b4a91b5aa71.mp3",
+      "sha256": "f29287225998699470bcdbd64a9ae0c406ea0ecaf147ee9e024b3bd02bcc3ac1",
+      "num_step": 64,
+      "generation_text_sha256": "5e5b7d3e8d27800cce0115b848c8b35ca81fd0f5eb1b125582886505115b2b08"
+    },
+    {
+      "id": "a7b834cf59af4ff7b9613cd750d8950cdd2610356748d75f3299c75b6c2e2bb1",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"It's not much, but it's cozy.\"",
+      "file": "en/a7b834cf59af4ff7b9613cd750d8950cdd2610356748d75f3299c75b6c2e2bb1.mp3",
+      "sha256": "587a97bdb17e5bfa1b0010a0a9a0934d1110dad20311fe4a1ef80c5553954fe1",
+      "num_step": 64,
+      "generation_text_sha256": "475b73b50cb5d855f9f10fa664f6b8413395f9f5b6ac7d88c618cf974badfd9c"
+    },
+    {
+      "id": "9bc97daea5d3f853ecc2199431b9eb85ac292e37edefb20be65da87f7de53f9d",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Let's get you settled. I want to run a quick scan — you took quite a knock back there.\"",
+      "file": "en/9bc97daea5d3f853ecc2199431b9eb85ac292e37edefb20be65da87f7de53f9d.mp3",
+      "sha256": "50f3ad26eb018f73c36f1a42e6ef78fd72e23028051f0076af8878dece410867",
+      "num_step": 64,
+      "generation_text_sha256": "98f76b24a1fc51d2b2b331c451925d8ea4270f6565d7d35e88692d84efbe1436"
+    },
+    {
+      "id": "cd12eeea9793667a5a373d82fb03b6a31de61e9abcc91954384b0b68336cf5b0",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Her horn glows softly, bathing me in a violet aura.",
+      "file": "en/cd12eeea9793667a5a373d82fb03b6a31de61e9abcc91954384b0b68336cf5b0.mp3",
+      "sha256": "91f49affe354761cf9211b5af1ecdb145789a64efb2089068747cad61beb88b7",
+      "num_step": 64,
+      "generation_text_sha256": "b592e7f171808f8f80d54055833acf5c3c8b8c1f27955026680b3197a55393f9",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "f8b89904c2d72d2987179b1ea5cfa741ea1ee13fd9be0bad89175f1ef2de573f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A tingling sensation ripples through my body, as if invisible threads of energy are weaving around me.",
+      "file": "en/f8b89904c2d72d2987179b1ea5cfa741ea1ee13fd9be0bad89175f1ef2de573f.mp3",
+      "sha256": "afd0529d4b5faa0903bcdae1ef2d17c429692cf1803984b04deacdd0695d08d0",
+      "num_step": 64,
+      "generation_text_sha256": "450c3ef1446c2391f20479ebd1124ae8e968412d68c01a88da7dde3da911f687",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "84a459b046a10387a3a21701880f58ff78d81023361e8c2483a83c4f455435da",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The magic probes gently — exploring, mapping, measuring.",
+      "file": "en/84a459b046a10387a3a21701880f58ff78d81023361e8c2483a83c4f455435da.mp3",
+      "sha256": "02cfcd62bd4ed8a6ed89969db6136281ff753e5c0a4956b8080104321a84e790",
+      "num_step": 64,
+      "generation_text_sha256": "6afa78a86f3e0805267f3895c0167f66bac6f1f1124fd00e3190aaa10294cfdb",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "11b6d31ed20068dc432ccc39ca263d7433776ea8e651ba14edfd9d975bb7d3d5",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I hold my breath, uncertain what it might find.",
+      "file": "en/11b6d31ed20068dc432ccc39ca263d7433776ea8e651ba14edfd9d975bb7d3d5.mp3",
+      "sha256": "92c61b3850f29ebf7bbe3b8df15bd5c1cf56af788e1226fce61b6594db65ab43",
+      "num_step": 64,
+      "generation_text_sha256": "a87be25141a4983b0578ca33fc78b5cf7cdac526f1874bd0cec99becd767fcf8",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "42899157489bc06fbaae5ab61a25cf6db755d8d477c265c79dcebc0feb918ab0",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Fascinating!\"",
+      "file": "en/42899157489bc06fbaae5ab61a25cf6db755d8d477c265c79dcebc0feb918ab0.mp3",
+      "sha256": "cacc5cf1e51575ecd8627a50483de600f1c53cf29452aef699d357aa26980133",
+      "num_step": 64,
+      "generation_text_sha256": "4f1126235860bb0870e0b4497c56db3b3d2d794bf3ffb8d0cd14935f753eebb0"
+    },
+    {
+      "id": "d4d9ac58473415197871326ca715c6c9e60452bc53caee15bfb48a3bfa35c9cb",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I've never encountered anyone with quite your... physiology.\"",
+      "file": "en/d4d9ac58473415197871326ca715c6c9e60452bc53caee15bfb48a3bfa35c9cb.mp3",
+      "sha256": "1a661c86e1c1af738efc9bd6aa3aee37a9e74bf0a4651a0462d61822b4adbc75",
+      "num_step": 64,
+      "generation_text_sha256": "23fd77b7c258047c35d3d95f7ea8554c01b7f453e8943cd8982e29519527d210"
+    },
+    {
+      "id": "f8e570a2bcbf7fcc8b899285dc161a53400f5d8e7218e592a3f463cba1294aaa",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Your magical signature is almost nonexistent, yet you're clearly alive and self-aware.\"",
+      "file": "en/f8e570a2bcbf7fcc8b899285dc161a53400f5d8e7218e592a3f463cba1294aaa.mp3",
+      "sha256": "ea5c99fbd865848d527ff727fe41033db24a917a1003e97d4aca8e811cc93563",
+      "num_step": 64,
+      "generation_text_sha256": "22306fa2a152f2ea2d74d33ca5cabc489efeedf98bdeb6468aea6a569e01055b"
+    },
+    {
+      "id": "209e5a9865b82b33f92150b18fdc996e671da0ff4cc169b85da100604ddec07b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"And these... hands — like minotaurs, I think, but with five fingers instead of four.\"",
+      "file": "en/209e5a9865b82b33f92150b18fdc996e671da0ff4cc169b85da100604ddec07b.mp3",
+      "sha256": "e9ac021c27cdabba909e87d11db4a694b0276f51115316787116914721e9ddf1",
+      "num_step": 64,
+      "generation_text_sha256": "b898e8b3b95d8e8335983591565da43c3be75cc142ad2f11b8ac7db35e4d9256"
+    },
+    {
+      "id": "abbea03a2aa66d899c7d404ee7c4e6eec3906b1eaaa57c0900ce67cfc5878138",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She floats over a scroll and quill, scribbling notes with barely contained excitement.",
+      "file": "en/abbea03a2aa66d899c7d404ee7c4e6eec3906b1eaaa57c0900ce67cfc5878138.mp3",
+      "sha256": "34e6101fd8c94a6486d7f11b6d3f6bc2c390630c01cf237fb10d3f39851e72df",
+      "num_step": 64,
+      "generation_text_sha256": "2fb763ad5cf0a9d686a10f3ccd5c3e46f849551621bf1fb4aa88c2c8cb62b729",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "a168f54a09e7fd0b54e7a120fa709b8087d9bb319c34ac02aee014979c48efa1",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I can't sense the usual flow of magic through you at all...\"",
+      "file": "en/a168f54a09e7fd0b54e7a120fa709b8087d9bb319c34ac02aee014979c48efa1.mp3",
+      "sha256": "e72ef967343dff79bf0386165201b9c7c5c9460a18f0708f2941dc772042b642",
+      "num_step": 64,
+      "generation_text_sha256": "2c68ef4f6ce9f6237fa87bb3a3c941c71cae9c56c7ea563b094a3c61a763bb63"
+    },
+    {
+      "id": "f4961c2ab4fcbd0663b5451f1bd6c7ea0a8c26a4422ba83d32d08c1838a4c277",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "For a moment, she seems lost in her own world, forgetting I'm standing right in front of her.",
+      "file": "en/f4961c2ab4fcbd0663b5451f1bd6c7ea0a8c26a4422ba83d32d08c1838a4c277.mp3",
+      "sha256": "6760d4f185a89ca02b0df64a94be49f9dc9c2b84174501cd9292b33e426b0415",
+      "num_step": 64,
+      "generation_text_sha256": "d32497b21f1151983810d8a13a98be691aa57ba3525caa1fa04ef51f622224ae",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "dad9dcc3578baf352ece4caf95486da357d2c0569a6aded7ee226edef0906f4b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Ah! Sorry. Sometimes I get carried away.\"",
+      "file": "en/dad9dcc3578baf352ece4caf95486da357d2c0569a6aded7ee226edef0906f4b.mp3",
+      "sha256": "16cc4422d2dce26f897dc8f974da1364e6cad72f27d4d8ea29dd04d49423a00e",
+      "num_step": 64,
+      "generation_text_sha256": "24097d5b41de252a43865ed27689d425b3094bbc35ede06cb9e3f3efdc8994c7"
+    },
+    {
+      "id": "f10544471f5e1737ef96aacb40db5e850194376a6d2b7523ddf7fad693acb44e",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Well, physically you're in good health, though your magical field is a little unstable.\"",
+      "file": "en/f10544471f5e1737ef96aacb40db5e850194376a6d2b7523ddf7fad693acb44e.mp3",
+      "sha256": "6a5c4098c023ce2578dd49d1b29a43ce3f8b7b30ac79a82ea5580251f5115a21",
+      "num_step": 64,
+      "generation_text_sha256": "aaae8735c65d9114ea36200e3fe315772fe32ff20334ecec719bee02b6f94570"
+    },
+    {
+      "id": "fd1964aafbbc856a73a4d119c4605eba7e464ce8caf8503cd87ca4b5494cde4e",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"From what I can tell, you're a...\"",
+      "file": "en/fd1964aafbbc856a73a4d119c4605eba7e464ce8caf8503cd87ca4b5494cde4e.mp3",
+      "sha256": "eb42acee8daa83ac6263947a93d3b796edb14fe93ed5d479bae81525b3524793",
+      "num_step": 64,
+      "generation_text_sha256": "28c2c9ad1d29763a0d12684b51419f5a15e424c47dee65e2e28e05549c52bdaf"
+    },
+    {
+      "id": "8c4469ac3dce4d127660d0d15f7db5f6ee86b4e5a46872abaecf164c410bb953",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"...unicorn. Though your horn's resonance is lower than expected.\"",
+      "file": "en/8c4469ac3dce4d127660d0d15f7db5f6ee86b4e5a46872abaecf164c410bb953.mp3",
+      "sha256": "3a0f15e141e3bbc3073cf4adb27c6ed36a93aa2dc904dfd12fe83ac0769c1bd1",
+      "num_step": 64,
+      "generation_text_sha256": "cf947728740c23c250f5af2eb894d28eccfadbecfe8d05331c1fca1d8fc16553"
+    },
+    {
+      "id": "42480da0b5864024f2365abafa63af820135ec22527e753eaa443b7e8b7fb4ea",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "That would explain the slight weight I feel on my forehead.",
+      "file": "en/42480da0b5864024f2365abafa63af820135ec22527e753eaa443b7e8b7fb4ea.mp3",
+      "sha256": "3de3014dbdeff569e1f3c79b928c8352b8c951528f2bfa58482fbe10445d6285",
+      "num_step": 64,
+      "generation_text_sha256": "8c5ae5f698d9f6b30a1375799e1b8d90eb651bcefabe9e38885cc1a14fee480f",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "38d95ab8b6044d80111d776e9a373f8aed99c64c554288a0b6d87876e057001c",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"...pegasus. Your flight aura seems faint, but intact.\"",
+      "file": "en/38d95ab8b6044d80111d776e9a373f8aed99c64c554288a0b6d87876e057001c.mp3",
+      "sha256": "202eb2a6a9cb06da0b722c19d619b6c9d1d7fc3703b7e45a0a46e00c6fd55c1c",
+      "num_step": 64,
+      "generation_text_sha256": "2df367d968cbd2d6e78a7459d0f6f189df58e6b994604393fc8b0523082c0d30"
+    },
+    {
+      "id": "84371232a56294ac26b020a7b9a6e607c0d2c361ad07d3b17ab8030b0ff3e07d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I shift my shoulders, aware of unfamiliar weight on my back.",
+      "file": "en/84371232a56294ac26b020a7b9a6e607c0d2c361ad07d3b17ab8030b0ff3e07d.mp3",
+      "sha256": "a2e66ef72c591e35b98f72eb31c21bb5719cf6361d7604639a3107233a3a9a0d",
+      "num_step": 64,
+      "generation_text_sha256": "3c562bdab1a42a5c6f4d0d8424a67595d980a57ffa4d6356f1dc57266bf87e9c",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "a5826d9cefa6ff0177548b47a7da798dcc1d5114aaf4e1944e5d3339ebce99f8",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"...earth pony. Your connection to the ground feels... distant, somehow.\"",
+      "file": "en/a5826d9cefa6ff0177548b47a7da798dcc1d5114aaf4e1944e5d3339ebce99f8.mp3",
+      "sha256": "42bdc9ac92ee3e1466207112b0d7623c1b20fff065d768ec274e1b72661ac4fc",
+      "num_step": 64,
+      "generation_text_sha256": "fc5e5ac52c5ad8d162d0363922792dbac276e8650a434925a16b15b6b5dbdc00"
+    },
+    {
+      "id": "a8876a3a2c5bacd6266d9e38eff959ac281c2ae4c1bb5c280611176b204a1142",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My hooves feel heavy, rooted to the floor in ways I can't explain.",
+      "file": "en/a8876a3a2c5bacd6266d9e38eff959ac281c2ae4c1bb5c280611176b204a1142.mp3",
+      "sha256": "4fa14ea4a2158b0ae336831e29f5c7928467716cd62eaa888f8d01e7475c6c11",
+      "num_step": 64,
+      "generation_text_sha256": "c00c7a9ecba938268e28fac2fa70ba8647b8daa77c381f69a35da4f6bbf52b64",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "ce01cae37a121e3e894c3d66bef57b66f1914b3f67f5cff4af31037bb50c2074",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Still, nothing some rest and food won't help restore.\"",
+      "file": "en/ce01cae37a121e3e894c3d66bef57b66f1914b3f67f5cff4af31037bb50c2074.mp3",
+      "sha256": "d303a105250ce0c7f93bb11b9e0a1d77e7ffa199998c26284b00d5535c29df6f",
+      "num_step": 64,
+      "generation_text_sha256": "285009cf4784ed6961adc5823c798699496898e9bdf2db1cad459b6f3a02f5bc"
+    },
+    {
+      "id": "2ca345f28740eb06ec84c6c7f72677607bd0e16d8448652871af552203c60040",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"All done. You seem stable enough, at least for the moment.\"",
+      "file": "en/2ca345f28740eb06ec84c6c7f72677607bd0e16d8448652871af552203c60040.mp3",
+      "sha256": "b35e41e4690d3c37f9010d617a760f689836d6ff938cc24c01cfcb96004e6c28",
+      "num_step": 64,
+      "generation_text_sha256": "da5b393616e2047c8111ac4dd929a07237ea432e23721394ffd8c4db2eaed8f0"
+    },
+    {
+      "id": "596489dc94b274cb90038a8984ab398357e70f6f0ab9c13b8588f21adbffedef",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Is there anything you'd like to know?\"",
+      "file": "en/596489dc94b274cb90038a8984ab398357e70f6f0ab9c13b8588f21adbffedef.mp3",
+      "sha256": "61d6946f104db33be5f81c405a635f2b080795a8ac97352892a0f1cd19edc7f7",
+      "num_step": 64,
+      "generation_text_sha256": "e8c1ad943be60db9782fad5b258deb440013c674b82672ecd9929615cca78cda"
+    },
+    {
+      "id": "b7243db7896cc5d3230f7ec6256ea5a96ffcb91757727986017a7ec82667c47a",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"That was a wonderful conversation!\"",
+      "file": "en/b7243db7896cc5d3230f7ec6256ea5a96ffcb91757727986017a7ec82667c47a.mp3",
+      "sha256": "b30094bc7f224cffdfae1ecebd721a1be664ba0aa3724c31ca23c12e7ff68ce6",
+      "num_step": 64,
+      "generation_text_sha256": "395f50e5219b36cdade8bab407e72a230067971b52ffcf8d80df378bd6d499e4"
+    },
+    {
+      "id": "69608e823eb2b57ce06433882781067a6eb9aeb588cf33ad0df78ec62ab63f3b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I hope I was able to help answer some of your questions.\"",
+      "file": "en/69608e823eb2b57ce06433882781067a6eb9aeb588cf33ad0df78ec62ab63f3b.mp3",
+      "sha256": "bad64dd78803ce7ad72c958f8cd0ee637504325f2e8a8b957ca46bbcc851ea1e",
+      "num_step": 64,
+      "generation_text_sha256": "7ae5a4c17f9034f333718da41b9cd4e61fca0c658eb5e50c5dc0608ddfefb41a"
+    },
+    {
+      "id": "12c092c59c482af7143c5facd84c060534493ee73f1364a2766077b162a1d2c9",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You look exhausted. You've been through a lot today.\"",
+      "file": "en/12c092c59c482af7143c5facd84c060534493ee73f1364a2766077b162a1d2c9.mp3",
+      "sha256": "a9346dc7d66c28304c3d0cd7edc76ab2b4939231d291ac32323f4e40dd3dfe36",
+      "num_step": 64,
+      "generation_text_sha256": "b294cf7285e5096d7c4cc730d28531c0b375c25a60e32b66c92bfafc764e56ce"
+    },
+    {
+      "id": "be6f61c79851521f5e2e87290173da1c73b70ce80f2fab537e45f741fb7c7642",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Come on — let's get you somewhere warm. You've earned a break.\"",
+      "file": "en/be6f61c79851521f5e2e87290173da1c73b70ce80f2fab537e45f741fb7c7642.mp3",
+      "sha256": "4ae4546f8900d18008b7fb240cc6b4d2792128b6f6a4619fbab9e684793899db",
+      "num_step": 64,
+      "generation_text_sha256": "8405161fc757e055736928446d428eaf6fc706c79297e656d6688b41406b12f5"
+    },
+    {
+      "id": "a87951a17ef698a4386ee1fce5733aeda5d0af3bac82f41acb93a1a2dcca21e8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She gently levitates a folded blanket and pillow toward a reading nook nestled against the far wall.",
+      "file": "en/a87951a17ef698a4386ee1fce5733aeda5d0af3bac82f41acb93a1a2dcca21e8.mp3",
+      "sha256": "da510a2ec37cd4eb8cc04a3865b393a7360a46bc798f486d269544acbd016e01",
+      "num_step": 64,
+      "generation_text_sha256": "ae7968072d22ef04277f35e301c59fd1839268beafeba29a7912944671d34a3f",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "e1a515c5657e839fa0e6c258e45ea9ca58d88381ab8c52b47a0a66a411ea6966",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Even though I'm still reeling from everything, the gentle atmosphere here is comforting.",
+      "file": "en/e1a515c5657e839fa0e6c258e45ea9ca58d88381ab8c52b47a0a66a411ea6966.mp3",
+      "sha256": "392a2b783c84744ca44f190481cbd1d6b2a5b378bce48b98d8f325c35effedfb",
+      "num_step": 64,
+      "generation_text_sha256": "bd4d383521197e21cf73857f0c9980fcf4bb5c381755c18b1ecdb4021e68f7ad",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "09bdac40fef720e5670650f9a153782d0ef18de585bf6abe440068cce4da86ed",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"The guest bed isn't much, but I promise it's softer than tree roots.\"",
+      "file": "en/09bdac40fef720e5670650f9a153782d0ef18de585bf6abe440068cce4da86ed.mp3",
+      "sha256": "ac92e68a6733d49df46fa3a0d3e8685ce7cb6e20d92580d48f091ad43a6c3232",
+      "num_step": 64,
+      "generation_text_sha256": "9126733567ec1f6191d4bc0693e5c40fc08dba89ae8cc2e8adc830933dde30ad"
+    },
+    {
+      "id": "18745f0609478de812ebbee6007c80661b3bb07225a340084780398574ad853a",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Twilight arranges the cozy corner with care. The scent of ink, dust, and aged paper clings to the air, a strangely soothing ambiance.",
+      "file": "en/18745f0609478de812ebbee6007c80661b3bb07225a340084780398574ad853a.mp3",
+      "sha256": "cf3f1b8aa4e6e4dbc5638c4893b0a11f6e52f44e2eee4c79ade49ddad9ed2389",
+      "num_step": 64,
+      "generation_text_sha256": "9391b940d24164270184fc022d841e28e0da6e8aabd38cb742f3c558a585521c",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "71e776467bc9be5c7f654e109aa527d637cff07a1b54c26be120b54e4dd30339",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Take your time. I'll be right here if you need anything.\"",
+      "file": "en/71e776467bc9be5c7f654e109aa527d637cff07a1b54c26be120b54e4dd30339.mp3",
+      "sha256": "72ac773ba8660735ff06356e4d7210e06554c70d58b4e6039471b868b93da8a8",
+      "num_step": 64,
+      "generation_text_sha256": "5758d77cc371be652069183f4ae16fdce92586a512bbba94445bfe1d84bfbba3"
+    },
+    {
+      "id": "4ef742f38ee547a793bfdb1814b84384089556ad1248f884b506e75bfc1f4875",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Fatigue tugs at my thoughts. Despite everything swirling in my mind, I ease down onto the makeshift bed.",
+      "file": "en/4ef742f38ee547a793bfdb1814b84384089556ad1248f884b506e75bfc1f4875.mp3",
+      "sha256": "d66f6df6dc6499fca2810500c0b57b52617e21b1b09e1c280d992af2a6987d69",
+      "num_step": 64,
+      "generation_text_sha256": "d65da88dc819e1a5f2b88d83fe761e2d8ab072c4cd69fde2c5543ac51d86f876",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "2a5b2d14bc499b1693ae8a74ae4d5449665d2030bf612b43cb0e88d5cc8cbd7c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Sleep takes me, but not gently. My mind drifts into a churning sea of sensation.",
+      "file": "en/2a5b2d14bc499b1693ae8a74ae4d5449665d2030bf612b43cb0e88d5cc8cbd7c.mp3",
+      "sha256": "27fe5047d4ff69dd06f9f70d8a7aa21a1ab8e60b90facda8a6c73a5e57bb911d",
+      "num_step": 64,
+      "generation_text_sha256": "1a25b3a4ecfcbd4ccbcf3bbe8c5bd92a9ae84a06a93c4b697dd080b4603cf4ad",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "3cba25f3e83f2463a977cde2bb07d7260e8f60ab55ab438885412b4cf7d1c5ad",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Dark shapes coil around the edges of my vision — shadows that slither and breathe.",
+      "file": "en/3cba25f3e83f2463a977cde2bb07d7260e8f60ab55ab438885412b4cf7d1c5ad.mp3",
+      "sha256": "2a7d6486ef77c4601198ea96e3f571a7c0c5d29847366f04190ddacb976c9e08",
+      "num_step": 64,
+      "generation_text_sha256": "3dbb24e8485eb289630c83b178c2a5f830f99fdf024e92f74584e040223f1a71",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "67628ad12022d83ed7973e8a2aa43ec02d66c30c884a8deb767507f9b03382c8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A low whisper seeps into my thoughts, more felt than heard...",
+      "file": "en/67628ad12022d83ed7973e8a2aa43ec02d66c30c884a8deb767507f9b03382c8.mp3",
+      "sha256": "ae8ea815bddfb67feea65711a74062562fcc1365d8c3ff58d18b398bd2bdb8d9",
+      "num_step": 64,
+      "generation_text_sha256": "11f45eb4e54399f05e5320eec9e36f2b1c3f65dd36635df66ec8008e1936887d",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "de4714b72adbe058277d6eb3dbc31afb4123d53c31fc4d3166d1fbd8ae36ffc2",
+      "language": "en",
+      "speaker": "crypticvoice",
+      "text": "\"So... you've arrived. Such potential... bound by mortal flesh...\"",
+      "file": "en/de4714b72adbe058277d6eb3dbc31afb4123d53c31fc4d3166d1fbd8ae36ffc2.mp3",
+      "sha256": "6419444398bc309e39e11e9c5314a82507424b131999f63f43fea792a9c3ccc5",
+      "num_step": 64,
+      "generation_text_sha256": "3fdf8f9019ef347d747a1ede2c73e53e38e72d87626bdc15713b480a7c15c89e"
+    },
+    {
+      "id": "776befb0dc949080c6e6d10b64e98b1fdbc52fd4f07c9e05eff0d9c198744370",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A cold pressure brushes against my mind — ancient, ravenous. It probes where memories should be.",
+      "file": "en/776befb0dc949080c6e6d10b64e98b1fdbc52fd4f07c9e05eff0d9c198744370.mp3",
+      "sha256": "dd519ceb2dd21e0b7e006917e60ef256a3c4a654e16dfe9ad589f6da0bc1a8dd",
+      "num_step": 64,
+      "generation_text_sha256": "b0ee88288093a7df7430c7235babd98269ba0ba766df5a926af95e128abd3ea7",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "9effbc2fd93f30bb918e19ad1fb6ffaab50d910a390ae3baae80c74c1e6e0ab8",
+      "language": "en",
+      "speaker": "crypticvoice",
+      "text": "\"You cannot hide forever. We will find the key... unlock the path...\"",
+      "file": "en/9effbc2fd93f30bb918e19ad1fb6ffaab50d910a390ae3baae80c74c1e6e0ab8.mp3",
+      "sha256": "44b7cf1a1badfea69b268c4522b32280836fbbbf56c390bce5993fd2faf491d3",
+      "num_step": 64,
+      "generation_text_sha256": "fdfd91e69ad2af20953cdc5add4142c9d8322cb7b07dcd877ba83b9d98557747"
+    },
+    {
+      "id": "5b7fb7b91c40e61d374a1c5cace16264010c5c32362682461b7bfca4e2498eed",
+      "language": "en",
+      "speaker": "royalvoice",
+      "text": "\"Enough! The realm of dreams is under my protection; your foul presence is not welcome here.\"",
+      "file": "en/5b7fb7b91c40e61d374a1c5cace16264010c5c32362682461b7bfca4e2498eed.mp3",
+      "sha256": "bb35d4e75c3148ffb824a02ed36bbdebc311c23ae85590064f343c72fee54c2b",
+      "num_step": 64,
+      "generation_text_sha256": "451c8616581f2ecc3763b9e819a2083965a4bf5aa9cabbe0e71e72f721e6d813"
+    },
+    {
+      "id": "a027cb39e35b78495d775d28ca7d8620b28321d48c3bfedec7309a2091a91677",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A flash of searing light splits the dark. The whispering presence shrieks and vanishes.",
+      "file": "en/a027cb39e35b78495d775d28ca7d8620b28321d48c3bfedec7309a2091a91677.mp3",
+      "sha256": "5dac4178e09ef8fbfa05a9909d18054ea1868641db544d8cd2d013e8d2728711",
+      "num_step": 64,
+      "generation_text_sha256": "b277dfbc4bf1b584b69cebd73604d71a8ac8cdd19f92a21496dd7c52ca3d857d",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "15f15749aa4b6ce4056715a7e0962a251f6b8a8ff53ffb42103cc162343d2f03",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Then... silence.",
+      "file": "en/15f15749aa4b6ce4056715a7e0962a251f6b8a8ff53ffb42103cc162343d2f03.mp3",
+      "sha256": "36548c9ffa0ad257478af7e7984952fd263051baccb8fdbb83caf6deb919f230",
+      "num_step": 64,
+      "generation_text_sha256": "69df2b3b95024e0e0dade3ff4ddc5e46254f563e8725dc647d6cbde92919333d",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "3f2847e114654156a289596ecdcd05be54f3d8f57a55643d97108541c8b6e8d1",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I jolt awake, heart pounding. The library is quiet, its shelves standing watch under a gentle morning light.",
+      "file": "en/3f2847e114654156a289596ecdcd05be54f3d8f57a55643d97108541c8b6e8d1.mp3",
+      "sha256": "bf65795f944b61e2cfac32c8dc3111e321f776979885933bdfc34ede8c8fbf60",
+      "num_step": 64,
+      "generation_text_sha256": "6c533a0f7883a8df3eed1c4aa0b5342fe748fc0f8a67db201a2fa08294589d95",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "a00d705f1e594fd6997c87ac14f2b6461bbef70e0ddb3a3bc8356dd9bdfbf7d6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "That dream... it felt real. Too real. My head throbs, like something was forcibly pushed out of place.",
+      "file": "en/a00d705f1e594fd6997c87ac14f2b6461bbef70e0ddb3a3bc8356dd9bdfbf7d6.mp3",
+      "sha256": "cbfc8950f3ecf688441b71f9f186e448c166d2eb20a9c64822a824857ef9ce46",
+      "num_step": 64,
+      "generation_text_sha256": "44069eba74dfe0f0d2054073092b1d3cfcfb7b5fed94d6fd792a5c70603c0b6c",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 0.8889,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "c461123f13435573040a1f34341fad3ff73e6d675dce8de3496e1eda7528c738",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Then a scent draws me back, warm and sweet... pancakes?",
+      "file": "en/c461123f13435573040a1f34341fad3ff73e6d675dce8de3496e1eda7528c738.mp3",
+      "sha256": "ad48abbe3523888c4f4d6e6265501b1620ef94cc64eeb2f845b6950e51ea082d",
+      "num_step": 64,
+      "generation_text_sha256": "44617732d99c8eafda4423901c2cc8ba03b29bfa7e97cd3fd0228dee08be5e19",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "ab7b10055c21f712b4322d57d9211873a549876607fdda6d1ab0b6cca74c6dc9",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You're awake! Are you alright? I heard you talking in your sleep.\"",
+      "file": "en/ab7b10055c21f712b4322d57d9211873a549876607fdda6d1ab0b6cca74c6dc9.mp3",
+      "sha256": "c1be94e248a23fb8c7b415de4b3e53678d47de6da2f9944ede119490ff33618a",
+      "num_step": 64,
+      "generation_text_sha256": "c73bc46f43834148724ea7167804f4dcbccd3669df6a05e86a4c9887e888d8ab"
+    },
+    {
+      "id": "917dfefd2a58c9a95ed3c6b17c52307eb5283d40a0032e8ad4e4bcaccc4281c8",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Spike just finished making breakfast; maybe food will help ground you.\"",
+      "file": "en/917dfefd2a58c9a95ed3c6b17c52307eb5283d40a0032e8ad4e4bcaccc4281c8.mp3",
+      "sha256": "c24130d9446ec16c4ced3a7f1445ceaa765fdf8aae6acf039f01a71f8892fdbe",
+      "num_step": 64,
+      "generation_text_sha256": "704dc2c9a51b55aff072a5348090c9feaf432a4333cc846290c235ae4d47e127"
+    },
+    {
+      "id": "32add1b84026f9b69f3777ab740e05f2fed7c919d7b8b4b7b26c7d0875421875",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Even as she speaks, the lingering echo of that cryptic whisper haunts me.",
+      "file": "en/32add1b84026f9b69f3777ab740e05f2fed7c919d7b8b4b7b26c7d0875421875.mp3",
+      "sha256": "3dc754a34f32be9e61e841d5bcf307805fc603234f6d0e67bd60bf3479e22af1",
+      "num_step": 64,
+      "generation_text_sha256": "e2a2b198e774c2abfe65d2abd821f6c9459939ac5c320653fde2e312d5935680",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "0342a8f662103975f8daa843933a501e804bd8ac208655e9f88cfde680e1f456",
+      "language": "en",
+      "speaker": "spike",
+      "text": "\"Hey there! Twilight said we had a visitor. You, uh, don't look great.\"",
+      "file": "en/0342a8f662103975f8daa843933a501e804bd8ac208655e9f88cfde680e1f456.mp3",
+      "sha256": "d16d28d51ccf4bf72858d5dca47cfe054b414fd41e5410b3c8e12d565c6cd727",
+      "num_step": 64,
+      "generation_text_sha256": "9f21ab1aa84d1c56b709fbb6fc5af2bcfdddfd840eff6c52085eeab24338a439"
+    },
+    {
+      "id": "94a6a652243526e9b39dea8528e628a2261170e666470b8ff5a69a2e4a9c0056",
+      "language": "en",
+      "speaker": "spike",
+      "text": "\"But hey — pancakes help everything. I made 'em sweet, the way I like 'em.\"",
+      "file": "en/94a6a652243526e9b39dea8528e628a2261170e666470b8ff5a69a2e4a9c0056.mp3",
+      "sha256": "6305de5d23723bdd10e6a2f1d5dffd9c1b75425f3dab47c47cc260b1f998867e",
+      "num_step": 64,
+      "generation_text_sha256": "1c7347e27ba78933d22d08dd81bde04019d59a897bf5f08cfd3ee7af0a2b2072"
+    },
+    {
+      "id": "e44cd393a3a600c04f6008794ec9e12aaee51627bc8fc875d097c90073d83cf2",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A small dragon with emerald spines grins at me, holding a plate piled high with steaming goods.",
+      "file": "en/e44cd393a3a600c04f6008794ec9e12aaee51627bc8fc875d097c90073d83cf2.mp3",
+      "sha256": "ed422262c009228fe9de083d92657899bbd6c7ac678cca8633faf29d79159760",
+      "num_step": 64,
+      "generation_text_sha256": "8b474ee193ac32287c1372d234ce7823494998910d2a63cf516d4ae3c590a3ec",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "f457046fc4368fa4cebb6df8b1b7a02bfc1c4a5eda0d29b9283e138261c424a9",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"We were actually just talking about what might've happened to you.\"",
+      "file": "en/f457046fc4368fa4cebb6df8b1b7a02bfc1c4a5eda0d29b9283e138261c424a9.mp3",
+      "sha256": "8e1cbe9288400cba55afff34073b27b2b1bdf2e9171606204871df1f998c7d04",
+      "num_step": 64,
+      "generation_text_sha256": "26c41014d1c553a536c722f3d09d7fff7a1c85dc787a3d1f8ecc332547a5547e"
+    },
+    {
+      "id": "ee02de6847b88a5ee49789d221a35649aa6de8dee4c94d33abac99651338ab81",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Two heads are better than one, right?\"",
+      "file": "en/ee02de6847b88a5ee49789d221a35649aa6de8dee4c94d33abac99651338ab81.mp3",
+      "sha256": "10b31dfb002c4275ded801e10d6e8e3cb533f3ffb10673073c16fe568719d88b",
+      "num_step": 64,
+      "generation_text_sha256": "f48575e436edef161556744d69bb57250ef4c5ba9c01e9a6302b90a4c599c174"
+    },
+    {
+      "id": "c022669112d3c569afaca11caaba5401b42648a5bbc159b9052805a21adbeba4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "They both look at me, hopeful. My thoughts are still clouded by that bizarre dream, but maybe they can shed some insight.",
+      "file": "en/c022669112d3c569afaca11caaba5401b42648a5bbc159b9052805a21adbeba4.mp3",
+      "sha256": "61f99f1bb43126e0d4ed9ca69b28e90631eeaa78628d4a49c5284aedd6696bf6",
+      "num_step": 64,
+      "generation_text_sha256": "fdcd8c88ff21928a0eafab60f9c592b0120c4456816c2087290653fa3e59f299",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "55b992fe92424a3194a9785c90094a70bfe9e0445e24d3e5131c8d04c9822c5b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The conversation with Twilight and Spike concludes, leaving me with a head full of new insights... and more questions.",
+      "file": "en/55b992fe92424a3194a9785c90094a70bfe9e0445e24d3e5131c8d04c9822c5b.mp3",
+      "sha256": "10f821ca5747d2955ee60332eac5a6d13c4d7e598274ac20f5639ce2596775e8",
+      "num_step": 64,
+      "generation_text_sha256": "05c3ed41cb90c70513aeb0914fc87824c0e134d40501348ff9feb246e51442de",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "be826d474664ea4c1d9b2927e9876ba4239b09c8b0d7a9706fe591ae93755a8f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Now that you're up and feeling a little better, I'd love to introduce you to some of my friends.\"",
+      "file": "en/be826d474664ea4c1d9b2927e9876ba4239b09c8b0d7a9706fe591ae93755a8f.mp3",
+      "sha256": "266e8d5f84011c759e994f8759d57edd856d6ad4469055416244b8e9d651aa58",
+      "num_step": 64,
+      "generation_text_sha256": "064e3e10b6041ee9d6b7c552b8d5c306b596734291718c79282fd9c9a1c5ac9a"
+    },
+    {
+      "id": "5949cde3f83c70aff6c38717e2e9ef4c391850c54a816be56c2a06e0b4f18575",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Ponyville's not big, but it has its quirks — and some very colorful residents.\"",
+      "file": "en/5949cde3f83c70aff6c38717e2e9ef4c391850c54a816be56c2a06e0b4f18575.mp3",
+      "sha256": "e340b0f21e1928aa82e248b553de8f2b5c3b9133e07802b604e98f30cc5282e4",
+      "num_step": 64,
+      "generation_text_sha256": "d32c12a408b577edf27240e3ce0c3be006e13ac8bcaafd75ca90cd7126201ab0"
+    },
+    {
+      "id": "6d0aaa68f917d78e4b1b507535c04ea6ae97613c443e0c59df3f9654221cb17b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Here, let me grab a map for you. I don't want you getting lost on your first day.\"",
+      "file": "en/6d0aaa68f917d78e4b1b507535c04ea6ae97613c443e0c59df3f9654221cb17b.mp3",
+      "sha256": "89d42b44650aef18a9939b63313a4b7e340d51a9820427db25a4b2a1f039878e",
+      "num_step": 64,
+      "generation_text_sha256": "4ada9e91f5e8cb2e5e1947e57724ac67753a0d628a5595246d8183ced44006b3"
+    },
+    {
+      "id": "be0fbf25a941b7a80bdb8ce70af6cf3ea9cad7953471013416da1d0c639591a8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Her horn glows as she lifts a scroll from a nearby shelf and unfurls it with a practiced flick.",
+      "file": "en/be0fbf25a941b7a80bdb8ce70af6cf3ea9cad7953471013416da1d0c639591a8.mp3",
+      "sha256": "0cb9ff0f098f752a9f8a883f7b1c1dd701d7b13b8b891ba69fff047677adce05",
+      "num_step": 64,
+      "generation_text_sha256": "98ccaacc977a5c19938027e576e503e377950ad463592bd8039ac392b886f0f5",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "30a7929d56e2abda0aacbdf91f4df89452c0f5ecdbaefd354b766439b3a5d9b6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The parchment spreads out before me, detailed with neat hoofwriting and little hand-drawn symbols marking key spots.",
+      "file": "en/30a7929d56e2abda0aacbdf91f4df89452c0f5ecdbaefd354b766439b3a5d9b6.mp3",
+      "sha256": "e551774f3db9e8581b53c62a470a32361ee8d6ad9942f53f0f8bdca1ce044711",
+      "num_step": 64,
+      "generation_text_sha256": "9dee3263662a6a29163c5b34e7fd6e40108a405f1274426391d608693a57ca26",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 0.9444,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "a34d1f6cdd60182983432e0de8bb8a87509c54c4d6570d083559f74dc1056911",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I'll come with you to show you around. Just pick a place on the map and we'll head there together!\"",
+      "file": "en/a34d1f6cdd60182983432e0de8bb8a87509c54c4d6570d083559f74dc1056911.mp3",
+      "sha256": "9dfcd75c43a03896dfb309712591483a44cb7333e2f6a3ac844d5749a3f1d33f",
+      "num_step": 64,
+      "generation_text_sha256": "7b46cbdcf4ca7fdcfa8fb1e27c13419e91b2004b9b070ad74b63e0c6b755b836"
+    },
+    {
+      "id": "119006573772cac1ca1b3d712c9e38bca7b4bb92b2820fc0d574a00867006f72",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "Hello! My name is Twilight Sparkle, and I'm so happy to meet you!",
+      "file": "en/119006573772cac1ca1b3d712c9e38bca7b4bb92b2820fc0d574a00867006f72.mp3",
+      "sha256": "1dd5c795655c98d47fda413b228ae854f486c29827121c81d7e44af0d9a966f5",
+      "num_step": 64,
+      "generation_text_sha256": "fcaf3f60f924ca6660c93570838a3fe47750700fde6e1975ec17a049a6cc0107"
+    },
+    {
+      "id": "9880a8f5d729eb2e51d89f28acc28846f50913644d9aeccc2f71db51d544ac6c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "You can now ask questions or continue the conversation.",
+      "file": "en/9880a8f5d729eb2e51d89f28acc28846f50913644d9aeccc2f71db51d544ac6c.mp3",
+      "sha256": "ec27a9363b4899b7cf74a8aef0043ec8e6f5c489792aa2bf6320d0740216d1ea",
+      "num_step": 64,
+      "generation_text_sha256": "ed1def7ba42566bf4142e110614d6b58042fa57a13f6eabedbc66e1c1e2ec596",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    },
+    {
+      "id": "9214bd5e964eb802e3a3045ff4d9072dbd089935e5c27d4e677d11ae64674705",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "As the conversation winds down, you all drift off to sleep, feeling comfortable and safe...",
+      "file": "en/9214bd5e964eb802e3a3045ff4d9072dbd089935e5c27d4e677d11ae64674705.mp3",
+      "sha256": "1ecabda82cd9ca5c0e7b98701cd3316eb06a4814d132144c7aab17d6cdb1549e",
+      "num_step": 64,
+      "generation_text_sha256": "cd1a5ea136992f4bd5299a2a8edce95ee533a378d02c2578b0f863f68568671e",
+      "generation_attempts": 1,
+      "narrator_verification": {
+        "ok": true,
+        "first_word_verified": true,
+        "word_coverage": 1.0,
+        "attempts": 1,
+        "asr_model": "openai/whisper-small",
+        "onset_burst": false
+      },
+      "reference_sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897"
+    }
+  ]
+}

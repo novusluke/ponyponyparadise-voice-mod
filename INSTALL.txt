@@ -1,0 +1,10 @@
+PonyPonyParadise Voice Mod
+
+Extract the ZIP and open PonyPonyParadiseVoiceSetup.exe.
+Select your game folder and an OmniVoice installation, or install OmniVoice
+through setup. Click Apply voices, then Launch PonyPonyParadise.
+
+Includes 50 English voices. New speech requires an NVIDIA CUDA GPU.
+Use Character Voices in the game for voice settings and Clean Cache.
+Use setup to check for updates or uninstall the mod. Uninstall restores
+the original game and keeps your saves.

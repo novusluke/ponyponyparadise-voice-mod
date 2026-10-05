@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "description": "Fixed narrator and system lines. Generated once for the base asset pack.",
+  "lines": [
+    {
+      "id": "9880a8f5d729eb2e51d89f28acc28846f50913644d9aeccc2f71db51d544ac6c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "You can now ask questions or continue the conversation."
+    },
+    {
+      "id": "a672887ec6a6ec301c6e348812b115dc786c9033d5ceeb79920a48c517b17bfe",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The library is warm and welcoming, a stark contrast to the dark forest."
+    },
+    {
+      "id": "9214bd5e964eb802e3a3045ff4d9072dbd089935e5c27d4e677d11ae64674705",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "As the conversation winds down, you all drift off to sleep, feeling comfortable and safe..."
+    }
+  ]
+}

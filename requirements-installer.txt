@@ -1,0 +1,5 @@
+# Only needed to run/build the GUI from source. The release EXE bundles these.
+PySide6-Essentials==6.11.2
+PySide6-Addons==6.11.2
+PyInstaller==6.22.3
+Pillow==12.3.0

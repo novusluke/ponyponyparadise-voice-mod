@@ -1,0 +1,410 @@
+{
+  "schema_version": 1,
+  "method": "FFmpeg EBU R128 integrated loudness, mono, verified after MP3 encoding",
+  "reference": "en/buttonmash.mp3",
+  "target_lufs": -14.4,
+  "tolerance_lu": 0.3,
+  "peak_limit_dbtp": 0,
+  "files": [
+    {
+      "file": "en/aloe.mp3",
+      "source_sha256": "7fe66e6937b7939d640e483216f18a29310bab89c46f5d4d7f7381a56de9aa1e",
+      "sha256": "71b041a1642fd734bf2e0a6a346f308c6fa71780b16c3dc5d018ff29fc637a51",
+      "before_lufs": -22.95,
+      "after_lufs": -14.52,
+      "true_peak_dbtp": -1.88
+    },
+    {
+      "file": "en/applebloom.mp3",
+      "source_sha256": "7595d835bcdcb30d24b96ab80f7a8899366e16fbda262d3fd3539d5dac6a4bd3",
+      "sha256": "a3b6114f9c9e4dbde59d9f1566e7041c015d6d710660aea91116e56f0376bfc5",
+      "before_lufs": -24.15,
+      "after_lufs": -14.59,
+      "true_peak_dbtp": -1.79
+    },
+    {
+      "file": "en/applejack.mp3",
+      "source_sha256": "d5e4fd3663732e03a715a2497ad35993e7c1696445584f94bd44c7c82113223c",
+      "sha256": "92c6b397ca4f5137569d96e73068fe05990dc72a799b382ecc8cae4a31a77cb6",
+      "before_lufs": -12.66,
+      "after_lufs": -14.65,
+      "true_peak_dbtp": -1.86
+    },
+    {
+      "file": "en/berrypunch.mp3",
+      "source_sha256": "f062fb544200e68a9e0d43fbfdcd50b698f58e1309f36e625cb1b7907cf69119",
+      "sha256": "d7847ed43efc6333b3878560ac5c575777c1e7f0ccb8b16bd16a55c5f9b4433f",
+      "before_lufs": -16.43,
+      "after_lufs": -14.5,
+      "true_peak_dbtp": -1.9
+    },
+    {
+      "file": "en/bigmcintosh.mp3",
+      "source_sha256": "c5256793a2cc09b162b1174a6d6b29365ee56fe888caf39c383053820e1def00",
+      "sha256": "79140ab823eeffb5f83d0337116ea59c2b0563e56ad519b3b238cc3114a4bf31",
+      "before_lufs": -15.15,
+      "after_lufs": -14.57,
+      "true_peak_dbtp": -1.9
+    },
+    {
+      "file": "en/blueblood.mp3",
+      "source_sha256": "fe6b27130bcaf16e0ce9bbfdcb912f766622a03aace4fa10d4db942998dabd4c",
+      "sha256": "3b50b1c7e02f6f2fbae05335eecdda1377c2d0e56fcccbdac34c7a62d5c3836f",
+      "before_lufs": -26.21,
+      "after_lufs": -14.67,
+      "true_peak_dbtp": -1.87
+    },
+    {
+      "file": "en/bonbon.mp3",
+      "source_sha256": "eb4d556aa9e3fb027302c36a219320eb38382bdafd24511e5c803cdd32dc719f",
+      "sha256": "1e18a910481eb7a3219129e46df902f50848a14ac0f094ab6e7fbfe5c3e5465b",
+      "before_lufs": -26.09,
+      "after_lufs": -14.62,
+      "true_peak_dbtp": -1.83
+    },
+    {
+      "file": "en/buttonmash.mp3",
+      "source_sha256": "a06f072f3cf7c5f7b0dc8b12da383c2eb7a15eda0e614ad0f70fbe196a67c088",
+      "sha256": "da45604fb7cdfef6de6f760681abcbfed9ce0b4ae372394d20686ea6fa759790",
+      "before_lufs": -14.4,
+      "after_lufs": -14.48,
+      "true_peak_dbtp": -1.56
+    },
+    {
+      "file": "en/celestia.mp3",
+      "source_sha256": "96c504eebe401ec551b7fd5530a68576007c725bfb4c20b5d3cbf44e2c35b6f2",
+      "sha256": "201966552bd633080c40137f58259fa3730951c83d5ad95a907b0a907cfb17b3",
+      "before_lufs": -17.57,
+      "after_lufs": -14.58,
+      "true_peak_dbtp": -1.91
+    },
+    {
+      "file": "en/cheerilee.mp3",
+      "source_sha256": "b55b0d4513d5e8c8d80f3abe178b05c64dbc965213a6669f653e58f8f3a6f847",
+      "sha256": "c885809128d781d8a444da6816b02ff5d9ae9637c9f06b8b6ce8ca59d18cee33",
+      "before_lufs": -16.08,
+      "after_lufs": -14.5,
+      "true_peak_dbtp": -1.8
+    },
+    {
+      "file": "en/chrysalis.mp3",
+      "source_sha256": "0aa5ed252c6c382ef176828288809c8e1a7eb9bf7d64e1fb2721f03a9ebf3345",
+      "sha256": "a78175f4727ae1892d0d904c27179c067d3095b0457719e451c4f33ab6d56b32",
+      "before_lufs": -16.15,
+      "after_lufs": -14.59,
+      "true_peak_dbtp": -1.84
+    },
+    {
+      "file": "en/daisy.mp3",
+      "source_sha256": "a2e86005808f7c0f361317f7283a766231f78737cbf7c38090c849de35bb181c",
+      "sha256": "a310c147917a7ce5f426565170f833a5f99a56c8e87b8efbaf125415c7de1ccd",
+      "before_lufs": -24.91,
+      "after_lufs": -14.67,
+      "true_peak_dbtp": -1.93
+    },
+    {
+      "file": "en/derpyhooves.mp3",
+      "source_sha256": "0692f0c44509f300f152bc01654a506a86caf3bdaec9c0789b76704bbb8b50f9",
+      "sha256": "819afa7033ddde4f3ed3494f6211046e5d4a3e4ff069d1e437b8df971723a443",
+      "before_lufs": -22.55,
+      "after_lufs": -14.62,
+      "true_peak_dbtp": -1.89
+    },
+    {
+      "file": "en/diamondtiara.mp3",
+      "source_sha256": "aaf4319161b82de3dc0b9fb76bcf7263134edbd47b80cf494690f3f55f22fdd9",
+      "sha256": "f2461492b10454ab8f703fd63325f08eb63a1ae9c8d9c69ccf51d2a433e992a4",
+      "before_lufs": -19.19,
+      "after_lufs": -14.66,
+      "true_peak_dbtp": -1.83
+    },
+    {
+      "file": "en/donutjoe.mp3",
+      "source_sha256": "94754498f30d473622b8ba7b58c0c13c35f55ed8eba5bfe4a52455449245924d",
+      "sha256": "aba243b6101fcb22a86031f7a9fd4faad4a9be4510a7b077b6a7f592e4eed9ed",
+      "before_lufs": -29.36,
+      "after_lufs": -14.69,
+      "true_peak_dbtp": -1.88
+    },
+    {
+      "file": "en/fancypants.mp3",
+      "source_sha256": "a63a59f343f5a4413ede23cc09ca675fad8b9273d266a9c973cd1ebe39ee43dd",
+      "sha256": "9a8c459d09db94b0bc18e41b6554533a8a700ee249a4f5c291fdbd1e6417eda8",
+      "before_lufs": -31.91,
+      "after_lufs": -14.65,
+      "true_peak_dbtp": -1.72
+    },
+    {
+      "file": "en/fleetfoot.mp3",
+      "source_sha256": "7b3818f4944206ac12798eb293c494ea63ecbe623fe4e5b5e222e7a26daf9395",
+      "sha256": "cfbb0a3998c7df5321075b6c609d87804e4be21ec82a6dadab61968acdfe560b",
+      "before_lufs": -24.9,
+      "after_lufs": -14.55,
+      "true_peak_dbtp": -1.82
+    },
+    {
+      "file": "en/fleurdelys.mp3",
+      "source_sha256": "cf7e3dde20983865a92f69a53e9263f5bfd554b4d0765c9106f87a22dd89748f",
+      "sha256": "53fcfbf401819ad04f7fb92f2cca74ad960ba00dc8b498ee81001cd5ce8bafc9",
+      "before_lufs": -24.61,
+      "after_lufs": -14.64,
+      "true_peak_dbtp": -1.91
+    },
+    {
+      "file": "en/fluttershy.mp3",
+      "source_sha256": "30df8d1fcec6080658f70ed6b31f13f8c9d71d2bfb85434c2a9c674ba6f85af1",
+      "sha256": "2b9e6ba26af252b8bf25f614ba729120474171040a9c3dceb0a1303f60a97ff1",
+      "before_lufs": -10.31,
+      "after_lufs": -14.45,
+      "true_peak_dbtp": -1.84
+    },
+    {
+      "file": "en/grannysmith.mp3",
+      "source_sha256": "e923e62dd0639ee654528a904bfe39fa1bef8a2b9d393516da282235019e9be7",
+      "sha256": "ec0bbdfcc948176cc7bc7a239efe4e5cc1a78be5054c02671e995d249f2480cb",
+      "before_lufs": -25.33,
+      "after_lufs": -14.62,
+      "true_peak_dbtp": -1.83
+    },
+    {
+      "file": "en/lightningdust.mp3",
+      "source_sha256": "9bb6532102e647493e5093770b0465a943a4baf96288d745af0572f09fe7895b",
+      "sha256": "d501dba932ed07209fac5f1c4851e6d179564bd97b6e991793441c35fac3f886",
+      "before_lufs": -24.58,
+      "after_lufs": -14.61,
+      "true_peak_dbtp": -1.88
+    },
+    {
+      "file": "en/lilyvalley.mp3",
+      "source_sha256": "8b1d643cc976e75baf149e437ab6a9e262f06173e8fb6ea57b4d7acbb8a052b8",
+      "sha256": "0b7f32a3aa553998fafea72946f91aad7b6306fa7b870666c5f3f3bfcfa6679c",
+      "before_lufs": -26.59,
+      "after_lufs": -14.64,
+      "true_peak_dbtp": -1.65
+    },
+    {
+      "file": "en/lotus.mp3",
+      "source_sha256": "673295a43becac768889188923914ab30fe03c88dc3ba9083550ddd0592b510f",
+      "sha256": "5e9d9995e50c9c3c60ef3f1546252eb14a4f9d66e27394beb83739a0d5c2cde6",
+      "before_lufs": -26.72,
+      "after_lufs": -14.63,
+      "true_peak_dbtp": -1.87
+    },
+    {
+      "file": "en/luna.mp3",
+      "source_sha256": "775d89e0eb00884f64123df2ca3a2f3d4d36d580e8be4037a2f4d2dfb46e9cd7",
+      "sha256": "bb5efa23847e581f2b0471b64cfebf4108ce3baddde8e6d850ad3b698f15da45",
+      "before_lufs": -17.77,
+      "after_lufs": -14.7,
+      "true_peak_dbtp": -1.88
+    },
+    {
+      "file": "en/lyraheartstrings.mp3",
+      "source_sha256": "04ae2268372dfc482fcde913a809df1a0d694605fc8ff70c414f32d11d3ba1fc",
+      "sha256": "8f5ad77f338ce0996a9edde639522d475fd12155fcac1b1428e4d44795722339",
+      "before_lufs": -23.68,
+      "after_lufs": -14.55,
+      "true_peak_dbtp": -1.81
+    },
+    {
+      "file": "en/mayormare.mp3",
+      "source_sha256": "80e5713e03e5fe2da34e2b65637b12d51fcc7393867bbd7bf6bfae2059c7ae41",
+      "sha256": "5a380f823ecef6b73fd5e4bdf6c8289ccbe179da26d9c0705534e7bcd58f1385",
+      "before_lufs": -27.92,
+      "after_lufs": -14.54,
+      "true_peak_dbtp": -1.89
+    },
+    {
+      "file": "en/minuette.mp3",
+      "source_sha256": "89a2616f7aa8f823a4cb77261af3ab9f860151112d460ca9f0746585be7e1721",
+      "sha256": "2f024d6b8bb693eba7f6658ce647eb2169a7f9ecd8be5a885a400511dace22cd",
+      "before_lufs": -20.33,
+      "after_lufs": -14.57,
+      "true_peak_dbtp": -1.88
+    },
+    {
+      "file": "en/moondancer.mp3",
+      "source_sha256": "6c8cdf9dd72cdfb1f8a859c8b177f0707a34898be3ebcb54fe4b1aa811f66ca7",
+      "sha256": "e242014e74df1291d31b07ddede69aa1e0e6c5ee9b88aa42f86eb8e056162f60",
+      "before_lufs": -25.46,
+      "after_lufs": -14.7,
+      "true_peak_dbtp": -1.89
+    },
+    {
+      "file": "en/mrcake.mp3",
+      "source_sha256": "cca0614458aca23b19b66ad81e4424d3e9297f7a953111206936f5e46a3ba786",
+      "sha256": "913e6d289abdef787d77cafab435071d8d703de19ea6cfcfc1233acb44a8cbd1",
+      "before_lufs": -21.22,
+      "after_lufs": -14.56,
+      "true_peak_dbtp": -1.9
+    },
+    {
+      "file": "en/mrscake.mp3",
+      "source_sha256": "3c1108de8b1d703f079d382244e8506268bed39feaaabe973a728edbc75d3928",
+      "sha256": "5d85a94dced669e71eca77cabf8c78f9f295a7213e289f350db56a015ce12f14",
+      "before_lufs": -21.03,
+      "after_lufs": -14.42,
+      "true_peak_dbtp": -1.9
+    },
+    {
+      "file": "en/narrator.mp3",
+      "source_sha256": "c44193859575dd99c363c1c0f70b242416d3d4ce8c811b0babeed97438fb12a0",
+      "sha256": "7f4a9dbcafad317f9e34429bc1135f192f6b0b2a2ea189cf542d899c06023897",
+      "before_lufs": -23.3,
+      "after_lufs": -14.53,
+      "true_peak_dbtp": -1.91
+    },
+    {
+      "file": "en/nurseredheart.mp3",
+      "source_sha256": "353d33438647c3bc999123c9f8caa74f66043d1912c35016231856917688efa5",
+      "sha256": "6a6d9d6cce840a95301660c2ce0cf6d2fa5f31c4a45c859c9864cdd14c566302",
+      "before_lufs": -25.37,
+      "after_lufs": -14.62,
+      "true_peak_dbtp": -1.87
+    },
+    {
+      "file": "en/octaviamelody.mp3",
+      "source_sha256": "b3c192a19804eabf6057393fec1df5e38cf6260b7b30fa82f845c9bea876ae7a",
+      "sha256": "dc396bbe8c89faaa7ea1dbdd9f5160ef85b2c68bdb79103b3cb3b19dc5fe0cba",
+      "before_lufs": -18.46,
+      "after_lufs": -14.59,
+      "true_peak_dbtp": -1.91
+    },
+    {
+      "file": "en/photofinish.mp3",
+      "source_sha256": "83e164e4d7f1aaa85ef0ecc784f7445f4a8a8a15048f5c94902590390eb923ae",
+      "sha256": "2c520c112471e31d78cebc2b35d0afd4d8de75e67528f1485b7f18e156509583",
+      "before_lufs": -27.35,
+      "after_lufs": -14.6,
+      "true_peak_dbtp": -1.92
+    },
+    {
+      "file": "en/pinkiepie.mp3",
+      "source_sha256": "6b1f71a8c6c20633f03e2b9218248edf0d91c14608e4df5b479515d1c7f210f2",
+      "sha256": "decfbaeef799f1d15a1d6241c819824763bebdff2854c7f2ede0c90e49d3c044",
+      "before_lufs": -11.18,
+      "after_lufs": -14.55,
+      "true_peak_dbtp": -1.83
+    },
+    {
+      "file": "en/poseyshy.mp3",
+      "source_sha256": "69b66134e76b27cae789b2c21246b61b0576f71d807d89de0e5d0171714e09ba",
+      "sha256": "39c1afb437c04f5eca72e62dc746923028b7cb6695125f3ed1e899b05d1b40ef",
+      "before_lufs": -24.11,
+      "after_lufs": -14.48,
+      "true_peak_dbtp": -1.88
+    },
+    {
+      "file": "en/rainbowdash.mp3",
+      "source_sha256": "907b28de4bdeb4fa6524cbeae72259fe90367ecef21d5855e2b67588e7b66670",
+      "sha256": "9b711ca254dbfb325ddcb652507d44ed6caeef9def7f9805989d905147715e93",
+      "before_lufs": -15.12,
+      "after_lufs": -14.65,
+      "true_peak_dbtp": -1.66
+    },
+    {
+      "file": "en/rainbowshine.mp3",
+      "source_sha256": "7f082006adad48aeac2a28c35aa199f6b7ee83ff3687edef5890b826b3678f6c",
+      "sha256": "50dc88135bb1aa3b83fc0eb71302f9f9a02828530c2ea76d1d4b3f5dcf718b2c",
+      "before_lufs": -33.29,
+      "after_lufs": -14.58,
+      "true_peak_dbtp": -1.83
+    },
+    {
+      "file": "en/rarity.mp3",
+      "source_sha256": "8a9421e257f77bf3cda1e2f7fd819eb69d85b2a8073aa1f19ba92a7833e0ed90",
+      "sha256": "23f6a358bbe0e60e8c800df74c8c679445a8d5084ee2da1d1e27c51807723cc7",
+      "before_lufs": -11.48,
+      "after_lufs": -14.63,
+      "true_peak_dbtp": -1.84
+    },
+    {
+      "file": "en/roseluck.mp3",
+      "source_sha256": "18cf6b019acfa316849557008b27762805f5caa2616c8d1363d284dc358b68db",
+      "sha256": "f1bcde37e126ca0907e32552c100e1e645273a1ce8b579f2e2b59e9f7613340d",
+      "before_lufs": -25.88,
+      "after_lufs": -14.56,
+      "true_peak_dbtp": -1.92
+    },
+    {
+      "file": "en/scootaloo.mp3",
+      "source_sha256": "f56ba8caff0491a0b128f94f18f54c109f791a701800d6b8155da79c24591af1",
+      "sha256": "4bbe972c600f278d6b323fa991ae1f2f2df7ed9eb65c024c2e3f572a62c5b4c8",
+      "before_lufs": -14.44,
+      "after_lufs": -14.63,
+      "true_peak_dbtp": -1.84
+    },
+    {
+      "file": "en/silverspoon.mp3",
+      "source_sha256": "61a616566048be1962bc01a808a1d2ea0ff5461bbd87a223f84782c900f4566a",
+      "sha256": "6f8d9235de7ebcea5d363069b27751093d6cd0518e12c86ef2e70ca066a0be26",
+      "before_lufs": -27.12,
+      "after_lufs": -14.59,
+      "true_peak_dbtp": -1.74
+    },
+    {
+      "file": "en/spike.mp3",
+      "source_sha256": "62c5ac327412410e7d8765bb4f0c468d63aef5607e99f8d9aee443bc78ca439d",
+      "sha256": "0458b788115d2c9e1a451ced79e5875495473e6f70c6d75c80b72756f6d53afe",
+      "before_lufs": -17.93,
+      "after_lufs": -14.58,
+      "true_peak_dbtp": -1.84
+    },
+    {
+      "file": "en/spitfire.mp3",
+      "source_sha256": "709f93e2c01f3b13702b20df9c8dd54efb7585ff27b038f2cbd3ea7306ee0850",
+      "sha256": "0349de959238f9e7ad761b406b92af559d5329cfee09d6c9a652312be72694d2",
+      "before_lufs": -24.75,
+      "after_lufs": -14.59,
+      "true_peak_dbtp": -1.74
+    },
+    {
+      "file": "en/sweetiebelle.mp3",
+      "source_sha256": "60f1a3d281b7eef04a533a8788f220818d15d6ffdeca3adb43a5146ca971592c",
+      "sha256": "26f55f42f139d9eb202da6c819407ed7eddf6a09b8b70fcaaf14aee5b2defb38",
+      "before_lufs": -19.89,
+      "after_lufs": -14.5,
+      "true_peak_dbtp": -1.75
+    },
+    {
+      "file": "en/trixie.mp3",
+      "source_sha256": "d49a231cd9b45f4e9988c9461ac754122965bbb07bcc1f263da949f82bf098a7",
+      "sha256": "3ad8e0e7c96ac35926499d8ba878ae21682f7807e67a4376ba41f4b9e23d5883",
+      "before_lufs": -26.8,
+      "after_lufs": -14.62,
+      "true_peak_dbtp": -1.85
+    },
+    {
+      "file": "en/twilight.mp3",
+      "source_sha256": "3a11a4e2917bc32d580644e986557aa4e5199572767e3cabb962748da1571e55",
+      "sha256": "b9f7a88075106ea9e0b8c83a4fb279d1d1d6b44e7bfc3610ffc15b72940e5c69",
+      "before_lufs": -13.62,
+      "after_lufs": -14.62,
+      "true_peak_dbtp": -1.76
+    },
+    {
+      "file": "en/windywhistles.mp3",
+      "source_sha256": "c96112498ba15fe85c2f72a768b3872c1c31c8c800ba2813d055c3405839a5f0",
+      "sha256": "16b5d97ac569ab252272d2ab0455646d1aa1a0d16f131fe76b2f6febfb2e83c8",
+      "before_lufs": -23.35,
+      "after_lufs": -14.66,
+      "true_peak_dbtp": -1.9
+    },
+    {
+      "file": "en/zecora.mp3",
+      "source_sha256": "61a0332b90b99a91b96c038a52bdf95f7c172e638e4aa57ee7e58176394e0a7a",
+      "sha256": "962a6ecd7856b9b9a98ffe94dacb49d2bc8d714fa511b4d7708251483444ac99",
+      "before_lufs": -27.57,
+      "after_lufs": -14.56,
+      "true_peak_dbtp": -1.92
+    },
+    {
+      "file": "en/zephyrbreeze.mp3",
+      "source_sha256": "f5453142dd5c47a56073f03ddba77a890c19b84f401d65b1afa4b82f22f115aa",
+      "sha256": "e7f7254b2cc38f0f177264932abddfbda410c9ab2e399e42e19e6d02f34e4b84",
+      "before_lufs": -31.67,
+      "after_lufs": -14.53,
+      "true_peak_dbtp": -1.87
+    }
+  ]
+}

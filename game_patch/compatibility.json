@@ -1,0 +1,26 @@
+{
+  "engine": [
+    4,
+    8,
+    0
+  ],
+  "base_scripts": {
+    "addons/dialogic/Modules/Text/event_text.gd": "2d54ce9466dd8a841e30f554aeb96248cd808431f548fa3eb2f8d4955ddaa285",
+    "scripts/ai/dialogic_ai_conversation.gd": "a32b4573f127231eb118654aab5fdd033400ed6fe0de1505c38e2e6a69c24c0c",
+    "scripts/ai/ai_scene_generator.gd": "c910b23cde03ae7c630a71e1091b82b68f68f795b397a49b50e38ba8603dd9fa",
+    "scenes/ui_settings_menu.gd": "1c9e4ee1b155d93ba49ee86a21080d318648bae876acf8eb6b5431817bf290e1",
+    "autoloads/map_manager.gd": "c89e2b238694b1210e6b1892be1ed861bb0c503727d9bf4f640c8f6125634bf5",
+    "autoloads/rollback_manager.gd": "5119904107d04fcb439d2a2a138de2f75be44e1073e576d3f35b237c080e9437",
+    "addons/dialogic/Modules/History/subsystem_history.gd": "3f17ec53c376981b4c0eb1e6fb138ac596f5ae9c135d922c1d2a3e282fafb70f",
+    "addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd": "273322963a33d44c208d84178fabbde45398390ca24ca7ed2fbf26068210ebcf",
+    "scripts/ai/ai_dialogue_shared.gd": "84c49752e0a78452f04955e4b96165a02dc9fc41a42a28cb4bba737b2953b477",
+    "addons/dialogic/Core/DialogicGameHandler.gd": "f8b89205656f67441894e1e35389a2b3b58bc382bee811bfb664dd023dcc3e73",
+    "addons/dialogic/Modules/Text/manual_advance.gd": "fe441d1d1150e6791f5999e363091f42dd46ae91d80b59950ec590cb4e7a78d8",
+    "scenes/save_load_menu.gd": "9cd9b2b8436c8408418534f0ba75645b678d8a9eada9a8ea44708c31195b9749",
+    "scripts/ai/ai_conversation_bridge.gd": "bb50b3d0b7bda1f6a05d7e1d7bcfb1123b448d77ae498bde23b55b5b7848c534",
+    "addons/dialogic/Modules/Clear/event_clear.gd": "1b3655f7f11678da40c1faf3286c282c958b502482442c4760c7615d40c98c10",
+    "addons/dialogic/Modules/Text/subsystem_text.gd": "785028a32dcd4e1ce96aca851395ee2309bd31d50225bc35f8cd8e18809f3e02",
+    "scenes/main.gd": "10feefca220a3a42caaf2f73a56adeb0c2f2d7af973db9c5f3da4ccc0a251d83",
+    "addons/dialogic/Modules/Audio/subsystem_audio.gd": "e4c3480e6a29c6768e522f916c49d228e55839833c988f45ee70e8c64cc1608c"
+  }
+}

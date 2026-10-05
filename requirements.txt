@@ -1,0 +1,2 @@
+# Install into the OmniVoice environment. Setup also installs pinned OmniVoice.
+imageio-ffmpeg>=0.6.0,<0.7

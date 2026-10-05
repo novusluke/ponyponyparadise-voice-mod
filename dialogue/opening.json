@@ -1,0 +1,900 @@
+{
+  "schema_version": 1,
+  "description": "Fixed Everfree and Golden Oak Library scenes, every choice branch, and the Twilight voice test.",
+  "lines": [
+    {
+      "id": "d7135983d1abdd5c766d2e9df477a674b235b89d8ad129d8bf23a5f7fd41a8b4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Darkness."
+    },
+    {
+      "id": "22d92de2cb0b63af9871c71457537afa359a3b533a42b695bec63bc31771afba",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Weight."
+    },
+    {
+      "id": "6c5b6a9be16847fd7ae5e93599839dd33400bcd447a60e221487ab87b2712c01",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Cold earth presses into my back, damp and crawling with tiny things."
+    },
+    {
+      "id": "708bc3628711298f580f78b20ec155ecb6ddf4a959c465180ec11a9643283739",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The scent of moss and rot fills my lungs."
+    },
+    {
+      "id": "1d148fd2b93ab3ac475235a2eecd3d53ccfc8f0cd469e0e43bb13c21a29116b1",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Something's wrong."
+    },
+    {
+      "id": "e423966e2dda1288f01c7996e85d4cb39b016073d705c10f4412b2e6d0dc9f76",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My mind claws upward from sleep, thick and sluggish, like wading through wet sand."
+    },
+    {
+      "id": "a2fc2563efc9f157c66104bc40c625a73330ee312eeff1ba88aa4cd016db0e53",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Pain flares behind my eyes, sharp and disorienting."
+    },
+    {
+      "id": "242a9b68adc867f58513bced5d10a1382ea41dcf67010219417067058a112e9e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The world tilts sideways."
+    },
+    {
+      "id": "a2607f33f27add606ad681b1fa1a7de49a0e96a845e1821950963a4dad73c5be",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I try to move. My limbs feel distant, like they belong to someone else."
+    },
+    {
+      "id": "92f87433848b142a81b0865f4db502b465397f6eac15839dc5872c3e72dc28e1",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Where…?"
+    },
+    {
+      "id": "cb239ce921cc11cc59978eb8670a9ed63892cf1feda2578cb13001677e763c27",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I manage to roll onto my side. Wet leaves cling to my skin."
+    },
+    {
+      "id": "f8a3e0f8862df95bf8a29d5864181bc27d153c202f7e377d6a4c3785bb15b7ab",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Each breath scrapes my throat — shallow, expensive."
+    },
+    {
+      "id": "d921389b80aff752b3257db5625bd84785f39bf75a1ee78531708675f821f48f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My heart pounds, unsure if from fear or effort."
+    },
+    {
+      "id": "2ea582aaa03612d5bd57d0f3be6f235c6523156adf9e2a9b1645d642dc9f761a",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Shapes flicker at the edges of my vision — light, movement, forest."
+    },
+    {
+      "id": "829beb9aacf8bc7784e8defe2386e8ac88e2c88d280a5055f4e11e6487000f6d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I lift an arm. Or... I try to."
+    },
+    {
+      "id": "91aee54fb5db83b645160af7cf23643fef0683b7d8ad2ff0cfdf96895a54601f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I need to know."
+    },
+    {
+      "id": "8b1128a2352bb3da45bddb8a03083a7310fbc3aacd33b5b4f07f7e5ac7ebf8fa",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "What am I?"
+    },
+    {
+      "id": "50330c1dafce92d465e143b370473456144e0828205a82255b2ecbef532ea6d5",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Blurred fingers come into view — five of them, trembling and smudged with dirt."
+    },
+    {
+      "id": "2f13161368f859bbd824374229723791092a1c03fc93c92486f5406ff84f05da",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I flex them. The motion is clumsy, but familiar."
+    },
+    {
+      "id": "503daa9455d82489c8dc5c0466de19aae9b4c9093dbbaf4579ec4ae428e8cab3",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "This feels right. Even if nothing else does."
+    },
+    {
+      "id": "027ce1128915f51dd044b40169f61c3e6ff652dac868fe62b73496bc109c1794",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Broad, flat shapes come into view — hooves, chipped and heavy with mud."
+    },
+    {
+      "id": "835f1412cb0bdba73600dbd5e5a618fd2c7c8bd7f4f22004ae34d671f9e5d71f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I lift one. It moves... wrong. Like a tool I don't remember learning to use."
+    },
+    {
+      "id": "27a5e3c340289f4fc40236829452196de8fd717fea2d153664a20703a1680761",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A chill coils in my stomach. This can't be me."
+    },
+    {
+      "id": "bd7a59ba387e83d377a9ce2563f2e9ead7fb541e6472dba978abed86c6a39bcf",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "...Can it?"
+    },
+    {
+      "id": "830525c772a2adfac751f3cd9a2d725120086da730280bf6c5971ccc6046f326",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A sudden noise jolts me alert."
+    },
+    {
+      "id": "0be6cc7912e1d2df9392af5b742f5ab7b78baad3a2c672a88dac06122b9efb22",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Leaves rustle nearby, something is moving out there."
+    },
+    {
+      "id": "9fadd77e9e9288d43fcafb6714eb508976281f18fea4fd4165bf2695f6b5dbc5",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Hello? Is anypony— Oh!\""
+    },
+    {
+      "id": "dc6132c13734f51753561d82b3d037a8de17f5a2d1119068eb383f3115e06e8e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A purple figure steps from the trees, the edges of my vision still swimming."
+    },
+    {
+      "id": "7b6bb31a43ba21837e6f102f3759cf3dde725f1d7936824227f0f78a335c2aeb",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"What in Equestria...? Are you hurt? Please, stay still.\""
+    },
+    {
+      "id": "39e0ed11c628ea9f43eacd7789a146fdb3b130891625fb086f462282dab9ff7d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Four legs, a spiralled horn. My mind recoils. Impossible."
+    },
+    {
+      "id": "83dc05cdbe41e0dbb30a85b093e4db6158dc2ad544217ce1cdab1ae9a744ce0f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"A… talking… horse?\""
+    },
+    {
+      "id": "b905998bac40da9e709226a749ca671a0c1f9f122a107dc64239e3959f03303e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Hearing my voice jars something loose. The sound might give me a clue..."
+    },
+    {
+      "id": "12de5e6c4899c3bf103b400a2cca5b6f4106edd36ccbfb62022c2b2c2c947a96",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Yes, that's definitely a male's voice."
+    },
+    {
+      "id": "902c2a5f98ae4433de870b973bcf5b0c2a56de64ce10acd0149914089b87871d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "No doubt about it, that's a female's voice."
+    },
+    {
+      "id": "ec70a55236b3dd675e7ad468b58edf54aa3aa759b9068374f6fa2c1c8552f4f8",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Horse? I'm a pony. A unicorn, technically.\""
+    },
+    {
+      "id": "d6d90dc967f82a8918abfe5d8a861b96c0a2868880d6a6a038cd1018f1567ebd",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I'm Twilight Sparkle. And I'm... guessing you're not from around here?\""
+    },
+    {
+      "id": "6458bd4bad57ca661479c3b0cddd034bd330049751e62666cd51dbfd0be5c4b6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She tilts her head — curious, but cautious."
+    },
+    {
+      "id": "62d13b1bb49edc6e9848acf139c366224a5c88f80399b29f7f1ab1b8f2de3eb1",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I tracked a surge of wild magic here, but I never expected to find *you*.\""
+    },
+    {
+      "id": "1b20bba390d3ffbfea60bd2d0285e33934d9cc432279c4f75a281dee0af669b7",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Hello? Is somepony there?\""
+    },
+    {
+      "id": "4f2cf75fd780b4dcbfe5a1adbface3daa10cf1228560facbdcdbc34200117ee7",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Oh my goodness! Are you hurt?\""
+    },
+    {
+      "id": "77d99b33d84c1f4180935ce951554acfb913e08b43172ea6b0d43376d77f6d8f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I sensed a burst of wild magic nearby. Did something happen?\""
+    },
+    {
+      "id": "65fa3a7e5d341a9485d67783c38e7d582b4f400f4335ba2f01a1765f29a534c2",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I blink hard. Four legs, a horn—this can't be real."
+    },
+    {
+      "id": "1ea056ff4843351020a8a80cf098bd7446a89428bfde3e67c78e409b3215ded5",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"A... talking... horse?\""
+    },
+    {
+      "id": "100391c6f3b98f1b35a5c170478063b3f158d292302a92e1eb04f6d4cb11efb4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Is this normal? It doesn't feel normal."
+    },
+    {
+      "id": "86ede4a4c0508c1347ac89b5658354baec540123acebc359bc488a038e8a3a7b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Horse? We're ponies—both of us.\""
+    },
+    {
+      "id": "8974943601b022bdec1b132c5f6df51c85e3079d9943cfab695d0389ec726905",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I'm Twilight Sparkle. You look a little... disoriented.\""
+    },
+    {
+      "id": "67195e6532af0c2ee7ac275e88cad34de862c9ae4657dde23c893475ba731337",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She studies me, frowning at my blank stare."
+    },
+    {
+      "id": "1aae43a18bf1ea5db27c8cbf97273a3b546b44ab0700935370993d208c0fca1a",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You may have hit your head... or been caught in a magical backlash. Maybe both.\""
+    },
+    {
+      "id": "06eaa9415eb06a6690cd4cf97764032ee4763a3ee20f20a5fbe48005ab0490de",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Her brow furrows, I can almost see the gears turning behind her eyes."
+    },
+    {
+      "id": "3e89907161190b020e7959f5593db3a3898b63ac55edc19858c720762123a91a",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Don't worry. We'll figure this out. But first, let's get you somewhere safe.\""
+    },
+    {
+      "id": "6bb46c82fb4e9f33c751d03f42424da0408cc716c5def8df296ea2ef230fd66c",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Hold still. Different anatomy, but levitation works on just about anything… I think.\""
+    },
+    {
+      "id": "0cabbe5e3b20c57ce0205c363f710576f50135c0402c936b1087a1449843136f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Purple light gathers around my arms and legs. I'm lifted a handspan from the ground—weightless, unsettling."
+    },
+    {
+      "id": "401f9fa9603b5279171d4bc9169bb9363b6cdf33cf0b8dbc285165496aa11e45",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Easy… there we go.\""
+    },
+    {
+      "id": "5254cc9131fcb250aa75411515718ea68d0676184bd192063ca702ba9ad0916f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Here, foreleg over my withers—steady.\""
+    },
+    {
+      "id": "713001ab5848be8a46f60c74a2a70795353c89fdd6d18a71c77374bb3fab2047",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Her aura cushions my barrel while her shoulder props me up. Four legs wobble beneath me like newborn stilts."
+    },
+    {
+      "id": "b174174e636e9fff587ce2f59ffb2f789e11922b08d768aca7090c073c06d7ca",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Breathe. Find your balance.\""
+    },
+    {
+      "id": "30dba83d1f761b770e1b25b4ad27c53a040f9aff73898cf2cdc96075d598727b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "We stand there for a moment: me, unsure of everything, and her, watching carefully."
+    },
+    {
+      "id": "fb71a6cfe828f297f155cf7b7acd2826f60b9c041e9860f2e0a3946c9c423515",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Can you tell me your name?\""
+    },
+    {
+      "id": "cb3bf81fd4298d0d97e8c802c287be61d7cfd3a044e8eca4905565eaad8d0bc6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"I... I can't...\""
+    },
+    {
+      "id": "52a0de3e6fe9d329c03db69b562f57292fe8f0b17f042988564b511df565e91e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"Why can't I remember anything?\""
+    },
+    {
+      "id": "61ffac1a7d57f966018225e8e94373cf3a0ea6e7e4bd6b4807ef5ed9c157ab69",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Memory loss, wild magic, and an unfamiliar species... This is bigger than a stray anomaly.\""
+    },
+    {
+      "id": "d321987d787b24ede8c6fd3f0b7293bbe410d20d3fd3b85e671b62591bf72124",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Memory loss? That's… troubling.\""
+    },
+    {
+      "id": "9aa4c9a2b358a447e89b68d55dfecd785527e875d7c7ed5840ad3d223cdd11c8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Words stick in my throat. Confusion crushes the urge to speak."
+    },
+    {
+      "id": "5734c6be7edddb95926bdea5d15c6eea9a0d9af856ab8d85e419ef76ec6b4153",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"It's alright. Take your time.\""
+    },
+    {
+      "id": "88315051824011d1363fad6540a3edb98a73c2f4d077f74486a79d76be81566b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"We'll figure this out together. Though first…\""
+    },
+    {
+      "id": "3b9ab051ad897107415f21ee5588dc7a8c774273255abf16507ece387a4b9d77",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"That didn't sound friendly. We should move, quickly. The Everfree isn't safe after dark.\""
+    },
+    {
+      "id": "a202ee6b7aed6ba53d606cadff8960ef7f6870bc6105633fd905bcdb9190b33f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"My library's close. Shelves on trans-dimensional theory, identity displacement, anomalous surge charts…\""
+    },
+    {
+      "id": "a46b491dd3a4266bda504dc30456845b0e5bb359f02ffd87c0b5158f91a444f6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She tries to stay serious, but the sparkle in her eyes betrays her excitement."
+    },
+    {
+      "id": "2311875a203a69f425228184fe8b760c0bcab8ec62413e49c6adb30aeef6dbab",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I've got a library nearby. Lots of material on magical disruptions, memory loss...\""
+    },
+    {
+      "id": "c932efb2641ffa2af90f3468146ee4b255eba9f9cd2037018bcf7b181f3d2e51",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"...and I *might* have been looking for a reason to reorganize the whole section again.\""
+    },
+    {
+      "id": "ffdefb1f237dfefb68eb0d49c5a08a67c8999e92aa69bf02e3012b5cecd1acb4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"Thank you... I don't know what else to do.\""
+    },
+    {
+      "id": "e68d4c9283554b3099f8597abbf974e23190891d9e5255c6b04d9290cf95878f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You're welcome. You're not alone in this, not anymore.\""
+    },
+    {
+      "id": "58de0a10198ae49efb1115b3db07bfc03de711562de23047374bf5182136b092",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She keeps pace beside me, magic ready in case I falter."
+    },
+    {
+      "id": "f491ca60ee82b9527548f315cc3227684f990e3627303dea2f0c45ceea3b40c4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She walks close, matching my uncertain steps."
+    },
+    {
+      "id": "cbaf3e68da46bb67ef283abe7199c538d087791c9cb40e92f364141915079fca",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"How do I know I can trust you?\""
+    },
+    {
+      "id": "1a642512a1fb859d84e2b3814d2c3f16d5b8770542cf98dddf9c509a6e7b84c0",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You don't. But you're alone, confused, and clearly not from here.\""
+    },
+    {
+      "id": "f622165697cf273d76f28f0e313868efdc8c82519ee6233f16a413c30c695066",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"And when things like *you* show up, it's kind of my job to get involved.\""
+    },
+    {
+      "id": "3057bb0be56399715cd645cb6e5f4fa127db95b598f5c7e06f31ee85db0d324a",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You don't. But you're disoriented, and I don't think you ended up here by choice.\""
+    },
+    {
+      "id": "676fe153412513b5dd6fcf00fc0521f7917f2aa2b678ad25c390119589b61086",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"And as Ponyville's resident magical expert, helping is what I do.\""
+    },
+    {
+      "id": "1f57dbab4b8ec8e955c55670c7a419bdeb9aeae295a353343cbceca5e6a9b6de",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "As we leave the forest behind, something shifts in the treeline—too quick to name."
+    },
+    {
+      "id": "3854d47e02638ab14a66e2331232f9bf89695dbacad8ebc235b76cb6c69621b5",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Whatever brought me here... I don't think it's finished with me."
+    },
+    {
+      "id": "a672887ec6a6ec301c6e348812b115dc786c9033d5ceeb79920a48c517b17bfe",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The library is warm and welcoming, a stark contrast to the dark forest."
+    },
+    {
+      "id": "66109eaf8f1cfda21edcf1bfee40607b74aa275e8a01cda1c4b6f310e2f60687",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Books line every wall, reaching up to the ceiling."
+    },
+    {
+      "id": "0486588e8c266a7d2f69f4df30e126670ad366b8a94c8e76ddbbf7f19eddcc44",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Soft light filters through the windows, illuminating floating dust motes."
+    },
+    {
+      "id": "5476bd8787713e69dbc855900dba915b6b518994b6e724e69a6f1b4a91b5aa71",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Welcome to my home — the Golden Oak Library!\""
+    },
+    {
+      "id": "a7b834cf59af4ff7b9613cd750d8950cdd2610356748d75f3299c75b6c2e2bb1",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"It's not much, but it's cozy.\""
+    },
+    {
+      "id": "9bc97daea5d3f853ecc2199431b9eb85ac292e37edefb20be65da87f7de53f9d",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Let's get you settled. I want to run a quick scan — you took quite a knock back there.\""
+    },
+    {
+      "id": "cd12eeea9793667a5a373d82fb03b6a31de61e9abcc91954384b0b68336cf5b0",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Her horn glows softly, bathing me in a violet aura."
+    },
+    {
+      "id": "f8b89904c2d72d2987179b1ea5cfa741ea1ee13fd9be0bad89175f1ef2de573f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A tingling sensation ripples through my body, as if invisible threads of energy are weaving around me."
+    },
+    {
+      "id": "84a459b046a10387a3a21701880f58ff78d81023361e8c2483a83c4f455435da",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The magic probes gently — exploring, mapping, measuring."
+    },
+    {
+      "id": "11b6d31ed20068dc432ccc39ca263d7433776ea8e651ba14edfd9d975bb7d3d5",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I hold my breath, uncertain what it might find."
+    },
+    {
+      "id": "42899157489bc06fbaae5ab61a25cf6db755d8d477c265c79dcebc0feb918ab0",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Fascinating!\""
+    },
+    {
+      "id": "d4d9ac58473415197871326ca715c6c9e60452bc53caee15bfb48a3bfa35c9cb",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I've never encountered anyone with quite your... physiology.\""
+    },
+    {
+      "id": "f8e570a2bcbf7fcc8b899285dc161a53400f5d8e7218e592a3f463cba1294aaa",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Your magical signature is almost nonexistent, yet you're clearly alive and self-aware.\""
+    },
+    {
+      "id": "209e5a9865b82b33f92150b18fdc996e671da0ff4cc169b85da100604ddec07b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"And these... hands — like minotaurs, I think, but with five fingers instead of four.\""
+    },
+    {
+      "id": "abbea03a2aa66d899c7d404ee7c4e6eec3906b1eaaa57c0900ce67cfc5878138",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She floats over a scroll and quill, scribbling notes with barely contained excitement."
+    },
+    {
+      "id": "a168f54a09e7fd0b54e7a120fa709b8087d9bb319c34ac02aee014979c48efa1",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I can't sense the usual flow of magic through you at all...\""
+    },
+    {
+      "id": "f4961c2ab4fcbd0663b5451f1bd6c7ea0a8c26a4422ba83d32d08c1838a4c277",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "For a moment, she seems lost in her own world, forgetting I'm standing right in front of her."
+    },
+    {
+      "id": "dad9dcc3578baf352ece4caf95486da357d2c0569a6aded7ee226edef0906f4b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Ah! Sorry. Sometimes I get carried away.\""
+    },
+    {
+      "id": "f10544471f5e1737ef96aacb40db5e850194376a6d2b7523ddf7fad693acb44e",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Well, physically you're in good health, though your magical field is a little unstable.\""
+    },
+    {
+      "id": "fd1964aafbbc856a73a4d119c4605eba7e464ce8caf8503cd87ca4b5494cde4e",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"From what I can tell, you're a...\""
+    },
+    {
+      "id": "8c4469ac3dce4d127660d0d15f7db5f6ee86b4e5a46872abaecf164c410bb953",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"...unicorn. Though your horn's resonance is lower than expected.\""
+    },
+    {
+      "id": "42480da0b5864024f2365abafa63af820135ec22527e753eaa443b7e8b7fb4ea",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "That would explain the slight weight I feel on my forehead."
+    },
+    {
+      "id": "38d95ab8b6044d80111d776e9a373f8aed99c64c554288a0b6d87876e057001c",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"...pegasus. Your flight aura seems faint, but intact.\""
+    },
+    {
+      "id": "84371232a56294ac26b020a7b9a6e607c0d2c361ad07d3b17ab8030b0ff3e07d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I shift my shoulders, aware of unfamiliar weight on my back."
+    },
+    {
+      "id": "a5826d9cefa6ff0177548b47a7da798dcc1d5114aaf4e1944e5d3339ebce99f8",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"...earth pony. Your connection to the ground feels... distant, somehow.\""
+    },
+    {
+      "id": "a8876a3a2c5bacd6266d9e38eff959ac281c2ae4c1bb5c280611176b204a1142",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My hooves feel heavy, rooted to the floor in ways I can't explain."
+    },
+    {
+      "id": "ce01cae37a121e3e894c3d66bef57b66f1914b3f67f5cff4af31037bb50c2074",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Still, nothing some rest and food won't help restore.\""
+    },
+    {
+      "id": "2ca345f28740eb06ec84c6c7f72677607bd0e16d8448652871af552203c60040",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"All done. You seem stable enough, at least for the moment.\""
+    },
+    {
+      "id": "596489dc94b274cb90038a8984ab398357e70f6f0ab9c13b8588f21adbffedef",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Is there anything you'd like to know?\""
+    },
+    {
+      "id": "b7243db7896cc5d3230f7ec6256ea5a96ffcb91757727986017a7ec82667c47a",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"That was a wonderful conversation!\""
+    },
+    {
+      "id": "69608e823eb2b57ce06433882781067a6eb9aeb588cf33ad0df78ec62ab63f3b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I hope I was able to help answer some of your questions.\""
+    },
+    {
+      "id": "12c092c59c482af7143c5facd84c060534493ee73f1364a2766077b162a1d2c9",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You look exhausted. You've been through a lot today.\""
+    },
+    {
+      "id": "be6f61c79851521f5e2e87290173da1c73b70ce80f2fab537e45f741fb7c7642",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Come on — let's get you somewhere warm. You've earned a break.\""
+    },
+    {
+      "id": "a87951a17ef698a4386ee1fce5733aeda5d0af3bac82f41acb93a1a2dcca21e8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She gently levitates a folded blanket and pillow toward a reading nook nestled against the far wall."
+    },
+    {
+      "id": "e1a515c5657e839fa0e6c258e45ea9ca58d88381ab8c52b47a0a66a411ea6966",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Even though I'm still reeling from everything, the gentle atmosphere here is comforting."
+    },
+    {
+      "id": "09bdac40fef720e5670650f9a153782d0ef18de585bf6abe440068cce4da86ed",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"The guest bed isn't much, but I promise it's softer than tree roots.\""
+    },
+    {
+      "id": "18745f0609478de812ebbee6007c80661b3bb07225a340084780398574ad853a",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Twilight arranges the cozy corner with care. The scent of ink, dust, and aged paper clings to the air, a strangely soothing ambiance."
+    },
+    {
+      "id": "71e776467bc9be5c7f654e109aa527d637cff07a1b54c26be120b54e4dd30339",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Take your time. I'll be right here if you need anything.\""
+    },
+    {
+      "id": "4ef742f38ee547a793bfdb1814b84384089556ad1248f884b506e75bfc1f4875",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Fatigue tugs at my thoughts. Despite everything swirling in my mind, I ease down onto the makeshift bed."
+    },
+    {
+      "id": "2a5b2d14bc499b1693ae8a74ae4d5449665d2030bf612b43cb0e88d5cc8cbd7c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Sleep takes me, but not gently. My mind drifts into a churning sea of sensation."
+    },
+    {
+      "id": "3cba25f3e83f2463a977cde2bb07d7260e8f60ab55ab438885412b4cf7d1c5ad",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Dark shapes coil around the edges of my vision — shadows that slither and breathe."
+    },
+    {
+      "id": "67628ad12022d83ed7973e8a2aa43ec02d66c30c884a8deb767507f9b03382c8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A low whisper seeps into my thoughts, more felt than heard..."
+    },
+    {
+      "id": "de4714b72adbe058277d6eb3dbc31afb4123d53c31fc4d3166d1fbd8ae36ffc2",
+      "language": "en",
+      "speaker": "crypticvoice",
+      "text": "\"So... you've arrived. Such potential... bound by mortal flesh...\""
+    },
+    {
+      "id": "776befb0dc949080c6e6d10b64e98b1fdbc52fd4f07c9e05eff0d9c198744370",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A cold pressure brushes against my mind — ancient, ravenous. It probes where memories should be."
+    },
+    {
+      "id": "9effbc2fd93f30bb918e19ad1fb6ffaab50d910a390ae3baae80c74c1e6e0ab8",
+      "language": "en",
+      "speaker": "crypticvoice",
+      "text": "\"You cannot hide forever. We will find the key... unlock the path...\""
+    },
+    {
+      "id": "5b7fb7b91c40e61d374a1c5cace16264010c5c32362682461b7bfca4e2498eed",
+      "language": "en",
+      "speaker": "royalvoice",
+      "text": "\"Enough! The realm of dreams is under my protection; your foul presence is not welcome here.\""
+    },
+    {
+      "id": "a027cb39e35b78495d775d28ca7d8620b28321d48c3bfedec7309a2091a91677",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A flash of searing light splits the dark. The whispering presence shrieks and vanishes."
+    },
+    {
+      "id": "15f15749aa4b6ce4056715a7e0962a251f6b8a8ff53ffb42103cc162343d2f03",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Then... silence."
+    },
+    {
+      "id": "3f2847e114654156a289596ecdcd05be54f3d8f57a55643d97108541c8b6e8d1",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I jolt awake, heart pounding. The library is quiet, its shelves standing watch under a gentle morning light."
+    },
+    {
+      "id": "a00d705f1e594fd6997c87ac14f2b6461bbef70e0ddb3a3bc8356dd9bdfbf7d6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "That dream... it felt real. Too real. My head throbs, like something was forcibly pushed out of place."
+    },
+    {
+      "id": "c461123f13435573040a1f34341fad3ff73e6d675dce8de3496e1eda7528c738",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Then a scent draws me back, warm and sweet... pancakes?"
+    },
+    {
+      "id": "ab7b10055c21f712b4322d57d9211873a549876607fdda6d1ab0b6cca74c6dc9",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You're awake! Are you alright? I heard you talking in your sleep.\""
+    },
+    {
+      "id": "917dfefd2a58c9a95ed3c6b17c52307eb5283d40a0032e8ad4e4bcaccc4281c8",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Spike just finished making breakfast; maybe food will help ground you.\""
+    },
+    {
+      "id": "32add1b84026f9b69f3777ab740e05f2fed7c919d7b8b4b7b26c7d0875421875",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Even as she speaks, the lingering echo of that cryptic whisper haunts me."
+    },
+    {
+      "id": "0342a8f662103975f8daa843933a501e804bd8ac208655e9f88cfde680e1f456",
+      "language": "en",
+      "speaker": "spike",
+      "text": "\"Hey there! Twilight said we had a visitor. You, uh, don't look great.\""
+    },
+    {
+      "id": "94a6a652243526e9b39dea8528e628a2261170e666470b8ff5a69a2e4a9c0056",
+      "language": "en",
+      "speaker": "spike",
+      "text": "\"But hey — pancakes help everything. I made 'em sweet, the way I like 'em.\""
+    },
+    {
+      "id": "e44cd393a3a600c04f6008794ec9e12aaee51627bc8fc875d097c90073d83cf2",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A small dragon with emerald spines grins at me, holding a plate piled high with steaming goods."
+    },
+    {
+      "id": "f457046fc4368fa4cebb6df8b1b7a02bfc1c4a5eda0d29b9283e138261c424a9",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"We were actually just talking about what might've happened to you.\""
+    },
+    {
+      "id": "ee02de6847b88a5ee49789d221a35649aa6de8dee4c94d33abac99651338ab81",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Two heads are better than one, right?\""
+    },
+    {
+      "id": "c022669112d3c569afaca11caaba5401b42648a5bbc159b9052805a21adbeba4",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "They both look at me, hopeful. My thoughts are still clouded by that bizarre dream, but maybe they can shed some insight."
+    },
+    {
+      "id": "55b992fe92424a3194a9785c90094a70bfe9e0445e24d3e5131c8d04c9822c5b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The conversation with Twilight and Spike concludes, leaving me with a head full of new insights... and more questions."
+    },
+    {
+      "id": "be826d474664ea4c1d9b2927e9876ba4239b09c8b0d7a9706fe591ae93755a8f",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Now that you're up and feeling a little better, I'd love to introduce you to some of my friends.\""
+    },
+    {
+      "id": "5949cde3f83c70aff6c38717e2e9ef4c391850c54a816be56c2a06e0b4f18575",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Ponyville's not big, but it has its quirks — and some very colorful residents.\""
+    },
+    {
+      "id": "6d0aaa68f917d78e4b1b507535c04ea6ae97613c443e0c59df3f9654221cb17b",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Here, let me grab a map for you. I don't want you getting lost on your first day.\""
+    },
+    {
+      "id": "be0fbf25a941b7a80bdb8ce70af6cf3ea9cad7953471013416da1d0c639591a8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Her horn glows as she lifts a scroll from a nearby shelf and unfurls it with a practiced flick."
+    },
+    {
+      "id": "30a7929d56e2abda0aacbdf91f4df89452c0f5ecdbaefd354b766439b3a5d9b6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The parchment spreads out before me, detailed with neat hoofwriting and little hand-drawn symbols marking key spots."
+    },
+    {
+      "id": "a34d1f6cdd60182983432e0de8bb8a87509c54c4d6570d083559f74dc1056911",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I'll come with you to show you around. Just pick a place on the map and we'll head there together!\""
+    },
+    {
+      "id": "119006573772cac1ca1b3d712c9e38bca7b4bb92b2820fc0d574a00867006f72",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "Hello! My name is Twilight Sparkle, and I'm so happy to meet you!"
+    }
+  ]
+}

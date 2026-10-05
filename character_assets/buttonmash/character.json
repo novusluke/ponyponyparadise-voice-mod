@@ -1,0 +1,10 @@
+{
+  "tag": "buttonmash",
+  "name": "Button Mash",
+  "color": "#8B4513",
+  "type": "foal",
+  "location": {
+    "id": "hay_burger",
+    "icon": "icon/icon.png"
+  }
+}

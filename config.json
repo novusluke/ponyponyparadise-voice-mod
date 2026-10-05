@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "game_path": "../PonyPonyParadise",
+  "github_repository": "novusluke/ponyponyparadise-voice-mod",
+  "github_branch": "main",
+  "enabled": true,
+  "execution_mode": "local",
+  "language": "en",
+  "volume_db": 0.0,
+  "request_timeout_seconds": 120,
+  "omnivoice": {
+    "install_path": "",
+    "python_path": "",
+    "revision": "08be0b4ccbac3e13e374e86fbfead4b4cac343e2",
+    "model": "k2-fsa/OmniVoice",
+    "device": "cuda:0",
+    "num_step": 64,
+    "speed": 1.0,
+    "torch_index": "https://download.pytorch.org/whl/cu128",
+    "reference_max_seconds": 10,
+    "default_voice": "",
+    "character_voices": {}
+  },
+  "text_display_mode": "wait",
+  "setup_music": {
+    "muted": false,
+    "volume": 25
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "language": "en",
+  "characters": [
+    {
+      "name": "Aloe",
+      "tag": "aloe",
+      "voice": "aloe",
+      "file": "en/aloe.mp3"
+    },
+    {
+      "name": "Apple Bloom",
+      "tag": "applebloom",
+      "voice": "applebloom",
+      "file": "en/applebloom.mp3"
+    },
+    {
+      "name": "Applejack",
+      "tag": "aj",
+      "voice": "applejack",
+      "file": "en/applejack.mp3"
+    },
+    {
+      "name": "Berry Punch",
+      "tag": "berry",
+      "voice": "berrypunch",
+      "file": "en/berrypunch.mp3"
+    },
+    {
+      "name": "Big McIntosh",
+      "tag": "bigmac",
+      "voice": "bigmcintosh",
+      "file": "en/bigmcintosh.mp3"
+    },
+    {
+      "name": "Bon Bon",
+      "tag": "bonbon",
+      "voice": "bonbon",
+      "file": "en/bonbon.mp3"
+    },
+    {
+      "name": "Button Mash",
+      "tag": "buttonmash",
+      "voice": "buttonmash",
+      "file": "en/buttonmash.mp3"
+    },
+    {
+      "name": "Cheerilee",
+      "tag": "cheerilee",
+      "voice": "cheerilee",
+      "file": "en/cheerilee.mp3"
+    },
+    {
+      "name": "Daisy",
+      "tag": "daisy",
+      "voice": "daisy",
+      "file": "en/daisy.mp3"
+    },
+    {
+      "name": "Derpy Hooves",
+      "tag": "derpy",
+      "voice": "derpyhooves",
+      "file": "en/derpyhooves.mp3"
+    },
+    {
+      "name": "Diamond Tiara",
+      "tag": "diamond",
+      "voice": "diamondtiara",
+      "file": "en/diamondtiara.mp3"
+    },
+    {
+      "name": "Donut Joe",
+      "tag": "donutjoe",
+      "voice": "donutjoe",
+      "file": "en/donutjoe.mp3"
+    },
+    {
+      "name": "Fancy Pants",
+      "tag": "fancypants",
+      "voice": "fancypants",
+      "file": "en/fancypants.mp3"
+    },
+    {
+      "name": "Fleetfoot",
+      "tag": "fleet",
+      "voice": "fleetfoot",
+      "file": "en/fleetfoot.mp3"
+    },
+    {
+      "name": "Fleur de Lys",
+      "tag": "fleur",
+      "voice": "fleurdelys",
+      "file": "en/fleurdelys.mp3"
+    },
+    {
+      "name": "Fluttershy",
+      "tag": "shy",
+      "voice": "fluttershy",
+      "file": "en/fluttershy.mp3"
+    },
+    {
+      "name": "Granny Smith",
+      "tag": "granny",
+      "voice": "grannysmith",
+      "file": "en/grannysmith.mp3"
+    },
+    {
+      "name": "Lightning Dust",
+      "tag": "lightning",
+      "voice": "lightningdust",
+      "file": "en/lightningdust.mp3"
+    },
+    {
+      "name": "Lily Valley",
+      "tag": "lilyvalley",
+      "voice": "lilyvalley",
+      "file": "en/lilyvalley.mp3"
+    },
+    {
+      "name": "Lotus",
+      "tag": "lotus",
+      "voice": "lotus",
+      "file": "en/lotus.mp3"
+    },
+    {
+      "name": "Lyra Heartstrings",
+      "tag": "lyra",
+      "voice": "lyraheartstrings",
+      "file": "en/lyraheartstrings.mp3"
+    },
+    {
+      "name": "Mayor Mare",
+      "tag": "mayor",
+      "voice": "mayormare",
+      "file": "en/mayormare.mp3"
+    },
+    {
+      "name": "Minuette",
+      "tag": "minuette",
+      "voice": "minuette",
+      "file": "en/minuette.mp3"
+    },
+    {
+      "name": "Moondancer",
+      "tag": "moondancer",
+      "voice": "moondancer",
+      "file": "en/moondancer.mp3"
+    },
+    {
+      "name": "Mr. Cake",
+      "tag": "mrcake",
+      "voice": "mrcake",
+      "file": "en/mrcake.mp3"
+    },
+    {
+      "name": "Mrs. Cake",
+      "tag": "mrscake",
+      "voice": "mrscake",
+      "file": "en/mrscake.mp3"
+    },
+    {
+      "name": "Nurse Redheart",
+      "tag": "redheart",
+      "voice": "nurseredheart",
+      "file": "en/nurseredheart.mp3"
+    },
+    {
+      "name": "Octavia Melody",
+      "tag": "octavia",
+      "voice": "octaviamelody",
+      "file": "en/octaviamelody.mp3"
+    },
+    {
+      "name": "Photo Finish",
+      "tag": "photofinish",
+      "voice": "photofinish",
+      "file": "en/photofinish.mp3"
+    },
+    {
+      "name": "Pinkie Pie",
+      "tag": "pinkie",
+      "voice": "pinkiepie",
+      "file": "en/pinkiepie.mp3"
+    },
+    {
+      "name": "Posey Shy",
+      "tag": "poseyshy",
+      "voice": "poseyshy",
+      "file": "en/poseyshy.mp3"
+    },
+    {
+      "name": "Prince Blueblood",
+      "tag": "blueblood",
+      "voice": "blueblood",
+      "file": "en/blueblood.mp3"
+    },
+    {
+      "name": "Princess Celestia",
+      "tag": "cel",
+      "voice": "celestia",
+      "file": "en/celestia.mp3"
+    },
+    {
+      "name": "Princess Luna",
+      "tag": "luna",
+      "voice": "luna",
+      "file": "en/luna.mp3"
+    },
+    {
+      "name": "Queen Chrysalis",
+      "tag": "chrys",
+      "voice": "chrysalis",
+      "file": "en/chrysalis.mp3"
+    },
+    {
+      "name": "Rainbow Dash",
+      "tag": "dash",
+      "voice": "rainbowdash",
+      "file": "en/rainbowdash.mp3"
+    },
+    {
+      "name": "Rainbowshine",
+      "tag": "rainbowshine",
+      "voice": "rainbowshine",
+      "file": "en/rainbowshine.mp3"
+    },
+    {
+      "name": "Rarity",
+      "tag": "rarity",
+      "voice": "rarity",
+      "file": "en/rarity.mp3"
+    },
+    {
+      "name": "Roseluck",
+      "tag": "roseluck",
+      "voice": "roseluck",
+      "file": "en/roseluck.mp3"
+    },
+    {
+      "name": "Scootaloo",
+      "tag": "scootaloo",
+      "voice": "scootaloo",
+      "file": "en/scootaloo.mp3"
+    },
+    {
+      "name": "Silver Spoon",
+      "tag": "silverspoon",
+      "voice": "silverspoon",
+      "file": "en/silverspoon.mp3"
+    },
+    {
+      "name": "Spike",
+      "tag": "spike",
+      "voice": "spike",
+      "file": "en/spike.mp3"
+    },
+    {
+      "name": "Spitfire",
+      "tag": "spitf",
+      "voice": "spitfire",
+      "file": "en/spitfire.mp3"
+    },
+    {
+      "name": "Sweetie Belle",
+      "tag": "sweetiebelle",
+      "voice": "sweetiebelle",
+      "file": "en/sweetiebelle.mp3"
+    },
+    {
+      "name": "Trixie Lulamoon",
+      "tag": "trixie",
+      "voice": "trixie",
+      "file": "en/trixie.mp3"
+    },
+    {
+      "name": "Twilight Sparkle",
+      "tag": "twi",
+      "voice": "twilight",
+      "file": "en/twilight.mp3"
+    },
+    {
+      "name": "Windy Whistles",
+      "tag": "windywhistles",
+      "voice": "windywhistles",
+      "file": "en/windywhistles.mp3"
+    },
+    {
+      "name": "Zecora",
+      "tag": "zecora",
+      "voice": "zecora",
+      "file": "en/zecora.mp3"
+    },
+    {
+      "name": "Zephyr Breeze",
+      "tag": "zephyrbreeze",
+      "voice": "zephyrbreeze",
+      "file": "en/zephyrbreeze.mp3"
+    }
+  ],
+  "narrator": "en/narrator.mp3"
+}

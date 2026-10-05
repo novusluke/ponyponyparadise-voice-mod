@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PonyPonyParadise Voice Mod Setup Configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "game_path",
+    "github_repository",
+    "github_branch",
+    "enabled",
+    "execution_mode",
+    "language",
+    "volume_db",
+    "request_timeout_seconds",
+    "omnivoice"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "game_path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Relative to script.py; user-selected absolute paths are also supported."
+    },
+    "github_repository": {
+      "type": "string",
+      "pattern": "^$|^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+      "description": "Empty auto-detects the GitHub origin."
+    },
+    "github_branch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "execution_mode": {
+      "type": "string",
+      "const": "local",
+      "default": "local"
+    },
+    "language": {
+      "type": "string",
+      "const": "en",
+      "default": "en"
+    },
+    "volume_db": {
+      "type": "number",
+      "minimum": -40,
+      "maximum": 6
+    },
+    "request_timeout_seconds": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 600
+    },
+    "omnivoice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "install_path",
+        "python_path",
+        "revision",
+        "model",
+        "device",
+        "num_step",
+        "speed",
+        "torch_index",
+        "reference_max_seconds"
+      ],
+      "properties": {
+        "install_path": {
+          "type": "string",
+          "description": "Empty uses a private app data folder; selected paths are saved in private preferences."
+        },
+        "python_path": {
+          "type": "string",
+          "description": "Saved interpreter path; empty until local setup is configured."
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "device": {
+          "type": "string",
+          "minLength": 1,
+          "default": "cuda:0"
+        },
+        "num_step": {
+          "type": "integer",
+          "const": 64,
+          "default": 64
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 2.0
+        },
+        "torch_index": {
+          "type": "string",
+          "format": "uri"
+        },
+        "reference_max_seconds": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "default_voice": {
+          "type": "string",
+          "default": ""
+        },
+        "character_voices": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "default": {}
+        }
+      }
+    },
+    "text_display_mode": {
+      "enum": [
+        "wait",
+        "instant"
+      ],
+      "default": "wait"
+    },
+    "setup_music": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "muted",
+        "volume"
+      ],
+      "properties": {
+        "muted": {
+          "type": "boolean",
+          "default": false
+        },
+        "volume": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "default": 25
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "version": "1.6.5",
+  "github_repository": "novusluke/ponyponyparadise-voice-mod",
+  "github_branch": "main",
+  "installer_asset": "PonyPonyParadiseVoiceSetup.exe",
+  "release_asset": "ponyponyparadise-voice-mod.zip"
+}
