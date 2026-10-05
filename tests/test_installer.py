@@ -313,7 +313,7 @@ class InstallerGuiTests(unittest.TestCase):
     def test_successful_launch_closes_setup_and_stops_music(self):
         from PySide6.QtMultimedia import QMediaPlayer
         with tempfile.TemporaryDirectory() as temporary:
-            game = Path(temporary)
+            game = Path(temporary).resolve()
             (game / "PonyPonyParadise.pck").touch()
             (game / "PonyPonyParadise.exe").touch()
             self.window.game_folder.setText(str(game))
@@ -328,7 +328,7 @@ class InstallerGuiTests(unittest.TestCase):
 
     def test_failed_launch_keeps_setup_open(self):
         with tempfile.TemporaryDirectory() as temporary:
-            game = Path(temporary)
+            game = Path(temporary).resolve()
             (game / "PonyPonyParadise.pck").touch()
             (game / "PonyPonyParadise.exe").touch()
             self.window.game_folder.setText(str(game))
@@ -339,7 +339,7 @@ class InstallerGuiTests(unittest.TestCase):
 
     def test_uninstall_uses_selected_game_and_refreshes_install_state(self):
         with tempfile.TemporaryDirectory() as temporary:
-            game = Path(temporary) / "selected game"
+            game = Path(temporary).resolve() / "selected game"
             game.mkdir()
             (game / "PonyPonyParadise.pck").touch()
             (game / "PonyPonyParadise.pck.voice-mod-original").touch()
@@ -367,7 +367,7 @@ class InstallerGuiTests(unittest.TestCase):
 
     def test_cancelling_uninstall_changes_nothing(self):
         with tempfile.TemporaryDirectory() as temporary:
-            game = Path(temporary)
+            game = Path(temporary).resolve()
             (game / "PonyPonyParadise.pck").write_bytes(b"unchanged")
             self.window.game_folder.setText(str(game))
             from PySide6.QtWidgets import QMessageBox
@@ -379,7 +379,7 @@ class InstallerGuiTests(unittest.TestCase):
 
     def test_older_game_update_is_read_only_until_clicked(self):
         with tempfile.TemporaryDirectory() as temporary:
-            game = Path(temporary)
+            game = Path(temporary).resolve()
             pack = game / "PonyPonyParadise.pck"
             pack.write_bytes(b"existing game fixture")
             state = game / "data/voice_mod/install_state.json"
