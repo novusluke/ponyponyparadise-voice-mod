@@ -8,6 +8,7 @@ import time
 import unittest
 import urllib.error
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 import script
@@ -142,7 +143,7 @@ class InstallerServiceTests(unittest.TestCase):
             service.require_private_destination(self.root)
 
     def test_uninstall_requires_game_to_be_closed_before_modification(self):
-        with patch.object(service.os, "name", "nt"), \
+        with patch.object(service, "os", SimpleNamespace(name="nt")), \
              patch.object(service, "command_result", return_value=subprocess.CompletedProcess([], 0, '"PonyPonyParadise.exe","1234"\n', "")), \
              patch("voice_mod.uninstall.uninstall_game") as remove:
             with self.assertRaisesRegex(ValueError, "Close PonyPonyParadise"):
