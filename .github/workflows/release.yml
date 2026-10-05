@@ -1,0 +1,58 @@
+name: Windows installer release
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      QT_QPA_PLATFORM: offscreen
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -B -m pip install -r requirements-installer.txt
+      - run: python -B -m unittest discover -s tests -v
+      - name: Verify release version
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: python
+        run: |
+          import json, os
+          version = json.load(open('release.json'))['version']
+          assert os.environ['GITHUB_REF_NAME'] == 'v' + version, 'Tag must match release.json version'
+      - run: python -B tools/build_installer.py
+      - run: python -B tools/smoke_installer.py
+      - run: python -B tools/build_release_zip.py
+      - name: Checksum release ZIP
+        shell: python
+        run: |
+          import hashlib
+          from pathlib import Path
+          archive = Path('ponyponyparadise-voice-mod.zip')
+          checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
+          archive.with_suffix('.sha256').write_text(checksum + '  ' + archive.name + '\n', encoding='ascii')
+      - run: python -B tools/audit_public_repo.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ponyponyparadise-voice-mod
+          path: |
+            ponyponyparadise-voice-mod.zip
+            ponyponyparadise-voice-mod.sha256
+      - name: Upload to GitHub release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          gh release view $env:GITHUB_REF_NAME --repo $env:GITHUB_REPOSITORY
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $env:GITHUB_REF_NAME --repo $env:GITHUB_REPOSITORY --title "Voice Mod $env:GITHUB_REF_NAME" --notes "English character voices for PonyPonyParadise. Download the ZIP, extract it, and open PonyPonyParadiseVoiceSetup.exe."
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+          gh release upload $env:GITHUB_REF_NAME ponyponyparadise-voice-mod.zip ponyponyparadise-voice-mod.sha256 --repo $env:GITHUB_REPOSITORY --clobber
+          exit $LASTEXITCODE
