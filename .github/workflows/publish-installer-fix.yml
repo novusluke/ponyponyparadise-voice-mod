@@ -1,0 +1,32 @@
+name: Publish installer fix
+on:
+  push:
+    paths: ['.github/workflows/publish-installer-fix.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply reviewed installer changes
+        shell: python
+        run: |
+          from pathlib import Path
+          from zipfile import ZipFile
+          allowed = {'script.py', 'voice_mod/installer_service.py', 'tests/test_installer.py', 'release.json', 'game_patch/scripts/voice_mod/voice_version.gd'}
+          with ZipFile('installer-fix-source.zip') as archive:
+              assert set(archive.namelist()) == allowed
+              assert len(archive.namelist()) == len(allowed)
+              for name in archive.namelist():
+                  Path(name).write_bytes(archive.read(name))
+          Path('installer-fix-source.zip').unlink()
+          Path('.github/workflows/publish-installer-fix.yml').unlink()
+      - name: Commit installer fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Handle missing Windows root certificates in setup downloads'
+          git push origin HEAD:main
