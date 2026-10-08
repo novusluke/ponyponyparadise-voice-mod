@@ -23,7 +23,7 @@ jobs:
           from pathlib import Path, PurePosixPath
           from zipfile import ZipFile
           archive = Path('voice-mod-v1.0.2-source-update.zip')
-          assert hashlib.sha256(archive.read_bytes()).hexdigest() == '81e7fc7c32dada48dbeb51ca84dbdd441b00b319ca552dd6f3c471f6a279e898'
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == '84cd74101f85f6f6b839c7542a59ec3b6b89ff5797fcfdf87dae22837f2c7ada'
           assert json.loads(Path('release.json').read_text())['version'] == '1.0.1'
           baseline = '56d70c6389c4fd7856c53e8f568431cdbd245f59'
           with ZipFile(archive) as z:
