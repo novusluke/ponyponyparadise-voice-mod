@@ -5,7 +5,7 @@ const MUTED := Color(0.68, 0.77, 0.88)
 const ACCENT := Color(1.0, 0.84, 0.44)
 var controller: Node
 var snapshot: Dictionary
-var enabled: CheckBox
+var enabled: Button
 var folder: LineEdit
 var language: OptionButton
 var text_mode: OptionButton
@@ -14,6 +14,7 @@ var speed: HSlider
 var volume: HSlider
 var status_label: Label
 var folder_dialog: FileDialog
+var _observed_steps := 64
 
 static func build(parent: VBoxContainer, tree: SceneTree, _menu: Node = null) -> Node:
 	var panel := PanelContainer.new()
@@ -108,11 +109,17 @@ func create_controls() -> void:
 	action(status_row, "Test Voice", test_voice, 110)
 	action(status_row, "Stop", func(): controller.stop_voice(), 80)
 	var toggle_row := row("Voices Enabled")
-	enabled = CheckBox.new()
-	enabled.text = "Enabled"
+	enabled = Button.new()
+	enabled.toggle_mode = true
+	enabled.text = "Voices Enabled" if bool(snapshot.enabled) else "Enable Voices"
+	preload("res://scripts/voice_mod/voice_preparation.gd").button_style(enabled, bool(snapshot.enabled))
 	enabled.button_pressed = bool(snapshot.enabled)
 	enabled.add_theme_color_override("font_color", MUTED)
-	enabled.toggled.connect(func(value: bool): controller.set_option("enabled", value))
+	enabled.toggled.connect(func(value: bool):
+		controller.set_option("enabled", value)
+		enabled.text = "Voices Enabled" if value else "Enable Voices"
+		preload("res://scripts/voice_mod/voice_preparation.gd").button_style(enabled, value)
+	)
 	toggle_row.add_child(enabled)
 	var path_row := row("OmniVoice Folder")
 	folder = path_edit(path_row, str(snapshot.omnivoice.get("install_path", "")), "Select OmniVoice, .venv or venv…")
@@ -124,9 +131,10 @@ func create_controls() -> void:
 	language.set_item_metadata(0, "en")
 	language.select(0)
 	language_row.add_child(language)
-	steps = slider("Quality (Steps)", 64, 64, 1, 64, "%d")
-	steps.editable = false
-	steps.tooltip_text = "OmniVoice always generates at 64 steps."
+	steps = slider("Quality (Steps)", 8, 64, 1, int(snapshot.omnivoice.get("num_step", 64)), "%d")
+	_observed_steps = int(snapshot.omnivoice.get("num_step", 64))
+	steps.tooltip_text = "Default: 64 steps. Fewer steps reduce generation time and voice quality."
+	hint("Fewer steps increase speed but reduce voice quality. Ready-to-play story voices stay at 64 steps.", 12)
 	speed = slider("Speed", 0.5, 2.0, 0.05, float(snapshot.omnivoice.get("speed", 1.0)), "%.2fx")
 	volume = slider("Voice Volume", -30, 6, 1, float(snapshot.get("volume_db", 0.0)), "%+d dB")
 	var text_row := row("Text Display Mode")
@@ -150,8 +158,18 @@ func create_controls() -> void:
 	timer.wait_time = 0.5
 	timer.autostart = true
 	timer.process_mode = Node.PROCESS_MODE_ALWAYS
-	timer.timeout.connect(func(): status_label.text = "Status: " + str(controller.status))
+	timer.timeout.connect(_refresh_status)
 	add_child(timer)
+
+func _refresh_status() -> void:
+	status_label.text = "Status: " + str(controller.status)
+	var current_steps := int(controller.settings.omnivoice.get("num_step", 64))
+	if current_steps != _observed_steps:
+		# A popup change is already applied. Preserve a separate unsaved proposal.
+		if int(steps.value) == _observed_steps:
+			steps.value = current_steps
+		snapshot.omnivoice.num_step = current_steps
+		_observed_steps = current_steps
 
 func test_voice() -> void:
 	save()
@@ -169,7 +187,7 @@ func save() -> void:
 	settings.execution_mode = "local"
 	settings.volume_db = volume.value
 	settings.text_display_mode = "wait" if text_mode.selected == 0 else "instant"
-	settings.omnivoice.num_step = 64
+	settings.omnivoice.num_step = int(steps.value)
 	settings.omnivoice.speed = speed.value
 	var selected := folder.text.strip_edges()
 	settings.omnivoice.install_path = selected
@@ -187,6 +205,7 @@ func save() -> void:
 	controller.apply_settings(settings)
 
 func reset() -> void:
+	_observed_steps = int(controller.settings.omnivoice.get("num_step", 64))
 	enabled.button_pressed = true
 	steps.value = 64
 	speed.value = 1.0
@@ -199,9 +218,12 @@ func cancel() -> void:
 
 func refresh() -> void:
 	snapshot = controller.settings.duplicate(true)
+	_observed_steps = int(snapshot.omnivoice.get("num_step", 64))
 	enabled.set_pressed_no_signal(bool(snapshot.enabled))
+	enabled.text = "Voices Enabled" if bool(snapshot.enabled) else "Enable Voices"
+	preload("res://scripts/voice_mod/voice_preparation.gd").button_style(enabled, bool(snapshot.enabled))
 	folder.text = str(snapshot.omnivoice.get("install_path", ""))
-	steps.value = 64
+	steps.value = int(snapshot.omnivoice.get("num_step", 64))
 	speed.value = float(snapshot.omnivoice.get("speed", 1.0))
 	volume.value = float(snapshot.volume_db)
 	for index in range(language.item_count):

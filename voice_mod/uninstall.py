@@ -65,6 +65,9 @@ def preserve_original_files(game: Path, paths: set[str], previous: dict, source:
     if previous and "owned_files" not in previous:
         known |= legacy_files(game, source)
     for relative in paths:
+        checked_path(game, relative)
+        checked_path(game, "data/voice_mod/install_originals/" + relative)
+    for relative in paths:
         target = checked_path(game, relative)
         if relative not in known and relative not in originals and target.is_file():
             # A publisher ZIP may already have placed the bundled MP3s in

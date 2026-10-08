@@ -7,6 +7,14 @@ import os
 import re
 from pathlib import Path
 
+
+def quality_steps(value=64) -> int:
+    """Public assets use 64; players may trade quality for shorter generation."""
+    try:
+        return max(8, min(64, int(value)))
+    except (ValueError, TypeError, OverflowError):
+        return 64
+
 ALIASES = {
     "player": "narrator",
     "narrator": "narrator", "narration": "narrator",

@@ -21,6 +21,9 @@
     "addons/dialogic/Modules/Clear/event_clear.gd": "1b3655f7f11678da40c1faf3286c282c958b502482442c4760c7615d40c98c10",
     "addons/dialogic/Modules/Text/subsystem_text.gd": "785028a32dcd4e1ce96aca851395ee2309bd31d50225bc35f8cd8e18809f3e02",
     "scenes/main.gd": "10feefca220a3a42caaf2f73a56adeb0c2f2d7af973db9c5f3da4ccc0a251d83",
-    "addons/dialogic/Modules/Audio/subsystem_audio.gd": "e4c3480e6a29c6768e522f916c49d228e55839833c988f45ee70e8c64cc1608c"
+    "addons/dialogic/Modules/Audio/subsystem_audio.gd": "e4c3480e6a29c6768e522f916c49d228e55839833c988f45ee70e8c64cc1608c",
+    "addons/dialogic/Modules/Text/node_dialog_text.gd": "edaa806ba78ac3542b19003b592eef95ded1d0a08e58dcf6f5a5cc870185d755",
+    "addons/dialogic/Modules/Text/node_input.gd": "49e5824f3684cbf0e36b3868efa89e5a96ecc64270f91c3a92385bb78dedfcb3",
+    "addons/dialogic/Modules/Core/subsystem_input.gd": "23abdd0c6ba99e87fe77fe7025517b0918e6b3b8bde03075abb82225582aa23f"
   }
 }

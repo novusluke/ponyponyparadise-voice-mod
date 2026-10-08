@@ -62,8 +62,14 @@ func _run():
 		var old_layout: Node = Dialogic.Styles.get_layout_node()
 		check(is_instance_valid(old_layout), "Load did not restore a dialogue layout")
 		voice.test_voice()
+		var pending: Dictionary = voice._row("twilight", "Title must cancel unfinished preparation.")
+		pending.deadline = Time.get_unix_time_from_system() + 60
+		voice._pending[pending.id] = pending
+		var pending_rows: Array[Dictionary] = [pending]
+		voice._begin_preparation(pending_rows)
 		main._return_to_main_menu_confirmed()
 		check(not voice.player.playing, "Returning to title kept speech playing")
+		check(voice._pending.is_empty() and not voice.preparation.visible, "Title kept voice generation/progress alive in the shared main scene")
 		check(not Dialogic.Styles.has_active_layout_node(), "Title retained a loaded dialogue layout")
 		if pause > 0:
 			await get_tree().create_timer(pause).timeout

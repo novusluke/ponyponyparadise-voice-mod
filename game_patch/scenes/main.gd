@@ -70,6 +70,7 @@ const API_CONFIG_DEFAULT_LAYER: = 100
 
 
 func _ready() -> void :
+	preload("res://scripts/voice_mod/voice_controller.gd").ensure(get_tree())
 
 
 	_apply_window_icon()
@@ -1203,7 +1204,7 @@ func _return_to_main_menu_confirmed() -> void :
 func _reset_dialogue_session() -> void:
 	# Title and New Game share the main scene. Retire the old layout immediately
 	# so restored AI controls, textbox offsets and ending fades cannot be reused.
-	preload("res://scripts/voice_mod/voice_controller.gd").ensure(get_tree()).stop()
+	preload("res://scripts/voice_mod/voice_controller.gd").ensure(get_tree()).cancel_preparation()
 	Dialogic.paused = false
 	for key in ["_skip_call_event_execution", "_block_call_event"]:
 		if Dialogic.has_meta(key):

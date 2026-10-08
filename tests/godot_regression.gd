@@ -43,10 +43,10 @@ func _run() -> void:
 	check(settings_menu != null, "Settings menu could not be created")
 	var options: Node = settings_menu._voice_options
 	check(options.steps.max_value == 64, "Quality slider exceeds 64 steps")
-	check(options.steps.min_value == 64 and not options.steps.editable, "Quality can be changed from 64")
+	check(options.steps.min_value == 8 and options.steps.editable, "Quality slider cannot select faster generation")
 	controller.settings.omnivoice.num_step = 4
 	controller.apply_settings(controller.settings)
-	check(controller.settings.omnivoice.num_step == 64, "Legacy configuration bypassed fixed 64 steps")
+	check(controller.settings.omnivoice.num_step == 8, "Quality minimum was not clamped")
 	options.reset()
 	check(options.steps.value == 64, "Quality does not default to 64 steps")
 	check(options.speed.min_value == 0.5 and options.speed.max_value == 2.0, "Speed range differs from original")
@@ -58,7 +58,7 @@ func _run() -> void:
 			if child is OptionButton:
 				option_count += 1
 	check(option_count == 2, "Unexpected execution/automatic-cleanup selector in local-only options")
-	check(options.enabled is CheckBox, "Voice toggle is not the original checkbox")
+	check(options.enabled is Button and options.enabled.toggle_mode, "Green voice toggle missing")
 	check(options.folder_dialog.use_native_dialog, "Browse dialogs are not native")
 	controller.settings.enabled = true
 	controller.settings.execution_mode = "local"
@@ -289,6 +289,9 @@ func _run() -> void:
 			await frames(3)
 			check(controller.player.playing and not bool(result.finished), "Settings test cancelled or exposed a waiting story line")
 			Dialogic.paused = false
+			check(controller._pending.has(waiting.id), "Settings discarded the pending voice job")
+			controller._pending[waiting.id].deadline = 0
+			controller._process(0.2)
 		await frames(3)
 		check(bool(result.finished) and bool(result.allowed), "Pending wait not released by " + str(release))
 		controller._pending.clear()

@@ -1319,9 +1319,7 @@ func _wait_for_advance() -> void :
 				if AIDialogueShared.consume_touch_advance_request():
 					Log.d("AISceneGenerator", "_wait_for_advance BREAK: touch tap advance")
 					break
-			elif Input.is_action_just_pressed("dialogic_default_action"):
-				Log.d("AISceneGenerator", "_wait_for_advance BREAK: dialogic_default_action pressed")
-				break
+			# Mouse releases arrive through dialogic_action after drag validation.
 			if Input.is_action_just_pressed("ui_accept"):
 				Log.d("AISceneGenerator", "_wait_for_advance BREAK: ui_accept pressed")
 				break

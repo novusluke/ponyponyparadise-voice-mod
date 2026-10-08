@@ -94,7 +94,8 @@
         },
         "num_step": {
           "type": "integer",
-          "const": 64,
+          "minimum": 8,
+          "maximum": 64,
           "default": 64
         },
         "speed": {

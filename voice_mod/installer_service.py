@@ -24,13 +24,24 @@ from .settings import application_directory, preferences_path, state_directory
 UV_VERSION = "0.12.21"
 UV_SHA256 = "5d223efa0bf00208c3853246af09420419dfbd352536aa6bb8163d6170e23890"
 PROBE_CODE = """import importlib.util,json,sys
-print(json.dumps({'python':sys.version.split()[0], 'omnivoice':bool(importlib.util.find_spec('omnivoice')), 'encoder':bool(importlib.util.find_spec('imageio_ffmpeg'))}))
+info = {'python':sys.version.split()[0], 'omnivoice':bool(importlib.util.find_spec('omnivoice')), 'encoder':bool(importlib.util.find_spec('imageio_ffmpeg'))}
+if info['omnivoice']:
+    try:
+        from omnivoice import OmniVoice, OmniVoiceGenerationConfig
+        from omnivoice.models.omnivoice import VoiceClonePrompt
+        import torch
+        info['loaded'] = callable(getattr(OmniVoice, 'from_pretrained', None))
+        info['cuda'] = torch.cuda.is_available()
+        info['torch'] = torch.__version__
+    except Exception:
+        info['loaded'] = False
+print(json.dumps(info))
 """
 
 
 def release_metadata() -> dict:
     path = backend.ROOT / "release.json"
-    return json.loads(path.read_text()) if path.exists() else {"version": "1.0.1", "github_repository": "", "github_branch": "main"}
+    return json.loads(path.read_text()) if path.exists() else {"version": "1.0.2", "github_repository": "", "github_branch": "main"}
 
 
 def patch_fingerprint() -> str:
@@ -63,7 +74,8 @@ def load_preferences() -> dict:
             config["omnivoice"]["python_path"] = str((runtime.parent / python).resolve())
     if not config["omnivoice"].get("install_path"):
         config["omnivoice"]["install_path"] = str(state_directory() / "OmniVoice")
-    config["omnivoice"]["num_step"] = 64
+    from .common import quality_steps
+    config["omnivoice"]["num_step"] = quality_steps(config["omnivoice"].get("num_step", 64))
     config["execution_mode"] = "local"
     config["language"] = "en"
     config["github_repository"] = release_metadata().get("github_repository", "") or backend.DEFAULTS["github_repository"]
@@ -72,7 +84,8 @@ def load_preferences() -> dict:
 
 
 def save_preferences(config: dict) -> None:
-    config["omnivoice"]["num_step"] = 64
+    from .common import quality_steps
+    config["omnivoice"]["num_step"] = quality_steps(config["omnivoice"].get("num_step", 64))
     atomic_json(preferences_path(), config)
 
 
@@ -125,7 +138,7 @@ def inspect_environment(folder: Path) -> dict:
     repairable = False
     for python in candidates:
         try:
-            result = command_result([str(python), "-c", PROBE_CODE], timeout=20)
+            result = command_result([str(python), "-I", "-c", PROBE_CODE], timeout=60)
             if result.returncode != 0:
                 reason = (result.stderr or result.stdout).strip()
                 if "No Python at" in reason or "Unable to create process" in reason:
@@ -139,9 +152,12 @@ def inspect_environment(folder: Path) -> dict:
             if not info["omnivoice"]:
                 errors.append("Python works, but OmniVoice is not installed in this environment.")
                 continue
+            if not info.get("loaded"):
+                errors.append("OmniVoice is installed, but its dependencies cannot load. Repair the environment or install OmniVoice in a new folder.")
+                continue
             return {"ok": True, "kind": "ready", "python_path": str(python.resolve()), **info,
-                    "message": "OmniVoice detected · Python " + info["python"]}
-        except (OSError, subprocess.SubprocessError, ValueError):
+                    "message": "OmniVoice detected · Python " + info["python"] + (" · CUDA ready" if info.get("cuda") else " · CUDA unavailable; check your NVIDIA driver")}
+        except (OSError, subprocess.SubprocessError, ValueError, KeyError, TypeError, IndexError):
             errors.append("Could not inspect this Python environment. Choose another folder or install a fresh environment.")
     return {"ok": False, "kind": "broken", "repairable": repairable,
             "message": errors[0] if errors else "OmniVoice is unavailable."}
@@ -241,9 +257,9 @@ def detect_environment(config: dict, extra: Path | None = None) -> dict:
     if extra:
         folders.append(extra)
     options = config["omnivoice"]
-    for value in (options.get("python_path"), options.get("install_path"), os.environ.get("OMNIVOICE_HOME")):
+    for value in (options.get("python_path"), options.get("install_path"), os.environ.get("OMNIVOICE_HOME"), os.environ.get("VIRTUAL_ENV"), os.environ.get("CONDA_PREFIX")):
         if value:
-            folders.append(Path(value))
+            folders.append(backend.resolve_path(value))
     base = application_directory()
     folders += [base / "OmniVoice", base.parent / "OmniVoice", Path.home() / "OmniVoice", state_directory() / "OmniVoice"]
     if not getattr(sys, "frozen", False):
@@ -310,17 +326,9 @@ def install_local(folder: Path, options: dict, log) -> dict:
         raise ValueError("Invalid pinned OmniVoice revision.")
     log("Downloading OmniVoice source…")
     content = backend.download(f"https://github.com/k2-fsa/OmniVoice/archive/{revision}.zip", log=log)
+    from .archive import extract_source
     with zipfile.ZipFile(io.BytesIO(content)) as archive:
-        for member in archive.infolist():
-            parts = Path(member.filename).parts[1:]
-            if not parts or ".." in parts or ":" in "".join(parts):
-                continue
-            destination = folder.joinpath(*parts)
-            if member.is_dir():
-                destination.mkdir(parents=True, exist_ok=True)
-            else:
-                destination.parent.mkdir(parents=True, exist_ok=True)
-                destination.write_bytes(archive.read(member))
+        extract_source(archive, folder)
     uv = ensure_uv(log)
     environment = clean_subprocess_environment()
     environment.update({"UV_PYTHON_INSTALL_DIR": str(state_directory() / "python"),
@@ -330,7 +338,7 @@ def install_local(folder: Path, options: dict, log) -> dict:
     run_logged([str(uv), "venv", "--python", "3.11", "--managed-python", "--seed", str(venv)], log, environment=environment)
     python = venv / "Scripts/python.exe"
     log("Installing CUDA PyTorch. This download can take several minutes…")
-    run_logged([str(uv), "pip", "install", "--python", str(python), "torch==2.8.0", "torchaudio==2.8.0", "--index-url", options["torch_index"]], log, environment=environment)
+    run_logged([str(uv), "pip", "install", "--python", str(python), "torch==" + backend.TORCH_VERSION, "torchaudio==" + backend.TORCH_VERSION, "--index-url", options["torch_index"]], log, environment=environment)
     log("Installing OmniVoice and the MP3 encoder…")
     run_logged([str(uv), "pip", "install", "--python", str(python), "-e", str(folder), "-r", str(backend.ROOT / "requirements.txt")], log, environment=environment)
     result = inspect_environment(folder)

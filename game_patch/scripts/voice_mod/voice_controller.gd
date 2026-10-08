@@ -31,6 +31,8 @@ var _batch_preparing := false
 var _release_wait_epoch := -1
 var _watched_scene: Node
 var _tree_was_paused := false
+var _preparation_rows: Array[Dictionary] = []
+var preparation: CanvasLayer
 
 static func ensure(tree: SceneTree) -> Node:
 	# Dialogic serializes its children as subsystems. Keep the voice player outside
@@ -59,6 +61,11 @@ func _ready() -> void:
 	# A dedicated player on Master avoids an independently muted SFX channel.
 	player.bus = "Master"
 	add_child(player)
+	preparation = preload("res://scripts/voice_mod/voice_preparation.gd").new()
+	preparation.controller = self
+	add_child(preparation)
+	# Load after Dialogic's autoload finishes to avoid a circular script dependency.
+	add_child(load("res://scripts/voice_mod/dialogue_input.gd").new())
 	player.finished.connect(func(): status = "Ready.")
 	get_tree().scene_changed.connect(_watch_scene)
 	_watch_scene()
@@ -89,7 +96,12 @@ func _watch_scene() -> void:
 		_watched_scene.tree_exiting.connect(_on_scene_leaving, CONNECT_ONE_SHOT)
 
 func _on_scene_leaving() -> void:
+	cancel_preparation()
+
+func cancel_preparation() -> void:
 	stop()
+	_cancel_jobs()
+	_finish_preparation()
 
 func load_settings() -> void:
 	var path := _folder.path_join("config.json")
@@ -102,29 +114,32 @@ func load_settings() -> void:
 	settings.execution_mode = "local"
 	settings.language = "en"
 	settings.erase("cache_cleanup_days") # Retire previous automatic-cleanup preferences.
-	settings.omnivoice.num_step = 64
+	settings.omnivoice.num_step = clampi(int(settings.omnivoice.get("num_step", 64)), 8, 64)
 	settings.omnivoice.speed = clampf(float(settings.omnivoice.get("speed", 1.0)), 0.5, 2.0)
 	status = "Ready." if bool(settings.enabled) else "Voice system OFF."
 
 func apply_settings(value: Dictionary) -> void:
-	stop(false)
-	_release_wait_epoch = _wait_epoch
-	_suppress_once = _waiting_key
-	if _worker_pid > 0 and OS.is_process_running(_worker_pid):
-		OS.kill(_worker_pid)
-	_worker_pid = -1
-	_pending.clear()
-	_failed.clear()
-	DirAccess.remove_absolute(_session.path_join("heartbeat"))
-	_session = _folder.path_join("runtime/session_%s_%s" % [OS.get_process_id(), Time.get_ticks_usec()])
-	DirAccess.make_dir_recursive_absolute(_session)
+	var engine_changed: bool = str(value.get("python_path", "")) != str(settings.get("python_path", "")) or str(value.get("omnivoice", {}).get("model", "")) != str(settings.omnivoice.get("model", "")) or value.get("omnivoice", {}).get("character_voices", {}) != settings.omnivoice.get("character_voices", {}) or str(value.get("references_path", "reference_audios")) != str(settings.get("references_path", "reference_audios"))
 	settings = value.duplicate(true)
 	settings.execution_mode = "local"
 	settings.language = "en"
 	settings.erase("cache_cleanup_days")
-	settings.omnivoice.num_step = 64
+	if not settings.has("omnivoice"):
+		settings.omnivoice = {}
+	settings.omnivoice.num_step = clampi(int(settings.omnivoice.get("num_step", 64)), 8, 64)
 	settings.omnivoice.speed = clampf(float(settings.omnivoice.get("speed", 1.0)), 0.5, 2.0)
 	_write_json(_folder.path_join("config.json"), settings)
+	if engine_changed or not bool(settings.enabled):
+		_release_wait_epoch = _wait_epoch
+		_suppress_once = _waiting_key
+		stop(false)
+		_cancel_jobs()
+		_finish_preparation()
+	else:
+		_update_queued_steps()
+		if is_instance_valid(player):
+			player.volume_db = float(settings.volume_db)
+			player.pitch_scale = float(settings.omnivoice.speed)
 	status = "Ready." if bool(settings.enabled) else "Voice system OFF."
 
 func reference_path(language: String, speaker: String) -> String:
@@ -152,17 +167,23 @@ func test_voice() -> void:
 	speak("twilight", sample, true)
 
 func set_option(key: String, value: Variant) -> void:
-	if key == "language":
-		value = "en"
-	settings[key] = value
-	if key in ["enabled", "execution_mode", "language"]:
+	if key == "num_steps":
+		settings.omnivoice.num_step = clampi(int(value), 8, 64)
+		_update_queued_steps()
+	else:
+		if key == "language":
+			value = "en"
+		settings[key] = value
+	if not bool(settings.enabled):
+		_release_wait_epoch = _wait_epoch
+		_suppress_once = _waiting_key
 		stop(false)
+		_cancel_jobs()
+		_finish_preparation()
 	if not _write_json(_folder.path_join("config.json"), settings):
 		status = "Could not save Voice Options."
 	elif not bool(settings.enabled):
 		status = "Voice system OFF."
-	else:
-		status = "Ready (%s)." % str(settings.execution_mode)
 
 static func speaker_id(value: String) -> String:
 	var re := RegEx.create_from_string("[^a-z0-9]")
@@ -299,11 +320,10 @@ func response_rows(entries: Array) -> Array[Dictionary]:
 	return rows
 
 func prefetch_response(entries: Array) -> void:
-	if not bool(settings.enabled) or str(settings.execution_mode) != "local" or str(settings.text_display_mode) != "instant":
+	if not bool(settings.enabled) or str(settings.text_display_mode) != "instant":
 		return
-	for row in response_rows(entries):
-		if not FileAccess.file_exists(_audio_path(row)):
-			_enqueue(row)
+	_begin_preparation(response_rows(entries))
+	_pump_preparation()
 
 func prepare_response(entries: Array, is_current: Callable = Callable()) -> bool:
 	# Prepare all speech before the caller pops a line, changes history or reveals
@@ -315,12 +335,14 @@ func prepare_response(entries: Array, is_current: Callable = Callable()) -> bool
 	var epoch := _wait_epoch
 	var rows := response_rows(entries)
 	_batch_preparing = true
+	_begin_preparation(rows)
 	var completed := 0
 	for row in rows:
 		if epoch != _wait_epoch or (is_current.is_valid() and not bool(is_current.call())):
 			if epoch == _wait_epoch:
 				_waiting_key = ""
 				_batch_preparing = false
+				_finish_preparation()
 			return false
 		if _release_wait_epoch == epoch or not bool(settings.enabled) or str(settings.text_display_mode) != "wait" or str(settings.execution_mode) != "local":
 			# Stop, cleanup and settings changes release this response completely.
@@ -349,7 +371,11 @@ func prepare_response(entries: Array, is_current: Callable = Callable()) -> bool
 	if epoch == _wait_epoch:
 		_waiting_key = ""
 		_batch_preparing = false
-		status = "Response audio ready." if completed == rows.size() else "Audio preparation stopped; dialogue continues."
+		var all_ready := true
+		for row in rows:
+			all_ready = all_ready and FileAccess.file_exists(_audio_path(row))
+		status = "Response audio ready." if all_ready else "Audio preparation unavailable; dialogue continues."
+		_finish_preparation()
 	return epoch == _wait_epoch and (not is_current.is_valid() or bool(is_current.call()))
 
 func prepare_line(speaker: String, text: String, is_current: Callable = Callable()) -> bool:
@@ -411,11 +437,14 @@ func _enqueue(row: Dictionary, current: bool = false) -> void:
 	if not _start_worker():
 		return
 	row = row.duplicate()
+	row.steps = clampi(int(settings.omnivoice.get("num_step", 64)), 8, 64)
 	row.priority = 1 if current else 0
 	row.deadline = Time.get_unix_time_from_system() + clampf(float(settings.request_timeout_seconds), 1.0, 600.0)
 	if _write_json(_session.path_join("job_" + key + ".json"), row):
 		_pending[key] = row
 		status = "Generating speech in the background."
+		if _preparation_rows.is_empty():
+			_begin_preparation([row])
 	else:
 		status = "Voice job could not be written; dialogue continues."
 
@@ -434,6 +463,8 @@ func _start_worker() -> bool:
 	return true
 
 func _process(delta: float) -> void:
+	_update_preparation()
+	_pump_preparation()
 	if get_tree().paused and not _tree_was_paused:
 		stop(false)
 	_tree_was_paused = get_tree().paused
@@ -461,7 +492,7 @@ func _process(delta: float) -> void:
 			row.deadline = Time.get_unix_time_from_system() + float(settings.request_timeout_seconds)
 			if FileAccess.file_exists(_session.path_join("job_" + str(key) + ".json")):
 				_write_json(_session.path_join("job_" + str(key) + ".json"), row)
-			status = "Starting OmniVoice / downloading models in the background…"
+			status = "Starting OmniVoice / downloading models in the backgroundâ€¦"
 		var done := _session.path_join("done_" + str(key) + ".json")
 		if FileAccess.file_exists(done):
 			var result = JSON.parse_string(FileAccess.get_file_as_string(done))
@@ -546,11 +577,8 @@ func clean_cache() -> Dictionary:
 	stop(false)
 	_release_wait_epoch = _wait_epoch
 	_suppress_once = _waiting_key
-	if _worker_pid > 0 and OS.is_process_running(_worker_pid):
-		OS.kill(_worker_pid)
-	_worker_pid = -1
-	_pending.clear()
-	_failed.clear()
+	_cancel_jobs()
+	_finish_preparation()
 	var result: Dictionary = preload("res://scripts/voice_mod/voice_cache.gd").clean(_folder.path_join("../voices").simplify_path(), _folder.path_join("runtime"))
 	DirAccess.make_dir_recursive_absolute(_session)
 	if str(result.error).is_empty():
@@ -594,3 +622,64 @@ func _exit_tree() -> void:
 	DirAccess.remove_absolute(_session.path_join("heartbeat"))
 	if _worker_pid > 0 and OS.is_process_running(_worker_pid):
 		OS.kill(_worker_pid)
+
+func _begin_preparation(rows: Array[Dictionary]) -> void:
+	_preparation_rows = rows.duplicate(true)
+	preparation.begin()
+	_update_preparation()
+
+func _finish_preparation() -> void:
+	_preparation_rows.clear()
+	if is_instance_valid(preparation):
+		preparation.update_progress(0, 0)
+
+func _update_preparation() -> void:
+	if _preparation_rows.is_empty():
+		return
+	var ready := 0
+	var unresolved := false
+	for row in _preparation_rows:
+		if FileAccess.file_exists(_audio_path(row)):
+			ready += 1
+		elif not _failed.has(row.id):
+			unresolved = true
+	preparation.update_progress(ready, _preparation_rows.size())
+	if ready == _preparation_rows.size() or (not unresolved and not _batch_preparing):
+		_finish_preparation()
+
+func _pump_preparation() -> void:
+	if _batch_preparing or not _pending.is_empty() or not bool(settings.enabled):
+		return
+	for row in _preparation_rows:
+		if not FileAccess.file_exists(_audio_path(row)) and not _failed.has(row.id):
+			_enqueue(row)
+			if not _pending.has(row.id):
+				_failed[row.id] = true
+			return
+
+func _update_queued_steps() -> void:
+	for key in _pending:
+		var path := _session.path_join("job_" + str(key) + ".json")
+		if FileAccess.file_exists(path):
+			_pending[key].steps = int(settings.omnivoice.num_step)
+			_write_json(path, _pending[key])
+
+func _cancel_jobs() -> void:
+	DirAccess.remove_absolute(_session.path_join("heartbeat"))
+	if _worker_pid > 0 and OS.is_process_running(_worker_pid):
+		OS.kill(_worker_pid)
+	_worker_pid = -1
+	_pending.clear()
+	_failed.clear()
+	_session = _folder.path_join("runtime/session_%s_%s" % [OS.get_process_id(), Time.get_ticks_usec()])
+	DirAccess.make_dir_recursive_absolute(_session)
+
+func apply_preparation_steps(value: int) -> void:
+	# Keep the response epoch and completed clips. Restart only unfinished jobs.
+	set_option("num_steps", value)
+	var remaining: Array = _pending.values().duplicate(true)
+	_cancel_jobs()
+	for row in remaining:
+		if not FileAccess.file_exists(_audio_path(row)):
+			_enqueue(row, int(row.get("priority", 0)) > 0)
+	status = "Preparing remaining voices at %d steps…" % int(settings.omnivoice.num_step)

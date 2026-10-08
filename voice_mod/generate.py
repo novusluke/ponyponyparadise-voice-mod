@@ -33,7 +33,8 @@ def convert_audio(source: Path, target: Path, max_seconds: float | None = None) 
 class VoiceGenerator:
     def __init__(self, references: Path, options: dict):
         self.references = references
-        self.options = {**options, "num_step": 64}
+        from .common import quality_steps
+        self.options = {**options, "num_step": quality_steps(options.get("num_step", 64))}
         self.model = None
         self.prompts = {}
         self._identities = {}
@@ -161,13 +162,15 @@ class VoiceGenerator:
                 finally:
                     staged_prompt.unlink(missing_ok=True)
         import torch
+        from .common import quality_steps
+        steps = quality_steps(self.options.get("num_step", 64))
         narrator = speaker == "narrator"
         attempts = NARRATOR_MAX_ATTEMPTS if narrator else 1
         for attempt in range(1, attempts + 1):
             with torch.inference_mode():
                 audio = self.model.generate(
                     text=text, language=language, voice_clone_prompt=self.prompts[identity],
-                    num_step=64, speed=1.0,
+                    num_step=steps, speed=1.0,
                     **(self.narrator_options if narrator else {}),
                 )[0]
             if not narrator:
@@ -181,7 +184,7 @@ class VoiceGenerator:
                 audio = pad_narration(audio, self.model.sampling_rate)
                 break
         else:
-            raise RuntimeError("Narrator speech failed its opening-word/content check after three 64-step attempts. No faulty clip was cached.")
+            raise RuntimeError(f"Narrator speech failed its opening-word/content check after three {steps}-step attempts. No faulty clip was cached.")
         output.parent.mkdir(parents=True, exist_ok=True)
         wav = Path(self.temp.name) / "generated.wav"
         sf.write(wav, audio, self.model.sampling_rate)

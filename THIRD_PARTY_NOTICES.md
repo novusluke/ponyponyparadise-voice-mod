@@ -5,6 +5,7 @@ The installer includes Python (PSF), PySide6/Qt and Shiboken (LGPL/GPL), and the
 - [Python](https://docs.python.org/3/license.html)
 - [PySide6 and Qt](https://doc.qt.io/qtforpython-6/licenses.html)
 - [PyInstaller](https://pyinstaller.org/en/stable/license.html)
+- [Certifi](https://github.com/certifi/python-certifi) 2026.7.22 supplies the Mozilla trusted CA bundle (MPL 2.0); its license is included in `assets/trusted-roots-LICENSE.txt`.
 
 OmniVoice and its dependencies are installed separately. Their licenses apply independently.
 

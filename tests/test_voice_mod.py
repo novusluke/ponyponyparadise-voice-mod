@@ -20,6 +20,7 @@ from voice_mod.narration import verify_words
 class FakeGenerator:
     def __init__(self, references, options):
         self.references = references
+        self.options = options
         self.calls = 0
         self.model = None
 
@@ -55,14 +56,14 @@ class VoiceTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
-    def test_quality_is_always_64_even_for_legacy_preferences(self):
+    def test_quality_is_clamped_with_64_as_default(self):
         preferences = self.root / "config.json"
-        for previous in (4, 16, 128, "invalid"):
+        for previous, expected in ((4, 8), (16, 16), (128, 64), ("invalid", 64)):
             atomic_json(preferences, {"omnivoice": {"num_step": previous}})
-            self.assertEqual(script.load_config(preferences)["omnivoice"]["num_step"], 64)
+            self.assertEqual(script.load_config(preferences)["omnivoice"]["num_step"], expected)
             generator = VoiceGenerator(self.refs, {"num_step": previous})
             try:
-                self.assertEqual(generator.options["num_step"], 64)
+                self.assertEqual(generator.options["num_step"], expected)
             finally:
                 generator.close()
 
@@ -75,14 +76,16 @@ class VoiceTests(unittest.TestCase):
         root = script.ROOT / "data/voices"
         manifest = json.loads((root / "opening_manifest.json").read_text(encoding="utf-8"))
         expected = {}
-        for filename in ("opening.json", "system.json"):
+        for filename in ("opening.json", "system.json", "quick_start.json"):
             expected.update({row["id"]: row for row in manifest_lines(script.ROOT / "dialogue" / filename)})
-        self.assertEqual(len(expected), 151)
+        self.assertEqual(len(expected), 252)
         self.assertEqual({row["id"] for row in manifest["lines"]}, set(expected))
         self.assertEqual({p.stem for p in (root / "en").glob("*.mp3")}, set(expected))
         narrator_count = 0
         reference_sha256 = hashlib.sha256((script.ROOT / "reference_audios/en/narrator.mp3").read_bytes()).hexdigest()
         for row in manifest["lines"]:
+            self.assertEqual(row["text"], speech_text(expected[row["id"]]["text"]))
+            self.assertEqual(line_id(row["language"], row["speaker"], row["text"]), row["id"])
             self.assertEqual(row["num_step"], 64, row["id"])
             self.assertEqual(row["generation_text_sha256"], hashlib.sha256(speech_text(expected[row["id"]]["text"]).encode()).hexdigest())
             self.assertEqual(row["sha256"], hashlib.sha256((root / row["file"]).read_bytes()).hexdigest())
@@ -93,9 +96,10 @@ class VoiceTests(unittest.TestCase):
                 self.assertTrue(verification["first_word_verified"])
                 self.assertFalse(verification["onset_burst"])
                 self.assertGreaterEqual(verification["word_coverage"], .88)
-                self.assertIn(row["generation_attempts"], (1, 2, 3))
+                self.assertGreaterEqual(row["generation_attempts"], 1)
+                self.assertIn(verification["attempts"], (1, 2, 3))
                 self.assertEqual(row["reference_sha256"], reference_sha256)
-        self.assertEqual(narrator_count, 84)
+        self.assertEqual(narrator_count, sum(x["speaker"] == "narrator" for x in expected.values()))
 
     def test_reference_loudness_receipt_matches_all_bundled_clips(self):
         report = json.loads((script.ROOT / "reference_audios/loudness.json").read_text(encoding="utf-8"))
@@ -143,7 +147,7 @@ class VoiceTests(unittest.TestCase):
         finally:
             generator.close()
 
-    def test_inference_receives_64_even_if_options_are_mutated(self):
+    def test_inference_receives_selected_steps(self):
         generator = VoiceGenerator(self.refs, {"num_step": 4})
         model = SimpleNamespace(sampling_rate=24000, generate=Mock(return_value=[[0.0]]))
         generator.model = model
@@ -155,7 +159,7 @@ class VoiceTests(unittest.TestCase):
                                             "soundfile": SimpleNamespace(write=Mock())}), \
                  patch("voice_mod.generate.convert_audio", side_effect=lambda _, target: target.write_bytes(b"ID3fixture")):
                 self.assertTrue(generator.generate("en", "spike", "Hello.", self.root / "output.mp3"))
-            self.assertEqual(model.generate.call_args.kwargs["num_step"], 64)
+            self.assertEqual(model.generate.call_args.kwargs["num_step"], 16)
         finally:
             generator.close()
 
@@ -282,6 +286,29 @@ class VoiceTests(unittest.TestCase):
 
     def test_successful_worker_uses_derived_output(self):
         self.worker_case("Hello", deadline=10**12, expected=True)
+
+    def test_worker_quality_changes_reuse_the_model_and_keep_cached_speech(self):
+        session = self.root / "quality-session"
+        session.mkdir()
+        voices = self.root / "voices"
+        generator = FakeGenerator(self.refs, {"num_step": 64})
+        runtime = {"voices_path": str(voices)}
+        model = None
+        for steps, expected in ((16, 16), (200, 64)):
+            text = f"Selected worker quality {steps}."
+            key = line_id("en", "spike", text)
+            job = session / ("job_" + key + ".json")
+            atomic_json(job, dict(language="en", speaker="spike", text=text, steps=steps, deadline=10**12))
+            process_job(job, runtime, generator)
+            self.assertTrue(json.loads((session / ("done_" + key + ".json")).read_text())["ok"])
+            self.assertEqual(generator.options["num_step"], expected)
+            if model is not None:
+                self.assertIs(generator.model, model)
+            model = generator.model
+        before = generator.calls
+        atomic_json(job, dict(language="en", speaker="spike", text=text, steps=8, deadline=10**12))
+        process_job(job, runtime, generator)
+        self.assertEqual(generator.calls, before, "A quality change regenerated an already cached line")
 
     def test_worker_cache_skips_model_loading_and_generation(self):
         key = line_id("en", "spike", "Cached sentence")

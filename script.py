@@ -32,6 +32,7 @@ ROOT = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent))
 if getattr(sys, "frozen", False):
     ROOT = ROOT / "payload"
 OMNIVOICE_URL = "https://github.com/k2-fsa/OmniVoice.git"
+TORCH_VERSION = "2.11.0"
 SUPPORTED_REFERENCE_SUFFIXES = {".mp3", ".wav", ".ogg", ".flac", ".txt"}
 DEFAULTS = {
     "schema_version": 1, "game_path": "../PonyPonyParadise", "github_repository": "novusluke/ponyponyparadise-voice-mod",
@@ -70,7 +71,8 @@ def load_config(path: Path) -> dict:
         config["omnivoice"].update(options)
     language_code(config["language"])
     config["language"] = "en"
-    config["omnivoice"]["num_step"] = 64
+    from voice_mod.common import quality_steps
+    config["omnivoice"]["num_step"] = quality_steps(config["omnivoice"].get("num_step", 64))
     config["omnivoice"]["speed"] = max(0.5, min(2.0, float(config["omnivoice"]["speed"])))
     # Earlier execution preferences migrate to the sole supported engine.
     config["execution_mode"] = "local"
@@ -106,6 +108,8 @@ def infer_repository(config: dict) -> str:
 
 
 def download(url: str, *, log=None) -> bytes:
+    if urllib.parse.urlparse(url).scheme != "https":
+        raise ValueError("Downloads require a verified HTTPS connection.")
     request = urllib.request.Request(url, headers={"User-Agent": "ponyponyparadise-voice-mod", "Accept": "application/vnd.github+json"})
     try:
         with urllib.request.urlopen(request, timeout=60) as response:
@@ -116,8 +120,9 @@ def download(url: str, *, log=None) -> bytes:
             isinstance(reason, ssl.SSLError) and getattr(reason, "reason", "") == "CERTIFICATE_VERIFY_FAILED"
         ):
             raise
-        (log or print)("Certificate verification failed; retrying this download without certificate verification.")
-    with urllib.request.urlopen(request, timeout=60, context=ssl._create_unverified_context()) as response:
+        (log or print)("Windows certificate verification failed; retrying with the bundled Mozilla trusted certificates.")
+    context = ssl.create_default_context(cafile=str(ROOT / "assets/trusted-roots.crt"))
+    with urllib.request.urlopen(request, timeout=60, context=context) as response:
         return response.read()
 
 
@@ -194,20 +199,19 @@ def git_blob_sha(content: bytes) -> str:
 
 
 def python_candidates(folder: Path) -> list[Path]:
-    candidates = [folder] if folder.is_file() else []
-    for base in (folder, folder / ".venv", folder / "venv", folder / "env"):
-        candidates += [base / "Scripts/python.exe", base / "bin/python"]
-    return [p for p in candidates if p.is_file()]
+    folder = folder.expanduser()
+    if folder.is_file():
+        return [folder] if re.fullmatch(r"python(?:\d+(?:\.\d+)*)?(?:\.exe)?", folder.name, re.I) else []
+    bases = [folder, folder / ".venv", folder / "venv", folder / "env"]
+    if folder.name.lower() in ("scripts", "bin"):
+        bases.insert(0, folder.parent)
+    candidates = [base / name for base in bases for name in ("Scripts/python.exe", "bin/python", "python.exe")]
+    return list(dict.fromkeys(p for p in candidates if p.is_file()))
 
 
 def probe_python(python: Path) -> bool:
-    try:
-        probe = subprocess.run([str(python), "-c", "import importlib.util; raise SystemExit(0 if importlib.util.find_spec('omnivoice') else 1)"],
-                               capture_output=True, timeout=20,
-                               creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
-        return probe.returncode == 0
-    except (OSError, subprocess.TimeoutExpired):
-        return False
+    from voice_mod.installer_service import inspect_environment
+    return inspect_environment(python)["ok"]
 
 
 def find_omnivoice(config: dict) -> Path | None:
@@ -244,24 +248,15 @@ def install_omnivoice(folder: Path, options: dict) -> Path:
             print("Git unavailable; downloading the pinned OmniVoice source archive.")
             archive = download(f"https://github.com/k2-fsa/OmniVoice/archive/{revision}.zip")
             import io
+            from voice_mod.archive import extract_source
             with zipfile.ZipFile(io.BytesIO(archive)) as z:
-                prefix = z.namelist()[0].split("/")[0] + "/"
-                for item in z.infolist():
-                    relative = Path(item.filename.removeprefix(prefix))
-                    if not relative.parts or ".." in relative.parts or relative.is_absolute():
-                        continue
-                    target = folder / relative
-                    if item.is_dir():
-                        target.mkdir(parents=True, exist_ok=True)
-                    else:
-                        target.parent.mkdir(parents=True, exist_ok=True)
-                        target.write_bytes(z.read(item))
+                extract_source(z, folder)
     venv = folder / ".venv"
     python = venv / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
     if not python.exists():
         run([sys.executable, "-m", "venv", str(venv)])
     run([str(python), "-m", "pip", "install", "--upgrade", "pip"])
-    run([str(python), "-m", "pip", "install", "torch==2.8.0", "torchaudio==2.8.0",
+    run([str(python), "-m", "pip", "install", "torch==" + TORCH_VERSION, "torchaudio==" + TORCH_VERSION,
          "--index-url", options["torch_index"]])
     run([str(python), "-m", "pip", "install", "-e", str(folder), "-r", str(ROOT / "requirements.txt")])
     return python
@@ -309,6 +304,15 @@ def configure_local(config: dict, args) -> None:
 
 
 def install_game(game: Path, config: dict, references: Path | None = None) -> None:
+    import stat
+    from voice_mod.uninstall import checked_path
+    game = game.resolve()
+    for relative in ("PonyPonyParadise.pck", "PonyPonyParadise.pck.voice-mod-original", "PonyPonyParadise.pck.voice-mod-staged"):
+        target = game / relative
+        if target.is_symlink() or (target.exists() and getattr(target.lstat(), "st_file_attributes", 0) & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0)):
+            raise ValueError("Linked game packs cannot be modified automatically.")
+    for relative in ("data/voice_mod/config.json", "data/voices/opening_manifest.json", "data/characters/custom/buttonmash"):
+        checked_path(game, relative)
     config = copy.deepcopy(config)
     config["language"] = "en"
     state = {}
@@ -340,6 +344,9 @@ def install_game(game: Path, config: dict, references: Path | None = None) -> No
         pack.files[relative] = source.read_bytes()
         pack.files.pop(relative + ".remap", None)
         pack.files.pop(relative.removesuffix(".gd") + ".gdc", None)
+    override = pack.files.get("override.cfg", b"").decode("utf-8")
+    override += "\n[gui]\ntheme/default_font_multichannel_signed_distance_field=true\n"
+    pack.files["override.cfg"] = override.encode("utf-8")
     staged = pack_path.with_suffix(".pck.voice-mod-staged")
     write_pack(staged, pack)
     read_pack(staged)  # Verify every checksum before replacing the exported pack.
@@ -388,7 +395,8 @@ def install_game(game: Path, config: dict, references: Path | None = None) -> No
             shutil.copyfile(bundled / "opening_manifest.json", game / "data/voices/opening_manifest.json")
     runtime = {key: config[key] for key in ("schema_version", "enabled", "execution_mode", "language", "volume_db", "request_timeout_seconds", "github_branch", "text_display_mode")}
     runtime.update({"github_repository": infer_repository(config), "references_path": "reference_audios", "voices_path": "../voices", "omnivoice": copy.deepcopy(config["omnivoice"]), "python_path": ""})
-    runtime["omnivoice"]["num_step"] = 64
+    from voice_mod.common import quality_steps
+    runtime["omnivoice"]["num_step"] = quality_steps(config["omnivoice"].get("num_step", 64))
     if config["omnivoice"].get("python_path"):
         runtime["python_path"] = stored_path(resolve_path(config["omnivoice"]["python_path"]), mod)
     atomic_json(mod / "config.json", runtime)

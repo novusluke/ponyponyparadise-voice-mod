@@ -1,0 +1,612 @@
+{
+  "schema_version": 1,
+  "description": "Fixed Quick Start dialogue, including every choice branch.",
+  "lines": [
+    {
+      "id": "aed176132dee58eac737de3140c8c5765f1b47d578a77ae2dbac3b136ce2462c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The rhythmic clatter of wheels on rails fills the compartment."
+    },
+    {
+      "id": "b63219f9833bf4f0b16b8aa3c5b8d5dfe36d392f29c6bc17f408bc65a9075e34",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Outside, Equestrian countryside blurs past \u2014 endless fields giving way to distant mountains."
+    },
+    {
+      "id": "134bbb1169766bb98edadc62aa8d7e7c40397abd94a703bc6a0925bfe5d9d050",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Soon, very soon, Ponyville."
+    },
+    {
+      "id": "3f168ab8a06f0587e8b5a06de78243a82f5bb8d004cc3095973a55972a8b9f8b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I lean back against the worn velvet seat, watching my reflection in the window."
+    },
+    {
+      "id": "bf3793bc2a8230b1c10a4fd7ac39464bc7c0df72a428b18459ed3f5a074cdb45",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "It's strange, this journey. This... new beginning."
+    },
+    {
+      "id": "ac58d0f4b26dabe40aa774c1ee9d5a287b55be74c8430555a451d33e7ac24d32",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The glass shows me..."
+    },
+    {
+      "id": "259dd988af57d243de069f8745c5cb0e8eebb5995817b79dc1d841f7ab382147",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Five fingers drum against the armrest \u2014 a nervous habit I've had since..."
+    },
+    {
+      "id": "eff3a4fa177318443661e45b2fd342dc2774e00d940238222ac1fa1c5683cf57",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Since the Princesses found me."
+    },
+    {
+      "id": "1a603ef55ef65b55973b3b454bcd6b0b1920f7ec56b8af7662bde3b474197f5e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Months in Canterlot, sheltered in the castle's highest towers."
+    },
+    {
+      "id": "0f22f9b1deb253d71952375e4df335d02beecf5d171f75f449ec3d5b7cfe6b48",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The very first human in Equestria. What a lucky..."
+    },
+    {
+      "id": "af15438d330cf3a29777843ac20dd21f725eac5de1d683f96adca708cbfabf2e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "...guy I am. Though \"lucky\" might be stretching it."
+    },
+    {
+      "id": "1f06a47891884be87c94cfb12c64546fefa2b3b5c34c8515862dcc66fa10c76d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "...gal I am. Though \"lucky\" might be debatable."
+    },
+    {
+      "id": "c81c8004a6a87c57f0008604df97eb6134c55ce9c17c3be0acb135802c4b40e8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Luna visiting my dreams. Celestia's patient lessons about this world."
+    },
+    {
+      "id": "681427342aebcc9db22c0d9d093ff7178fa1ba7367ee8237f5b846623c869b0f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "But even they agreed \u2014 I couldn't hide forever."
+    },
+    {
+      "id": "8a08559ca32c247b676bbb00336c4abc18ea7aa5995e7820c79a161f33e8adcc",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My reflection shifts as I adjust my position, hooves finding purchase on the seat."
+    },
+    {
+      "id": "7650849a45e1c0d60b463994ade0652088eb178cf614ada18ae5a787d4f07faa",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The royal summons still feels unreal. Princess Celestia and Princess Luna themselves..."
+    },
+    {
+      "id": "4ff5b9c1460c870ce829d2bed112a89fdc1f9cfd6cb97e797c92fc1b4d945415",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Out of all the researchers in Equestria, they chose me. A recent graduate, a nobody."
+    },
+    {
+      "id": "c4d6fdc6b4e1d058626b6993981324a13ea10e7b644dc1692ee813c200b07dad",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Not bad for a young..."
+    },
+    {
+      "id": "d5cced600d483b8e2ba4bd4dc5137860b4fd95d5c013d41a5f4a8641136834e0",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "...stallion like me. Though I still don't understand why."
+    },
+    {
+      "id": "250cb8cd2d8244e3aacac6fa427f6eaada492345362d79a61f501aab8671d4ac",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "...mare like me. Though their reasoning remains a mystery."
+    },
+    {
+      "id": "60ed5b2cb53fad471e69c3912975d785ab5960b3bf56febe617ccc5b4aedb89c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"Study Ponyville,\" they said. \"Document what makes it special.\""
+    },
+    {
+      "id": "d355e1af24ed480a41b9609543b88d34ebba0d5658cd7b420b55365125bbd30e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "As if the Princesses don't already know. There's something they're not telling me."
+    },
+    {
+      "id": "e721108667a3158dbb3e13213f53970c318a60c7f03fe14273fc2873a77c55a3",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The conductor's voice echoes from the next car: \"Next stop, Ponyville Station!\""
+    },
+    {
+      "id": "fa5dca543d890ab6ccee33008486d16a7d367f263cd9257d11eaacfb6b67f20c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My stomach tightens. No turning back now."
+    },
+    {
+      "id": "d8bcf2f9ebb287c6502ce49db6fef49b8ed01fc0cf02fcf3fa8dd085df9c8b89",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Celestia's words echo in my mind:"
+    },
+    {
+      "id": "f543404b623e55c601b3614ce6eb757d1a7259238f38a2822c0286cdfa0de55c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"Twilight Sparkle is my most trusted student. She'll help you find your place.\""
+    },
+    {
+      "id": "c0d8778e0d57d8272ce77d8da7c2d01fb5358c34d84e965794270cbc117b541d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A whole town of ponies. And me \u2014 the only human in Equestria."
+    },
+    {
+      "id": "1b7a92c80cc06fac82b826280c8d1addbcafff0be2b014bbc7bf97f5fd5fe57a",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I glance at my saddlebags \u2014 packed with research materials and the royal seal."
+    },
+    {
+      "id": "9bda96d52a42bc02418fbfd880be4ee42b74c90af41fb0401161026f47aa5387",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Princess Celestia's parting words echo in my mind:"
+    },
+    {
+      "id": "376400e45bd0ea053e24b4e3a8054bae7b7220ceef70c6b4a94fe64561b1153b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"Ponyville holds answers to questions we haven't learned to ask yet.\""
+    },
+    {
+      "id": "ea31811493976ee5a2b3a199d43871d0ab6e2dd4686573dd7ad7ff954e546143",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I stretch, feeling the familiar weight of my..."
+    },
+    {
+      "id": "b095d5b65946a8e31134b9bc9dd2ccbb7aef11b8bf5721b0b00e8cfa4f3c8570",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The spiral horn catches the light through the window."
+    },
+    {
+      "id": "f1ca1f95dbf85b5b77ff4aacd1f1d63cc84751e982b07975067077a595d26acb",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A unicorn in Ponyville \u2014 where magic supposedly behaves differently."
+    },
+    {
+      "id": "eac280316e651cae536a296bfb8464fbe3e60e3256496f71e7507eab5e8bba23",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I extend them slightly, careful not to hit other passengers."
+    },
+    {
+      "id": "f833558998734bb5c354936898685bfb6e95ffa3a8e405f81554240753b3ab6c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A pegasus studying ground-level phenomena \u2014 unconventional, but that's the point."
+    },
+    {
+      "id": "0e5f0e4a3666d66084ecb65d4e390d751169583d4f6a3cea99047aafe80ac3e3",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "No horn, no wings \u2014 just four solid hooves and determination."
+    },
+    {
+      "id": "7952cf7463da5afdd864173494ffb9839ff7467c4ef168b207dc0c0fce8cbc69",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Earth ponies have their own kind of magic, after all."
+    },
+    {
+      "id": "678ecc8f39a5a763d1db1a6ef5d64052fae1803744aff630bdad815ccc3f8eb6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The train begins to slow. Through the window, I catch my first glimpse:"
+    },
+    {
+      "id": "c3b1332f1285fc2b7125aa4d85bb5cebed28cf9769191de10980879e44a69a09",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Thatched roofs. Cobblestone streets. A massive tree with windows carved into its trunk."
+    },
+    {
+      "id": "71546c85180484caff6c8839a545978d65e3bc1e2ac16e8a8a37e1ae9f648e66",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Ponyville."
+    },
+    {
+      "id": "1eb6943f64ee23bf7afe4095436e4846a75b7378dc43d8c835c90cfd14d8dfe6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My handler \u2014 no, my host \u2014 will be waiting at the station."
+    },
+    {
+      "id": "fba822b3637f3eb320fdc32aa042d8425733a090875ffe7fed52a8f0e37b1a4c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "\"She has experience with the unusual,\" Celestia had said with that knowing smile."
+    },
+    {
+      "id": "9af8dbb98f903bde38cf217ba550de18d62f77413cac048931f5449f4e46f6d2",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The Golden Oak Library stands out even among Ponyville's unique architecture."
+    },
+    {
+      "id": "ed0521f63474ae8a437d797ac2ad1cb0cb57921d2bf7103d30253d0a88fe2d5d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My home for the next year, by royal decree."
+    },
+    {
+      "id": "5876648cbc93aca043afd94263ffd80da9247e006e91f67e3fc171a32a2da9cc",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The Princesses insisted I work alongside their most faithful student. Another piece of this puzzle."
+    },
+    {
+      "id": "66eeee85f76e17944b618e25ec9a1463fc142cd8c13a95d84fa7edf9ad42f0ea",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The brakes engage with a long, metallic shriek."
+    },
+    {
+      "id": "c93aef7809beb2cdebdddffbcbdcfb68caa3d3327af0ef61972d40bb6333d6bc",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Outside, ponies mill about the platform \u2014 a rainbow of colors and cutie marks."
+    },
+    {
+      "id": "1f06eb390297eabd7488cb3640a8940a0e30297664b2b364e71f122c9db4ed9a",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Will they stare? Run? I grip the seat harder."
+    },
+    {
+      "id": "a0c25fce859797d4fe074e94cc73df8f7a90e68bedb81ba7405e900c86182cae",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Celestia promised they'd been informed, but knowing and seeing..."
+    },
+    {
+      "id": "43056f03bbfbcb74a3104965c450c31303bd13ef3e9e42c7ac6ae48e0732bee1",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "My cutie mark tingles \u2014 that strange sensation when destiny pulls you forward."
+    },
+    {
+      "id": "503399daf3bd886d1b59a66bc22cd9f7dfe16150035ea284a430050662bf476b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Whatever happens next, I'm exactly where I need to be."
+    },
+    {
+      "id": "17602ad6ee53871b7487972c9fb3240ed519144db5234b47cfcde9f0ff25ca71",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The train shudders to a complete stop."
+    },
+    {
+      "id": "f8309e49eb3fccf4d787ffc22716edf0475c5ad579c64917126df3122e65c4f2",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Steam hisses. Doors clatter open."
+    },
+    {
+      "id": "0ca15042a37bacd187f42c99a0f32a11165dd1d34ac4eb622faa2b953db24552",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The conductor's final call: \"Ponyville Station! All off for Ponyville!\""
+    },
+    {
+      "id": "9a731c581b6e084e258c5375b047fd815b7e8a197e98dd07dae830812e7db8c8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I take a deep breath, gather my belongings, and step toward the door."
+    },
+    {
+      "id": "56703f888d3c2d82ffce74640109442abfed606aabd6dc79c1191c9b5c2a6bfe",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Time to begin."
+    },
+    {
+      "id": "7985cbe9db6bb77f98114b68f01b58e1001011df246cd8cca0e72bff21ec38d8",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The platform's packed. Ponies everywhere, luggage carts rattling past."
+    },
+    {
+      "id": "413f39e611aaaf4667f5c0c6f7becc815a257da190389c8e42d9fc12b124b87c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I step down carefully. The platform's lower than I expected."
+    },
+    {
+      "id": "9b0dd9ee2647e8c8b4a24a926cabb6cbcdc6b9961100badeb8ae7a9696e3b0aa",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A few ponies stare. Most just glance and move on."
+    },
+    {
+      "id": "63d7022b10fd39ccce6adba037d1d437ee1b061c34a4454819a331fa072c07be",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Then I spot her."
+    },
+    {
+      "id": "75dfc5ee243d6f54f99a6679129ed76cca793d6ce7719b183791cad1a164ee6c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Purple unicorn by the entrance, scroll floating in her magic."
+    },
+    {
+      "id": "05d417d93c561439ea6cda6c94bd1fceb2bc7c98b3e5d5436de3efc3d677921a",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She sees me and trots over."
+    },
+    {
+      "id": "3c9f772db406eda227e4127cb9c5e5b949f2fa34db59953e6910e18c7cc34550",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You must be the human visitor! I'm Twilight Sparkle.\""
+    },
+    {
+      "id": "29717803f489df52cdce85289a614bd57b4a07a2399ce81c8163acd318d48938",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Princess Celestia told me all about you. Welcome to Ponyville!\""
+    },
+    {
+      "id": "b6e2d9582acbfb13bcd4efa4bfdfaeafd6da66e554c7bebcb8392bcbd2036490",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She's studying me already."
+    },
+    {
+      "id": "3ad78665aeabf5f35de04604eef3924c6488f0aa95b65a881b944a6e9addf6e6",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Not sure if that's good or bad."
+    },
+    {
+      "id": "f52fd043bfa691a8af934ffb1f40dbad78034a9201fc12fe26f5284e0fa3b726",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I stick out my hand, then awkwardly wave instead."
+    },
+    {
+      "id": "1cc1613f4fbe1c71568f3c5050df31d7f335529ad04b325866632db6c6d33851",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Of course! I've prepared your room at the library.\""
+    },
+    {
+      "id": "de05aca3ec181facca01955d9b91b54ad63894c59507811bd54fef190b3b3cc0",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Not at all! I've been looking forward to this.\""
+    },
+    {
+      "id": "ebbc13db400a3ea572670f94e2e09e66e454e3d1d2458c6fe28765a0c89d0bae",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"It's not every day we get to learn about an entirely new species!\""
+    },
+    {
+      "id": "81d2a91b4c686fb62a60f0b8451770225055b9e4867b415a15bb1a053f009dd2",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I step down, adjusting my saddlebags. Try to look like I belong."
+    },
+    {
+      "id": "2d282607eb087b6fd585e184eec18a892e72363fdf7881e909e132a41c1c200b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "There she is."
+    },
+    {
+      "id": "e4fa25bfb5300f031664063a5015b2e4edebf284b005264c1e2de7114bfc580d",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Purple unicorn with a floating checklist."
+    },
+    {
+      "id": "13806a2cb52e9326f8d3dc5dd9692d6ee1f7a9dc7ac9797867e09fa7d90fea6b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She spots me and heads over."
+    },
+    {
+      "id": "1404df1d16f3d091e3481dbbecc94c816af22046bb579a4e3c33a82b1f741426",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"You must be the researcher from Canterlot! I'm Twilight Sparkle.\""
+    },
+    {
+      "id": "2f0db4639ce6730b4fe6e8328e1f2e367edb6706426eb0c3930ad93ad475e4a3",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I've been expecting you \u2014 the Princesses sent word ahead.\""
+    },
+    {
+      "id": "63f093d3544a0881e02b5ad46bba381971ff69d7b6b1eeb65144d85fde7b8c4f",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She's sizing me up. I know that look."
+    },
+    {
+      "id": "d15cddbc26a19a89cc9a7fdc74a5dd5948e281c6290c5c00a7f97df5589bb5e0",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Please, just Twilight is fine. We'll be working together after all.\""
+    },
+    {
+      "id": "f5cfd1ffdbedb3e143485d94baeeb1ba879b41fa385928f6af0d6a329e531ec4",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I've cleared out the guest room and half the lab space for your research.\""
+    },
+    {
+      "id": "91be8e8eb13895d9c76aa1505f543de02268acc99f16d5f126a67b484e8f8f48",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She tries not to look pleased."
+    },
+    {
+      "id": "46d2bc15ea67d26c311ac558c51782abe06575ca53153fba602f37be7d7f3a61",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"They're very kind. I hope we can live up to their expectations.\""
+    },
+    {
+      "id": "f4db09e7a7e094113891f9c2ca1942e175a0940616ea096ebb7d2f0137da57e0",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I've prepared workspace for your research at the library.\""
+    },
+    {
+      "id": "aea5df8c1e971c0072133dccb166c5f0143dbe71fc87e931c2e9042a26e821b1",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Speaking of which, we should head there now. I'm sure you're tired from the journey.\""
+    },
+    {
+      "id": "65db1b0bf4d69183cc9fba36be6d4a3c2821282e3ac41ae1616dbc3b4e6dcbea",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"The library has plenty of room, and it's... well, it's quiet. Usually.\""
+    },
+    {
+      "id": "776d7d324ce77467ff9522054174873116b11e8ddf96b0f8fe4babaa065f3339",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "That \"usually\" sounds like it's carrying a lot of weight."
+    },
+    {
+      "id": "2e5b7d96030a5a3ccc8bb1b8baa031400ab4930a160814e214468e8a67ded642",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Shall we go? It's not far \u2014 Ponyville is a small town.\""
+    },
+    {
+      "id": "4c5b142a7f4c14b6bfcb62779066fb019d688a899e85d4b5ebef9ccfb34915fc",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "She turns and starts walking, her pace brisk but not hurried."
+    },
+    {
+      "id": "e82c0273c31d5a3223ad64dbd77b1180883d3343d9b2e47bffaaa7b37f2e18c5",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "I fall in step beside her as we head for the exit."
+    },
+    {
+      "id": "fe8208c71a85197324622a3c051246ba4d05409efc32ee8234d9e3c2179ddf78",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "A few more ponies glance our way as we pass."
+    },
+    {
+      "id": "9cb3702a8a6d8a0cb29ee440f1553ec132a05b6e12779273be6b0c48954cab2e",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Twilight either doesn't notice or doesn't care. Maybe both."
+    },
+    {
+      "id": "afdf50ade0ea31802d945235226aad3b8229667200adb1a3a0c588a43e0e678c",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The crowd parts easily for us. Benefits of traveling with someone everypony knows."
+    },
+    {
+      "id": "9efa5f1dc89d12fb9d0f20654071d3536df8cfeb0370a960b35238b378f11012",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Wonder how long before that stops being useful and starts being annoying."
+    },
+    {
+      "id": "9637e059353682732bdd4b589a8c859d1fabde0d90f23b294924045c74e361bc",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "The station falls away behind us, and Ponyville proper begins."
+    },
+    {
+      "id": "47b31ae7c879eae9b080ee925e44670d92ebd3a526aabfcaafdfe662e04af547",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I think that's enough questions for now. You must be eager to explore Ponyville!\""
+    },
+    {
+      "id": "3049cfec918b42f220d73928cda4a8afc7de6432df4cf2183e1bcbaa858c2d66",
+      "language": "en",
+      "speaker": "spike",
+      "text": "\"Yeah! There's so much to see. The market, Sugarcube Corner, Sweet Apple Acres...\""
+    },
+    {
+      "id": "df9b4b7d33c9c815d71d702fcca7afb7dec553575d4c58150d9e4ef81aa98546",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Here, let me give you a map. Ponyville might be small, but it's easy to get turned around at first.\""
+    },
+    {
+      "id": "651e274adc2d3bcec20272c3153d53fcb596453df205cc9e928e2f962ff56d3b",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "Twilight's horn glows as she levitates a detailed map toward you."
+    },
+    {
+      "id": "5539c301f418ee7d87ff62049119c4ea65d979316a29e321a3b66da1160205f1",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"Feel free to visit anywhere you like! Most ponies are very friendly.\""
+    },
+    {
+      "id": "b0b87390774eb23616a33c529abfeeebeff2d41ce28d7c10115902a36de8d473",
+      "language": "en",
+      "speaker": "twilight",
+      "text": "\"I'll be here at the library if you need anything.\""
+    },
+    {
+      "id": "f35d74070f9ade9000fc384d4904ac5ca5dc1172527f025ef1e80d971fe84da0",
+      "language": "en",
+      "speaker": "spike",
+      "text": "\"And if you get hungry, just come back! I make a mean daisy sandwich.\""
+    },
+    {
+      "id": "a12dd2deca9141fe5a007e72ece3d92a26e974470b96460816759d655037d527",
+      "language": "en",
+      "speaker": "narrator",
+      "text": "With the map in hand, you're ready to explore Ponyville."
+    }
+  ]
+}

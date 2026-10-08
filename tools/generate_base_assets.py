@@ -31,7 +31,7 @@ def main():
         parser.error("Choose a new empty staging folder; cached clips cannot establish generation provenance.")
     output.mkdir(parents=True, exist_ok=True)
     rows = {}
-    for filename in ("opening.json", "system.json"):
+    for filename in ("opening.json", "system.json", "quick_start.json"):
         for row in manifest_lines(ROOT / "dialogue" / filename):
             rows[row["id"]] = row
     selected = {key: row for key, row in rows.items() if not args.speaker or row["speaker"] == speaker_id(args.speaker)}

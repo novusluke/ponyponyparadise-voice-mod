@@ -9,7 +9,7 @@ import re
 import time
 from pathlib import Path
 
-from .common import atomic_json, language_code, line_id, speaker_id, speech_text
+from .common import atomic_json, language_code, line_id, speaker_id, speech_text, quality_steps
 from .generate import VoiceGenerator
 
 KEY_RE = re.compile(r"^[a-f0-9]{64}$")
@@ -62,6 +62,7 @@ def process_job(path: Path, runtime: dict, generator: VoiceGenerator) -> None:
         elif key in runtime.get("protected_ids", set()):
             raise FileNotFoundError("Base voice clip missing. Apply voices again to restore it.")
         else:
+            generator.options["num_step"] = quality_steps(row.get("steps", runtime.get("omnivoice", {}).get("num_step", 64)))
             if generator.model is None:
                 atomic_json(path.with_name("worker_state.json"), {"phase": "loading", "started": time.time()})
                 generator.load_model()
@@ -102,7 +103,7 @@ def main():
         }
         index = Path(runtime["voices_path"]) / "opening_manifest.json"
         runtime["protected_ids"] = {row["id"] for row in json.loads(index.read_text(encoding="utf-8"))["lines"]} if index.is_file() else set()
-        runtime["omnivoice"]["num_step"] = 64
+        runtime["omnivoice"]["num_step"] = quality_steps(runtime["omnivoice"].get("num_step", 64))
         runtime["omnivoice"]["prompt_cache"] = str(session.parent / "prompts")
         runtime["omnivoice"]["temp_directory"] = str(session)
         generator = VoiceGenerator(Path(runtime["references_path"]), runtime["omnivoice"])

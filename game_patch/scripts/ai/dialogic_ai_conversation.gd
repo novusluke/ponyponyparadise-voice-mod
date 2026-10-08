@@ -3840,8 +3840,7 @@ func _wait_for_advance() -> void :
 			if TouchScrollGesture.is_touch_platform():
 				if AIDialogueShared.consume_touch_advance_request():
 					break
-			elif Input.is_action_just_pressed("dialogic_default_action"):
-				break
+			# Mouse releases arrive through dialogic_action after drag validation.
 			if Input.is_action_just_pressed("ui_accept"):
 				break
 		await get_tree().process_frame

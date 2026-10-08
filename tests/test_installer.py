@@ -37,8 +37,8 @@ class DownloadTests(unittest.TestCase):
         self.assertIs(first.args[0], retry.args[0])
         self.assertEqual(first.kwargs, {"timeout": 60})
         self.assertEqual(retry.kwargs["timeout"], 60)
-        self.assertEqual(retry.kwargs["context"].verify_mode, ssl.CERT_NONE)
-        self.assertFalse(retry.kwargs["context"].check_hostname)
+        self.assertEqual(retry.kwargs["context"].verify_mode, ssl.CERT_REQUIRED)
+        self.assertTrue(retry.kwargs["context"].check_hostname)
         self.assertIs(ssl._create_default_https_context, default_context)
         log.assert_called_once()
 
@@ -74,6 +74,21 @@ class DownloadTests(unittest.TestCase):
         self.assertIs(caught.exception, failure)
         self.assertEqual(open_url.call_count, 2)
 
+    def test_untrusted_certificate_is_never_accepted(self):
+        error = urllib.error.URLError(ssl.SSLCertVerificationError(1, "untrusted certificate"))
+        with patch.object(script.urllib.request, "urlopen", side_effect=error) as open_url, \
+             patch.object(script.ssl, "_create_unverified_context") as unsafe:
+            with self.assertRaises(urllib.error.URLError):
+                script.download("https://example.com/download", log=Mock())
+        self.assertEqual(open_url.call_count, 2)
+        unsafe.assert_not_called()
+
+    def test_plain_http_download_is_refused(self):
+        with patch.object(script.urllib.request, "urlopen") as open_url:
+            with self.assertRaises(ValueError):
+                script.download("http://example.com/download")
+        open_url.assert_not_called()
+
 
 class InstallerServiceTests(unittest.TestCase):
     def setUp(self):
@@ -100,11 +115,26 @@ class InstallerServiceTests(unittest.TestCase):
         self.assertNotIn("missing-base-interpreter", detected["message"])
 
     def test_select_venv_or_parent_folder_with_spaces(self):
-        info = {"python": "3.11.8", "omnivoice": True, "encoder": True}
+        info = {"python": "3.11.8", "omnivoice": True, "loaded": True, "cuda": True, "encoder": True}
         with patch.object(service, "command_result", return_value=subprocess.CompletedProcess([], 0, json.dumps(info), "")) as probe:
-            for folder in (self.folder, self.folder.parent, self.python):
+            for folder in (self.folder, self.folder.parent, self.python, self.python.parent):
                 self.assertTrue(service.inspect_environment(folder)["ok"])
                 self.assertEqual(probe.call_args.args[0][0], str(self.python))
+                self.assertIn("-I", probe.call_args.args[0])
+
+    def test_package_presence_without_loadable_dependencies_is_not_ready(self):
+        info = {"python": "3.11.8", "omnivoice": True, "loaded": False, "encoder": True}
+        with patch.object(service, "command_result", return_value=subprocess.CompletedProcess([], 0, json.dumps(info), "")):
+            detected = service.inspect_environment(self.folder)
+        self.assertFalse(detected["ok"])
+        self.assertIn("dependencies cannot load", detected["message"])
+
+    def test_arbitrary_selected_file_is_not_executed(self):
+        selected = self.root / "unrelated.exe"
+        selected.write_bytes(b"fixture")
+        with patch.object(service, "command_result") as probe:
+            self.assertFalse(service.inspect_environment(selected)["ok"])
+        probe.assert_not_called()
 
     def test_timeout_and_missing_package_do_not_crash(self):
         with patch.object(service, "command_result", side_effect=subprocess.TimeoutExpired("python", 20)):

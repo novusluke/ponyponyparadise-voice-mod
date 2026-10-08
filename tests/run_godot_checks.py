@@ -29,6 +29,7 @@ def main():
     environment = os.environ.copy()
     environment["PONY_TEST_PYTHON"] = sys.executable
     environment["PONY_VOICE_ROSTER"] = str(Path(__file__).resolve().parents[1] / "dialogue/voice_roster.json")
+    environment["PONY_QUICK_LINES"] = str(Path(__file__).resolve().parents[1] / "dialogue/quick_start.json")
     if args.live_gpu_python:
         environment["PONY_TEST_GPU_PYTHON"] = str(args.live_gpu_python.resolve())
     from voice_mod.installer_service import require_private_destination
@@ -38,6 +39,8 @@ def main():
     output = []
     for scene, marker, timeout in [("godot_regression", "VOICE_MOD_REGRESSION_OK", 180 if args.live_gpu_python else 25),
                                    ("godot_batch_regression", "BATCH_AUDIO_REGRESSION_OK", 30),
+                                   ("godot_preparation_regression", "PREPARATION_UI_REGRESSION_OK", 20),
+                                   ("godot_selection_regression", "SELECTION_NAVIGATION_OK", 20),
                                    ("godot_story_regression", "STORY_SAVE_REGRESSION_OK", 45),
                                    ("godot_lifecycle_regression", "AUDIO_SCENE_EXIT_OK", 15),
                                    ("godot_restart_regression", "LOAD_TITLE_NEW_GAME_OK", 35)]:
