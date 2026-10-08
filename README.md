@@ -27,3 +27,5 @@ python -B tools/build_release_zip.py
 Source uses [PolyForm Noncommercial 1.0.0](LICENSE). Dialogic uses [MIT](game_patch/addons/dialogic/LICENSE). Audio, artwork, and music retain their respective owners' rights. See [third-party notices](THIRD_PARTY_NOTICES.md).
 
 [Original setup music](https://www.youtube.com/watch?v=For4GGkxALQ).
+
+You can also try the web version that also includes voices: https://ponyponyparadise.bond/
