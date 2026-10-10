@@ -25,5 +25,169 @@
     "addons/dialogic/Modules/Text/node_dialog_text.gd": "edaa806ba78ac3542b19003b592eef95ded1d0a08e58dcf6f5a5cc870185d755",
     "addons/dialogic/Modules/Text/node_input.gd": "49e5824f3684cbf0e36b3868efa89e5a96ecc64270f91c3a92385bb78dedfcb3",
     "addons/dialogic/Modules/Core/subsystem_input.gd": "23abdd0c6ba99e87fe77fe7025517b0918e6b3b8bde03075abb82225582aa23f"
-  }
+  },
+  "base_sources": {
+    "addons/dialogic/Modules/Text/event_text.gd": [
+      "984856ffab0834f4067d259ae16595fb6f2f83e713069e11cd3f4f953c83579d"
+    ],
+    "scripts/ai/dialogic_ai_conversation.gd": [
+      "f20822e1e908aaceba87fdd4543e12506eaf51fb82fc9213ca75205174add23c"
+    ],
+    "scripts/ai/ai_scene_generator.gd": [
+      "727d78abe3441250f01a154bf709c8d713c16908d44b65707f9f1ea628544a52"
+    ],
+    "scenes/ui_settings_menu.gd": [
+      "73012ce7f9ca4603c2dccec18a6c103d70a71a7ea6e98c6388e61ccba456684d"
+    ],
+    "autoloads/map_manager.gd": [
+      "dd68da7e9eaeacd6960498a7898efd3f6fe3e493862291e09fd95d87cb7068fa"
+    ],
+    "autoloads/rollback_manager.gd": [
+      "66a2242c4b98c25733495604aaad68593a7cf9b1835459be6576be79ee3a40b9"
+    ],
+    "addons/dialogic/Modules/History/subsystem_history.gd": [
+      "2deb34e959f821e5e6966ff86b33dfd6ae18199f272fd0d3506266c4e4a8d542"
+    ],
+    "addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd": [
+      "21e673244650cb28c64673afde851f251e25b228be872b851e051c17a2d0ea98"
+    ],
+    "scripts/ai/ai_dialogue_shared.gd": [
+      "dfa8ad73d95faa4307d30289c739640330431380b8461c7f69c7c2cdfa490ddb"
+    ],
+    "addons/dialogic/Core/DialogicGameHandler.gd": [
+      "eb8e3e6d9d548a5f2c50f46fc95ef70b03903fd7c8c67a14c8a8addf92ccd648"
+    ],
+    "addons/dialogic/Modules/Text/manual_advance.gd": [
+      "4439aa9513c7229648ea688f6b295eb65f392fee8520cc4cf1445c8d324fdbe6"
+    ],
+    "scenes/save_load_menu.gd": [
+      "113fba499daf0871e41fa63b817c973aafe0b37f1191ba7b6ad51864d900d4c1"
+    ],
+    "scripts/ai/ai_conversation_bridge.gd": [
+      "4d1f0f71414e78008c96750fe7e52b353b083a38054c57ce9dd62beebf5a39ca"
+    ],
+    "addons/dialogic/Modules/Clear/event_clear.gd": [
+      "21453ff8114fdaf45cd9c2a0dd5b7b5d07d5ac1ed0a442ee9919fa6fb28c9dc0"
+    ],
+    "addons/dialogic/Modules/Text/subsystem_text.gd": [
+      "5537498056df63e6df1d811f4d465c60e1bd7aefa30358a29d5b100eb5df0d20"
+    ],
+    "scenes/main.gd": [
+      "f1e15227b074bbb543cf8e442c0c2c43dab6e121431c203d02f6dfc8a9829d6f"
+    ],
+    "addons/dialogic/Modules/Audio/subsystem_audio.gd": [
+      "023197697cefe8236832d156ddb61fb8a18acec32a0948c8df3545624f428782"
+    ],
+    "addons/dialogic/Modules/Text/node_dialog_text.gd": [
+      "a344fa92bee794fd16eafb17c458509b540d01e5cca40907a830e876103c489c"
+    ],
+    "addons/dialogic/Modules/Text/node_input.gd": [
+      "4818d499543e6c91036c79fd2cb6f939dc6b0fe0e88285962978e4e3b9a297eb"
+    ],
+    "addons/dialogic/Modules/Core/subsystem_input.gd": [
+      "8e0fb2f9317c06c233f56cb3317c62ce3daa83a50a2af93f0dd78e8a1ff3997d"
+    ]
+  },
+  "builds": [
+    {
+      "id": "windows-october-2026",
+      "label": "official October 2026 Windows export",
+      "engine": [
+        4,
+        8,
+        0
+      ],
+      "verified_download": "https://drive.google.com/file/d/1Fhe-OeIlNIYFFGx2FlnpuxcIkYdOFGh2/view",
+      "verified_date": "2026-10-10",
+      "pack_sha256": "f1e732ec1aa70af7d6993f7ff2e3d43fa2ca0b2d0ad72d0cfe9162fcccb49fd4",
+      "base_scripts": {
+        "addons/dialogic/Modules/Text/event_text.gd": "2d54ce9466dd8a841e30f554aeb96248cd808431f548fa3eb2f8d4955ddaa285",
+        "scripts/ai/dialogic_ai_conversation.gd": "f909c2d25e89a356dd68239765e72375d6fe7b0d08b1e0ae1358c3985fc81c41",
+        "scripts/ai/ai_scene_generator.gd": "27b2f607dcf20c32915a39d2b29519a2bfd06089ec4583f3aa45453742ed862c",
+        "scenes/ui_settings_menu.gd": "598049bed5ec4ebe06a349be1929bd02e5e99880b6f3928ee92968f4c07d4118",
+        "autoloads/map_manager.gd": "fb70f2a9ab40e126b67b56df2e16d06c1b6f1523a0bedd72f46579c4e6f7c800",
+        "autoloads/rollback_manager.gd": "451636d937530394ca2716806cdc51f946f748e629b01a2bdb73222be87eaff9",
+        "addons/dialogic/Modules/History/subsystem_history.gd": "7d86f3dadeaaa93c59807504e8df352a1327e264fa37fe4d69a3f0e69cb5e07f",
+        "addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd": "f5768c3b60e687f080f02058c01e5f347699184d5f9357c4b945131072ca471d",
+        "scripts/ai/ai_dialogue_shared.gd": "029c1c3092a6d8c0bc8585f708d56a1950b7c4bbdf295b364a9c16223e7865b1",
+        "addons/dialogic/Core/DialogicGameHandler.gd": "f8b89205656f67441894e1e35389a2b3b58bc382bee811bfb664dd023dcc3e73",
+        "addons/dialogic/Modules/Text/manual_advance.gd": "fe441d1d1150e6791f5999e363091f42dd46ae91d80b59950ec590cb4e7a78d8",
+        "scenes/save_load_menu.gd": "9a0891bc03fd2cf93c4dd2c3210f6f6cd775a431534754b5ff6aa074317a9238",
+        "scripts/ai/ai_conversation_bridge.gd": "89d3933f06b520ee5bdd6ce16aeef5ae2c00cbdc6dd4f1cfb4548c34990a8d4a",
+        "addons/dialogic/Modules/Clear/event_clear.gd": "1b3655f7f11678da40c1faf3286c282c958b502482442c4760c7615d40c98c10",
+        "addons/dialogic/Modules/Text/subsystem_text.gd": "785028a32dcd4e1ce96aca851395ee2309bd31d50225bc35f8cd8e18809f3e02",
+        "scenes/main.gd": "a31502d031f502a42d29bb093d0f6a0732dee9b18976f7cf89ee0c2070b7e22b",
+        "addons/dialogic/Modules/Audio/subsystem_audio.gd": "e4c3480e6a29c6768e522f916c49d228e55839833c988f45ee70e8c64cc1608c",
+        "addons/dialogic/Modules/Text/node_dialog_text.gd": "edaa806ba78ac3542b19003b592eef95ded1d0a08e58dcf6f5a5cc870185d755",
+        "addons/dialogic/Modules/Text/node_input.gd": "49e5824f3684cbf0e36b3868efa89e5a96ecc64270f91c3a92385bb78dedfcb3",
+        "addons/dialogic/Modules/Core/subsystem_input.gd": "23abdd0c6ba99e87fe77fe7025517b0918e6b3b8bde03075abb82225582aa23f",
+        "scenes/story_panel/story_panel.gd": "eaf8eb713a277e9113b1ad259faf6f9ac6fdacc3d0b5df22d6aa7c83d0770f75"
+      },
+      "base_sources": {
+        "addons/dialogic/Modules/Text/event_text.gd": [
+          "984856ffab0834f4067d259ae16595fb6f2f83e713069e11cd3f4f953c83579d"
+        ],
+        "scripts/ai/dialogic_ai_conversation.gd": [
+          "db9e84aea3500abd39fbd3404f53934108fdff0a723a1003125e165ecd54161e"
+        ],
+        "scripts/ai/ai_scene_generator.gd": [
+          "53b301d9bbf390111f589183d85c0a648d4aa14d111f2981f41fa33eb057d744"
+        ],
+        "scenes/ui_settings_menu.gd": [
+          "850482a5e75d1413ea80355b9bdbf9f0a4ea567feabfee0ee0e43af42067f731"
+        ],
+        "autoloads/map_manager.gd": [
+          "c902b77a753a4a38d40ecee72b080ba28a485b917c0036565f69499e124a4eca"
+        ],
+        "autoloads/rollback_manager.gd": [
+          "b4196338280d97e51eb60b846aad83fde16b39372e60c4cb1ea694bfa4b6287e"
+        ],
+        "addons/dialogic/Modules/History/subsystem_history.gd": [
+          "549253bc5c657a99b95b318ccb694469794146c470fe58ffa9c194f7ecee2968"
+        ],
+        "addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd": [
+          "789193329694737f6bd97d380c644e0e2f15190b5982403fbf7c545741f4bdc1"
+        ],
+        "scripts/ai/ai_dialogue_shared.gd": [
+          "2d5d73cecc82a2e9f03b42ad7cc61a874a9f266b8d1c7caa55f903bcf9b1ccce"
+        ],
+        "addons/dialogic/Core/DialogicGameHandler.gd": [
+          "eb8e3e6d9d548a5f2c50f46fc95ef70b03903fd7c8c67a14c8a8addf92ccd648"
+        ],
+        "addons/dialogic/Modules/Text/manual_advance.gd": [
+          "4439aa9513c7229648ea688f6b295eb65f392fee8520cc4cf1445c8d324fdbe6"
+        ],
+        "scenes/save_load_menu.gd": [
+          "90227b6b46a18430d1046379e055f6f9fee3e8042d1438e37c8426ec8bcc2001"
+        ],
+        "scripts/ai/ai_conversation_bridge.gd": [
+          "8d5fb52cfadb27223be4c88880cafd3796ccc4263d0ab8421fe9dea194f7b9bf"
+        ],
+        "addons/dialogic/Modules/Clear/event_clear.gd": [
+          "21453ff8114fdaf45cd9c2a0dd5b7b5d07d5ac1ed0a442ee9919fa6fb28c9dc0"
+        ],
+        "addons/dialogic/Modules/Text/subsystem_text.gd": [
+          "5537498056df63e6df1d811f4d465c60e1bd7aefa30358a29d5b100eb5df0d20"
+        ],
+        "scenes/main.gd": [
+          "3e524db0984d8732e13a62036e0e14e0533310eb3b2637eb0da2b92328c591f7"
+        ],
+        "addons/dialogic/Modules/Audio/subsystem_audio.gd": [
+          "023197697cefe8236832d156ddb61fb8a18acec32a0948c8df3545624f428782"
+        ],
+        "addons/dialogic/Modules/Text/node_dialog_text.gd": [
+          "a344fa92bee794fd16eafb17c458509b540d01e5cca40907a830e876103c489c"
+        ],
+        "addons/dialogic/Modules/Text/node_input.gd": [
+          "4818d499543e6c91036c79fd2cb6f939dc6b0fe0e88285962978e4e3b9a297eb"
+        ],
+        "addons/dialogic/Modules/Core/subsystem_input.gd": [
+          "8e0fb2f9317c06c233f56cb3317c62ce3daa83a50a2af93f0dd78e8a1ff3997d"
+        ],
+        "scenes/story_panel/story_panel.gd": [
+          "dbf8150063298e090bb8b5e367271abd8a46a835f32996a1dbd71ae01c7b9e96"
+        ]
+      }
+    }
+  ]
 }

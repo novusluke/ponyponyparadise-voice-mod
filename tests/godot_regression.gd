@@ -242,14 +242,21 @@ func _run() -> void:
 		await frames(5)
 		if event != null:
 			await Dialogic.end_timeline()
-		var history: Node = load("res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn").instantiate()
-		get_tree().root.add_child(history)
 		var history_row := metadata.duplicate(true)
 		history_row.character_name = "Twilight Sparkle"
 		history_row.text = text
-		history._context_entries = [history_row]
-		history._context_total_entries = 1
-		history._on_entry_clicked(0)
+		var history: Node
+		if ResourceLoader.exists("res://scenes/story_panel/story_panel.gd"):
+			history = load(get_script().resource_path.get_base_dir().path_join("godot_story_panel_probe.gd")).new()
+			get_tree().root.add_child(history)
+			history.fixture = history_row
+			history._select("ln_0")
+		else:
+			history = load("res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn").instantiate()
+			get_tree().root.add_child(history)
+			history._context_entries = [history_row]
+			history._context_total_entries = 1
+			history._on_entry_clicked(0)
 		check(controller.player.playing and controller._pending.is_empty(), "History log click did not replay cached audio")
 		history.queue_free()
 		var snapshot: Dictionary = metadata.duplicate(true)

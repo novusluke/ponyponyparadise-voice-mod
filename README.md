@@ -10,6 +10,8 @@ Download the ZIP from [Releases](https://github.com/novusluke/ponyponyparadise-v
 
 Generating new speech requires an NVIDIA CUDA GPU. The first engine setup and model download require an internet connection.
 
+Setup v1.0.3 supports the previously supported Windows game export and the official October 2026 Windows download checked on 10 October. It selects patches for the detected build, preserving its newer history, save and language features. Unrecognized or modified builds are refused before game files change; include your game version/download link when reporting a compatibility error.
+
 Voice settings and **Clean Cache** are available in the game's Character Voices menu. Setup includes **Check for updates**, **Release page**, and **Uninstall voice mod**. Uninstall restores the original game and keeps your saves.
 
 New Game and Quick Start include ready-to-play speech at 64 steps. **Wait for Audio (Recommended)** prepares the whole response before showing it; progress appears at the bottom right. After 30 seconds, **Too slow?** offers fewer steps with a quality warning. Preparation continues through settings and stops when you return to the main menu.

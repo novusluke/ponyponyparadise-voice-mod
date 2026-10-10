@@ -441,7 +441,7 @@ class VoiceTests(unittest.TestCase):
         game.mkdir()
         target = game / "PonyPonyParadise.pck"
         write_pack(target, Pack(4, (4, 8, 0), {"scripts/example.gdc": original_script,
-                                             "scripts/example.gd.remap": b"remap", "project.binary": b"project fixture"}))
+                                             "scripts/example.gd.remap": b'[remap]\npath="res://scripts/example.gdc"\n', "project.binary": b"project fixture"}))
         original_hash = hashlib.sha256(target.read_bytes()).hexdigest()
         with patch.object(script, "ROOT", source):
             config = copy.deepcopy(script.DEFAULTS)

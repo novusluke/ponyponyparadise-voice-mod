@@ -57,7 +57,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="payload-", dir=work) as directory:
         staging = Path(directory)
         for item in ("assets", "config.json", "config.schema.json", "release.json", "requirements.txt",
-                     "dialogue", "reference_audios", "character_assets", "data", "game_patch", "voice_mod", "THIRD_PARTY_NOTICES.md", "LICENSE"):
+                     "dialogue", "reference_audios", "character_assets", "data", "game_patch", "game_builds", "voice_mod", "THIRD_PARTY_NOTICES.md", "LICENSE"):
             source = ROOT / item
             if source.is_dir():
                 shutil.copytree(source, staging / item, ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "*.log"))

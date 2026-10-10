@@ -167,7 +167,8 @@ func test_question_input(convo: Node, context: String):
 	previous.request_failed.disconnect(convo._on_ai_request_failed)
 	previous.request_started.disconnect(convo._on_ai_request_started)
 	previous.queue_free()
-	var client: Node = load(get_script().resource_path.get_base_dir().path_join("godot_ai_client_fixture.gd")).new()
+	var fixture_name := "godot_ai_client_current_fixture.gd" if ResourceLoader.exists("res://scenes/story_panel/story_panel.gd") else "godot_ai_client_fixture.gd"
+	var client: Node = load(get_script().resource_path.get_base_dir().path_join(fixture_name)).new()
 	convo.add_child(client)
 	convo._ai_client = client
 	client.response_received.connect(convo._on_ai_response_received)

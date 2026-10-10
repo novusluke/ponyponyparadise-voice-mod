@@ -331,16 +331,13 @@ def install_game(game: Path, config: dict, references: Path | None = None) -> No
             raise ValueError("Game changed since installation. Restore/update it before reinstalling this mod.")
     original = backup if backup.exists() else pack_path
     pack = read_pack(original)
-    compatibility = json.loads((ROOT / "game_patch/compatibility.json").read_text())
-    for relative, digest in compatibility["base_scripts"].items():
-        bytecode = relative.removesuffix(".gd") + ".gdc"
-        if hashlib.sha256(pack.files.get(bytecode, b"")).hexdigest() != digest:
-            raise ValueError(f"Unsupported game build: {relative} differs from the clean supported version.")
+    compatibility = json.loads((ROOT / "game_patch/compatibility.json").read_text(encoding="utf-8"))
+    from voice_mod.compatibility import select_build, patch_sources
+    build = select_build(pack, compatibility)
     # Refuse old experiments, even if somebody reused matching files from this build.
     if any("omnivoice" in p.lower() or "codex" in p.lower() for p in pack.files):
         raise ValueError("Install on a clean game copy; an old experimental mod is present.")
-    for source in (ROOT / "game_patch").rglob("*.gd"):
-        relative = source.relative_to(ROOT / "game_patch").as_posix()
+    for relative, source in patch_sources(ROOT, build).items():
         pack.files[relative] = source.read_bytes()
         pack.files.pop(relative + ".remap", None)
         pack.files.pop(relative.removesuffix(".gd") + ".gdc", None)
@@ -401,7 +398,8 @@ def install_game(game: Path, config: dict, references: Path | None = None) -> No
         runtime["python_path"] = stored_path(resolve_path(config["omnivoice"]["python_path"]), mod)
     atomic_json(mod / "config.json", runtime)
     state = {"schema_version": 1, "original_sha256": hashlib.sha256(original.read_bytes()).hexdigest(),
-             "installed_sha256": hashlib.sha256(staged.read_bytes()).hexdigest(), "engine": pack.engine}
+             "installed_sha256": hashlib.sha256(staged.read_bytes()).hexdigest(), "engine": pack.engine,
+             "game_build": build["id"]}
     from voice_mod.installer_service import patch_fingerprint, release_metadata
     state.update({"mod_version": release_metadata()["version"], "patch_fingerprint": patch_fingerprint()})
     receipt["owned_files"].update({relative: digest(game / relative) for relative in resources if (game / relative).is_file()})

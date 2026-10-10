@@ -41,14 +41,19 @@ print(json.dumps(info))
 
 def release_metadata() -> dict:
     path = backend.ROOT / "release.json"
-    return json.loads(path.read_text()) if path.exists() else {"version": "1.0.2", "github_repository": "", "github_branch": "main"}
+    return json.loads(path.read_text()) if path.exists() else {"version": "1.0.3", "github_repository": "", "github_branch": "main"}
 
 
 def patch_fingerprint() -> str:
     digest = hashlib.sha256()
-    for path in sorted((backend.ROOT / "game_patch").rglob("*.gd")):
+    paths = [*(backend.ROOT / "game_patch").rglob("*.gd"),
+             *(backend.ROOT / "game_builds").rglob("*.gd")]
+    manifest = backend.ROOT / "game_patch/compatibility.json"
+    if manifest.is_file():
+        paths.append(manifest)
+    for path in sorted(paths):
         digest.update(path.relative_to(backend.ROOT).as_posix().encode("utf-8"))
-        digest.update(path.read_bytes())
+        digest.update(path.read_bytes().replace(b"\r\n", b"\n"))
     return digest.hexdigest()
 
 
